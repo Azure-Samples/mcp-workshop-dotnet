@@ -22,7 +22,8 @@ permissions:
   contents: read
 
 env:
-  DOTNET_VERSION: ${{ vars.DOTNET_VERSION }}
+  DISPATCH_ACTOR: '${{ secrets.DISPATCH_ACTOR }}'
+  DOTNET_VERSION: '${{ vars.DOTNET_VERSION }}'
   AZURE_RESOURCE_GROUP_NAME: 'rg-${{ inputs.azure-env-name }}'
   AZURE_FNCAPP_NAME: 'fncapp-${{ inputs.azure-env-name }}'
 
@@ -71,14 +72,14 @@ jobs:
         Get-ChildItem -Path *.sln -Recurse | ForEach-Object { dotnet test $_.Directory.Name -c Release }
 
     - name: Create artifacts
-      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ secrets.DISPATCH_ACTOR }}'
+      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ env.DISPATCH_ACTOR }}'
       shell: bash
       run: |
         # dotnet publish ${{ inputs.directory }} -c Release -f net7.0
         dotnet publish ${{ inputs.directory }} -c Release -f net8.0
     
     - name: Get project name
-      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ secrets.DISPATCH_ACTOR }}'
+      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ env.DISPATCH_ACTOR }}'
       id: project
       shell: bash
       run: |
@@ -89,7 +90,7 @@ jobs:
         echo "name=$capitalised" >> $GITHUB_OUTPUT
 
     - name: Upload artifact
-      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ secrets.DISPATCH_ACTOR }}'
+      if: github.event_name == 'workflow_dispatch' && github.actor == '${{ env.DISPATCH_ACTOR }}'
       uses: actions/upload-artifact@v3
       with:
         name: fncapp
@@ -98,7 +99,7 @@ jobs:
 
   deploy:
     name: Deploy
-    if: github.event_name == 'workflow_dispatch' && github.actor == '${{ secrets.DISPATCH_ACTOR }}'
+    if: github.event_name == 'workflow_dispatch' && github.actor == '${{ env.DISPATCH_ACTOR }}'
     needs:
     - build-test
 
