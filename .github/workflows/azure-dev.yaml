@@ -29,9 +29,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    outputs:
-      isValidActor: ${{ steps.check-dispatch-actor.outputs.isValid }}
-
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -69,7 +66,6 @@ jobs:
       if: github.event_name == 'workflow_dispatch'
       shell: bash
       run: |
-        # dotnet publish ${{ inputs.directory }} -c Release -f net7.0
         dotnet publish ${{ inputs.directory }} -c Release -f net8.0
     
     - name: Get project name
