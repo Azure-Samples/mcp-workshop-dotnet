@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+
+    "StorageConnection": "{{STORAGE_ACCOUNT_CONNECTION_STRING}}",
+    "StorageAccountName": "{{STORAGE_ACCOUNT_NAME}}",
+
+    "ComputerVisionKey": "{{COMPUTER_VISION_KEY}}",
+    "ComputerVisionEndPoint": "{{COMPUTER_VISION_ENDPOINT}}"
+  }
+}

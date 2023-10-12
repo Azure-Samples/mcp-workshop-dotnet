@@ -1,57 +1,22 @@
-# Project Name
+# Azure Functions Isolated Worker Samples
 
-(short, 1-3 sentenced, description of the project)
+This provides sample apps for Azure Functions running in the isolated worker process.
 
-## Features
+## Prerequisites
 
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
+- [Azure Subscription](https://azure.microsoft.com/free)
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local) v4 &ndash; 4.0.5000 or later
+- [Visual Studio](https://visualstudio.microsoft.com/vs) or [Visual Studio Code](https://code.visualstudio.com) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
+- [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
+- [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
+- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 or later
 
 ## Getting Started
 
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
+- [**Image Analysis**](./image-analysis): Azure Blob Storage, Table Storage and Azure Cognitive Services - Computer Vision
 
 ## Resources
 
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+- [Azure Functions in an isolated worker process](https://learn.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide)

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D457BCAC-48CF-42F8-BBBF-3923B924DD4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageAnalysis", "src\ImageAnalysis\ImageAnalysis.csproj", "{2033C5D9-C1C1-4214-A102-5BC68DDC1924}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2033C5D9-C1C1-4214-A102-5BC68DDC1924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2033C5D9-C1C1-4214-A102-5BC68DDC1924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2033C5D9-C1C1-4214-A102-5BC68DDC1924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2033C5D9-C1C1-4214-A102-5BC68DDC1924}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2033C5D9-C1C1-4214-A102-5BC68DDC1924} = {D457BCAC-48CF-42F8-BBBF-3923B924DD4E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA77EC3A-BCDF-4E4E-9930-F35000CE015B}
+	EndGlobalSection
+EndGlobal

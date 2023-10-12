@@ -1,0 +1,70 @@
+{
+  "name": "DevContainer for .NET",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": ".",
+    "args": {
+      "VARIANT": "8.0"
+    }
+  },
+  "forwardPorts": [
+    // Azure Functions
+    7071,
+    // Azurite
+    10000, 10001, 10002
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:latest": {
+      "version": "latest",
+      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp"
+    },
+    "ghcr.io/devcontainers/features/github-cli:latest": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/node:latest": {
+      "version": "lts",
+      "nodeGypDependencies": true,
+      "nvmInstallPath": "/usr/local/share/nvm"
+    },
+    "ghcr.io/devcontainers/features/common-utils:latest": {
+      "installZsh": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true,
+      "username": "vscode",
+      "uid": "1000",
+      "gid": "1000"
+    }
+  },
+  "overrideFeatureInstallOrder": [
+    "ghcr.io/devcontainers/features/common-utils"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Azurite.azurite",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-azuretools.vscode-bicep",
+        "ms-dotnettools.csdevkit",
+        "ms-vscode.PowerShell",
+        "ms-vscode.vscode-node-azure-pack"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh"
+          }
+        },
+
+        "explorer.sortOrder": "type",
+        "explorer.fileNesting.enabled": true,
+        "explorer.fileNesting.patterns": {
+          "*.bicep": "${capture}.json, ${capture}.parameters.json"
+        }
+      }
+    }
+  },
+  "onCreateCommand": "/usr/bin/zsh ./.devcontainer/on-create.sh > ~/on-create.log",
+  "remoteUser": "vscode"
+}
