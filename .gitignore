@@ -483,4 +483,9 @@ $RECYCLE.BIN/
 # Vim temporary swap files
 *.swp
 
+# azurite
+__blobstorage__/
+__queuestorage__/
+__azurite_db_*__.json
+
 serviceDependencies.*.json

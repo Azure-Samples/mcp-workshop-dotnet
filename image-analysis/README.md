@@ -11,6 +11,7 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
+- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 or later
 
 ## Getting Started
 
@@ -51,15 +52,13 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
    azd pipeline config
 
    # PowerShell
-   $WORKFLOW_PAYLOAD = '{ "directory": "image-analysis", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
+   $WORKFLOW_PAYLOAD = '{ "directory": "image-analysis" }'
    echo $WORKFLOW_PAYLOAD | gh workflow run "Azure Dev" --repo $GITHUB_USERNAME/$GITHUB_REPOSITORY_NAME --json
 
    # Bash
-   WORKFLOW_PAYLOAD='{ "directory": "image-analysis", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
+   WORKFLOW_PAYLOAD='{ "directory": "image-analysis" }'
    echo $WORKFLOW_PAYLOAD | gh workflow run "Azure Dev" --repo $GITHUB_USERNAME/$GITHUB_REPOSITORY_NAME --json
    ```
-
-   > **NOTE**: Replace `{{AZURE_ENV_NAME}}` with the actual value of `$AZURE_ENV_NAME`. If you want to directly use the `$AZURE_ENV_NAME` variable, use string interpolation with double-quotes, instead of single-quotes.
 
 ### Deprovision Resources from Azure
 
@@ -86,11 +85,7 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
    ```bash
    pushd src/ImageAnalysis
 
-   # Targeting .NET 7
-   func start --target-framework net7.0
-
-   # Targeting .NET 8
-   func start --target-framework net8.0
+   func start
 
    popd
    ```
