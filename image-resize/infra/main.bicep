@@ -15,16 +15,6 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   tags: tags
 }
 
-module cogsvc '../../_infra/provision-CognitiveServices.bicep' = {
-  name: 'CognitiveServices'
-  scope: rg
-  params: {
-    name: name
-    location: location
-    tags: tags
-  }
-}
-
 module fncapp '../../_infra/provision-FunctionApp.bicep' = {
   name: 'FunctionApp'
   scope: rg
@@ -36,18 +26,13 @@ module fncapp '../../_infra/provision-FunctionApp.bicep' = {
       {
         name: 'images'
       }
+      {
+        name: 'thumbnails'
+      }
     ]
     isLinux: false
     dotnetVersion: '8.0'
     appEnvSettings: [
-      {
-        name: 'ComputerVisionKey'
-        value: cogsvc.outputs.apiKey
-      }
-      {
-        name: 'ComputerVisionEndPoint'
-        value: cogsvc.outputs.endpoint
-      }
     ]
   }
 }

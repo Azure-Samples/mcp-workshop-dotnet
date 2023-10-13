@@ -3,7 +3,11 @@ param location string = resourceGroup().location
 
 param tags object = {}
 
-param blobContainerName string = 'container'
+param blobContainers array = [
+  {
+    name: 'container'
+  }
+]
 param isLinux bool = false
 param dotnetVersion string = '8.0'
 param appEnvSettings array = [
@@ -19,7 +23,7 @@ module st './storageAccount.bicep' = {
     name: name
     location: location
     tags: tags
-    blobContainerName: blobContainerName
+    blobContainers: blobContainers
   }
 }
 

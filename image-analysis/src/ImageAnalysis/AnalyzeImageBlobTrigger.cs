@@ -43,17 +43,20 @@ public class AnalyzeImageBlobTrigger
     /// </remarks>
     [Function(nameof(AnalyzeImageBlobTrigger))]
     [TableOutput(TableName, Connection = StorageConnection)]
-    public async Task<ImageContent> Run([BlobTrigger($"{ContainerName}/{{name}}", Connection = StorageConnection)] Stream stream, string name)
+    public async Task<ImageContent> Run(
+        [BlobTrigger($"{ContainerName}/{{name}}", Connection = StorageConnection)] Stream stream,
+        string name
+    )
     {
         var imageUrl = $"https://{Environment.GetEnvironmentVariable(StorageAccountName)}.blob.core.windows.net/{ContainerName}/{name}";
 
         // Get the analyzed image contents
-        var textContext = await this.AnalyzeImageContent(imageUrl);
+        var textContext = await this.AnalyzeImageContentAsync(imageUrl);
 
         return new ImageContent { PartitionKey = "Images", RowKey = Guid.NewGuid().ToString(), Text = textContext };
     }
 
-    private async Task<string> AnalyzeImageContent(string imageUrl)
+    private async Task<string> AnalyzeImageContentAsync(string imageUrl)
     {
         // Analyze the file using Computer Vision Client
         var textHeaders = await this._client.ReadAsync(imageUrl).ConfigureAwait(false);

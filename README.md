@@ -12,6 +12,7 @@ This provides sample apps for Azure Functions running in the isolated worker pro
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
 - [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 or later
+- [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azuriteo) for local debugging
 
 ## Getting Started
 

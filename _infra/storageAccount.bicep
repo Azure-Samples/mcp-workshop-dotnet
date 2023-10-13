@@ -5,7 +5,11 @@ param tags object = {}
 
 param skuName string = 'Standard_LRS'
 param blobName string = 'default'
-param blobContainerName string = 'container'
+param blobContainers array = [
+  {
+    name: 'container'
+  }
+]
 
 var storage = {
   name: 'st${name}'
@@ -16,9 +20,7 @@ var storage = {
   }
   blob: {
     name: blobName
-    container: {
-      name: blobContainerName
-    }
+    containers: blobContainers
   }
 }
 
@@ -47,8 +49,8 @@ resource stblob 'Microsoft.Storage/storageAccounts/blobServices@2023-01-01' = {
   }
 }
 
-resource stblobcontainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = {
-  name: storage.blob.container.name
+resource stblobcontainers 'Microsoft.Storage/storageAccounts/blobServices/containers@2023-01-01' = [for container in storage.blob.containers: {
+  name: container.name
   parent: stblob
   properties: {
     immutableStorageWithVersioning: {
@@ -58,7 +60,7 @@ resource stblobcontainer 'Microsoft.Storage/storageAccounts/blobServices/contain
     denyEncryptionScopeOverride: false
     publicAccess: 'Blob'
   }
-}
+}]
 
 output id string = st.id
 output name string = st.name

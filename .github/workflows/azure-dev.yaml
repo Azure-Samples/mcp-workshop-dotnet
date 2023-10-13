@@ -6,6 +6,9 @@ on:
       directory:
         description: 'Directory that deploys the function app'
         required: true
+      azure-env-name:
+        description: 'Azure environment name'
+        required: true
   push:
     branches:
     - main
@@ -20,8 +23,8 @@ permissions:
 
 env:
   DOTNET_VERSION: '${{ vars.DOTNET_VERSION }}'
-  AZURE_RESOURCE_GROUP_NAME: 'rg-${{ vars.AZURE_ENV_NAME }}'
-  AZURE_FNCAPP_NAME: 'fncapp-${{ vars.AZURE_ENV_NAME }}'
+  AZURE_RESOURCE_GROUP_NAME: 'rg-${{ inputs.azure-env-name }}'
+  AZURE_FNCAPP_NAME: 'fncapp-${{ inputs.azure-env-name }}'
 
 jobs:
   build-test:

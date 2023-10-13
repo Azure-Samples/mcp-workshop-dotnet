@@ -1,6 +1,6 @@
-# Image Analysis with Azure Computer Vision
+# Image Resize with Azure Event Grid
 
-This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide) app analyzes images uploaded on [Azure Blob Storage](https://learn.microsoft.com/azure/storage/blobs/storage-blobs-overview), using [Azure Computer Vision &ndash; Image Analysis Service](https://learn.microsoft.com/azure/ai-services/computer-vision/overview-image-analysis).
+This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide) app resizes images uploaded on [Azure Blob Storage](https://learn.microsoft.com/azure/storage/blobs/storage-blobs-overview), using [Azure Event Grid](https://learn.microsoft.com/azure/event-grid/overview).
 
 ## Prerequisites
 
@@ -23,12 +23,12 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
 
    ```bash
    # PowerShell
-   $AZURE_ENV_NAME="analysis$(Get-Random -Min 1000 -Max 9999)"
+   $AZURE_ENV_NAME="resize$(Get-Random -Min 1000 -Max 9999)"
    $GITHUB_USERNAME="{{GITHUB_USERNAME}}"
    $GITHUB_REPOSITORY_NAME="{{GITHUB_REPOSITORY_NAME}}"
 
    # Bash
-   AZURE_ENV_NAME="analysis$RANDOM"
+   AZURE_ENV_NAME="resize$RANDOM"
    GITHUB_USERNAME="{{GITHUB_USERNAME}}"
    GITHUB_REPOSITORY_NAME="{{GITHUB_REPOSITORY_NAME}}"
    ```
@@ -53,11 +53,11 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
    azd pipeline config
 
    # PowerShell
-   $WORKFLOW_PAYLOAD = '{ "directory": "image-analysis", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
+   $WORKFLOW_PAYLOAD = '{ "directory": "image-resize", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
    echo $WORKFLOW_PAYLOAD | gh workflow run "Azure Dev" --repo $GITHUB_USERNAME/$GITHUB_REPOSITORY_NAME --json
 
    # Bash
-   WORKFLOW_PAYLOAD='{ "directory": "image-analysis", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
+   WORKFLOW_PAYLOAD='{ "directory": "image-resize", "azure-env-name": "{{AZURE_ENV_NAME}}" }'
    echo $WORKFLOW_PAYLOAD | gh workflow run "Azure Dev" --repo $GITHUB_USERNAME/$GITHUB_REPOSITORY_NAME --json
    ```
 
@@ -93,11 +93,15 @@ This sample [Azure Functions (isolated worker)](https://learn.microsoft.com/azur
    popd
    ```
 
+   > **NOTE**: Use the [Dev Tunnels](https://learn.microsoft.com/connectors/custom-connectors/port-tunneling) feature in Visual Studio or [Port Forwarding](https://code.visualstudio.com/docs/editor/port-forwarding) feature in Visual Studio Code to expose the local Event Grid trigger to the Internet. The exposed URL may look like `https://********-7071.****.devtunnels.ms/runtime/webhooks/EventGrid?functionName=ResizeImageEventGridTrigger`.
+
 #### Local Debugging in Visual Studio
 
 1. Hit the <kbd>F5</kbd> key to start debugging.
+1. Add a new Azure Event Grid subscription to the local Event Grid trigger URL exposed by the Dev Tunnels feature.
 
 #### Local Debugging in Visual Studio Code
 
 1. Hit the <kbd>F5</kbd> key to start debugging.
-1. Choose `image-analysis/src/ImageAnalysis` to run the function app.
+1. Choose `image-resize/src/ImageResize` to run the function app.
+1. Add a new Azure Event Grid subscription to the local Event Grid trigger URL exposed by the Port Forwarding feature.

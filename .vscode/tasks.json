@@ -81,7 +81,8 @@
       "type": "pickString",
       "description": "Choose which sample function app to run",
       "options": [
-        "image-analysis/src/ImageAnalysis"
+        "image-analysis/src/ImageAnalysis",
+        "image-resize/src/ImageResize"
       ],
       "default": "image-analysis/src/ImageAnalysis"
     }
