@@ -18,9 +18,7 @@ namespace ImageResize;
 public class ResizeImageEventGridTrigger
 {
     private const string StorageConnection = "StorageConnection";
-    private const string ImageContainerName = "images";
     private const string ThumbnailWidth = "ThumbnailWidth";
-    private const string ThumbnailContainerName = "ThumbnailContainerName";
 
     private static readonly List<string> suportedExtensions = ["gif", "png", "jpg", "jpeg"];
 
@@ -95,6 +93,7 @@ public class ResizeImageEventGridTrigger
     private string GetBlobName(string blobUrl)
     {
         var blob = new BlobClient(new Uri(blobUrl));
+
         return blob.Name;
     }
 
@@ -108,7 +107,7 @@ public class ResizeImageEventGridTrigger
         var thumbnailHeight = Convert.ToInt32(Math.Round((decimal)(image.Height / divisor)));
 
         image.Mutate(x => x.Resize(thumbnailWidth, thumbnailHeight));
-        image.Save(output, encoder);
+        await image.SaveAsync(output, encoder);
 
         output.Position = 0;
 

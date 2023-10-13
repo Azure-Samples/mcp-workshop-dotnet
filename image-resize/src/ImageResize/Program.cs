@@ -10,6 +10,7 @@ var host = new HostBuilder()
     {
         var storageConnection = Environment.GetEnvironmentVariable("StorageConnection");
         var thumbnailContainerName = Environment.GetEnvironmentVariable("ThumbnailContainerName");
+
         var blobServiceClient = new BlobServiceClient(storageConnection);
         var blobContainerClient = blobServiceClient.GetBlobContainerClient(thumbnailContainerName);
 
