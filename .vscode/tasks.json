@@ -82,7 +82,8 @@
       "description": "Choose which sample function app to run",
       "options": [
         "image-analysis/src/ImageAnalysis",
-        "image-resize/src/ImageResize"
+        "image-resize/src/ImageResize",
+        "scheduled-image-upload/src/ImageUpload"
       ],
       "default": "image-analysis/src/ImageAnalysis"
     }

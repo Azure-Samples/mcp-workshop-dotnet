@@ -2,7 +2,7 @@
 Param(
     [string]
     [Parameter(Mandatory=$false)]
-    $Directory = "image-resize",
+    $Directory = "scheduled-image-upload",
 
     [string]
     [Parameter(Mandatory=$false)]
@@ -23,7 +23,7 @@ function Show-Usage {
             [-Help]
 
     Options:
-        -Directory     app directory name. Default is `image-resize`.
+        -Directory     app directory name. Default is `scheduled-image-upload`.
         -AzureEnvName  Azure environment name.
 
         -Help:          Show this message.
@@ -39,7 +39,7 @@ if ($needHelp -eq $true) {
     Exit 0
 }
 
-$capitalised = [CultureInfo]::GetCultureInfo("en-AU").TextInfo.ToTitleCase($Directory.Replace("-", " ")).Replace(" ", "")
+$capitalised = [CultureInfo]::GetCultureInfo("en-AU").TextInfo.ToTitleCase($Directory.Replace("-", " ")).Replace(" ", "").Replace("Scheduled", "")
 
 $localSettings = Get-Content -Path "./src/$capitalised/local.settings.sample.json" | ConvertFrom-Json
 
@@ -48,6 +48,7 @@ $stName = "st$AzureEnvName"
 
 $storageConnection = az storage account show-connection-string -g $rgName -n $stName --query "connectionString" -o tsv
 
+$localSettings.Values.AzureWebJobsStorage = $storageConnection
 $localSettings.Values.StorageConnection = $storageConnection
 
 $localSettings | ConvertTo-Json -Depth 100 | Out-File -FilePath "./src/$capitalised/local.settings.json" -Encoding utf8 -Force
