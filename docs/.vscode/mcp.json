@@ -1,23 +1,11 @@
 {
-  "inputs": [
-    {
-      "type": "promptString",
-      "id": "acaapp-server-fqdn",
-      "description": "Azure Container Apps FQDN"
-    }
-  ],
   "servers": {
-    "mcp-todo-list-aca-local": {
-      "type": "http",
-      "url": "http://0.0.0.0:5242/mcp"
-    },
-    "mcp-todo-list-aca-container": {
-      "type": "http",
-      "url": "http://0.0.0.0:8080/mcp"
-    },
-    "mcp-todo-list-aca-remote": {
-      "type": "http",
-      "url": "https://${input:acaapp-server-fqdn}/mcp"
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
     }
   }
 }

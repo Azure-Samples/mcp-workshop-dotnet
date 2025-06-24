@@ -2,13 +2,19 @@
 
 Are you interested in building an MCP server? What about an MCP client? Where would you like to run the MCP server - localhost or Azure? Let's build and deploy them!
 
-## Objectives
+## Workshop Objectives
 
 - Build a todo list MCP server in two different ways.
 - Build a Blazor web app as an MCP client.
 - Containerize the MCP server.
 - Run the MCP server locally and remotely on Azure.
 - Deploy the MCP server to Azure Container Apps.
+
+## Workshop in Your Language
+
+This workshop material is currently provided in the following languages:
+
+[English](./README.md) | [Español](./localisation/es-es/) | [Français](./localisation/fr-fr/) | [日本語](./localisation/ja-jp/) | [한국어](./localisation/ko-kr/) | [Português](./localisation/pt-br/) | [中文(简体)](./localisation/zh-cn/)
 
 ## Prerequisites
 
