@@ -1,70 +1,55 @@
 {
-  "name": "DevContainer for .NET",
-  "build": {
-    "dockerfile": "./Dockerfile",
-    "context": ".",
-    "args": {
-      "VARIANT": "8.0"
-    }
-  },
-  "forwardPorts": [
-    // Azure Functions
-    7071,
-    // Azurite
-    10000, 10001, 10002
-  ],
+  "name": "MCP Workshop for .NET",
+
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0-noble",
+
   "features": {
     "ghcr.io/devcontainers/features/azure-cli:latest": {
       "version": "latest",
-      "extensions": "account,alias,deploy-to-azure,functionapp,subscription,webapp"
+      "extensions": "account,alias,authV2,containerapp,deploy-to-azure,subscription"
     },
+    "ghcr.io/devcontainers/features/common-utils:latest": {},
+    "ghcr.io/devcontainers/features/dotnet:latest": {
+      "version": "9.0"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:latest": {},
     "ghcr.io/devcontainers/features/github-cli:latest": {
       "version": "latest"
     },
-    "ghcr.io/devcontainers/features/node:latest": {
-      "version": "lts",
-      "nodeGypDependencies": true,
-      "nvmInstallPath": "/usr/local/share/nvm"
-    },
-    "ghcr.io/devcontainers/features/common-utils:latest": {
-      "installZsh": true,
-      "installOhMyZsh": true,
-      "upgradePackages": true,
-      "username": "vscode",
-      "uid": "1000",
-      "gid": "1000"
-    }
+    "ghcr.io/devcontainers/features/node:latest": {}
   },
+
   "overrideFeatureInstallOrder": [
     "ghcr.io/devcontainers/features/common-utils"
   ],
+
   "customizations": {
     "vscode": {
       "extensions": [
-        "Azurite.azurite",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
         "GitHub.copilot",
         "GitHub.copilot-chat",
+        "GitHub.vscode-github-actions",
+        "GitHub.vscode-pull-request-github",
         "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-docker",
+        "ms-dotnettools.csharp",
         "ms-dotnettools.csdevkit",
-        "ms-vscode.PowerShell",
-        "ms-vscode.vscode-node-azure-pack"
+        "ms-vscode.vscode-node-azure-pack",
+        "redhat.vscode-yaml"
       ],
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "terminal.integrated.profiles.linux": {
-          "zsh": {
-            "path": "/usr/bin/zsh"
-          }
-        },
-
-        "explorer.sortOrder": "type",
-        "explorer.fileNesting.enabled": true,
-        "explorer.fileNesting.patterns": {
-          "*.bicep": "${capture}.json, ${capture}.parameters.json"
-        }
+        "chat.agent.enabled": true
       }
     }
   },
-  "onCreateCommand": "/usr/bin/zsh ./.devcontainer/on-create.sh > ~/on-create.log",
-  "remoteUser": "vscode"
+
+  "remoteUser": "vscode",
+
+  "onCreateCommand": "./.devcontainer/on-create.sh > ~/on-create.log",
+
+  "hostRequirements": {
+    "memory": "8gb"
+  }
 }

@@ -1,9 +1,0 @@
-{
-  "azureFunctions.projectLanguage": "C#",
-  "azureFunctions.projectRuntime": "~4",
-  "azureFunctions.preDeployTask": "publish",
-  "azureFunctions.showTargetFrameworkWarning": false,
-  "debug.internalConsoleOptions": "neverOpen",
-
-  "azureFunctions.projectSubpath": "image-analysis/src/ImageAnalysis"
-}

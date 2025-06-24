@@ -1,4 +1,4 @@
-## [Azure Functions Isolated Worker Samples](https://github.com/Azure-Samples/azure-functions-isloated-worker-sample) Changelog
+## [MCP Workshop for .NET](https://github.com/Azure-Samples/mcp-workshop-dotnet) Changelog
 
 <!-- 
 <a name="x.y.z"></a>

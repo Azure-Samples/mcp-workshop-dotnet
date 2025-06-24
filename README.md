@@ -1,24 +1,30 @@
-# Azure Functions Isolated Worker Samples
+# MCP Workshop for .NET
 
-This provides sample apps for Azure Functions running in the isolated worker process.
+Are you interested in building an MCP server? What about an MCP client? Where would you like to run the MCP server - localhost or Azure? Let's build and deploy them!
+
+## Objectives
+
+- Build a todo list MCP server in two different ways.
+- Build a Blazor web app as an MCP client.
+- Containerize the MCP server.
+- Run the MCP server locally and remotely on Azure.
+- Deploy the MCP server to Azure Container Apps.
 
 ## Prerequisites
 
 - [Azure Subscription](https://azure.microsoft.com/free)
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local) v4 &ndash; 4.0.5000 or later
+- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - [Visual Studio](https://visualstudio.microsoft.com/vs) or [Visual Studio Code](https://code.visualstudio.com) with [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
 - [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 or later
-- [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azuriteo) for local debugging
+- [Docker Desktop](https://docs.docker.com/desktop/)
 
 ## Getting Started
 
-- [**Image Analysis**](./image-analysis): Azure Blob Storage, Table Storage and Azure Cognitive Services - Computer Vision
-- [**Image Resize**](./image-resize): Azure Event Grid and Azure Blob Storage
+TBD
 
 ## Resources
 
-- [Azure Functions in an isolated worker process](https://learn.microsoft.com/azure/azure-functions/dotnet-isolated-process-guide)
+TBD
