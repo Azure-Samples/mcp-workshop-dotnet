@@ -33,8 +33,8 @@ Follow the step-by-step instructions in the workshop documentation:
 
 1. [Development Environment Setup](./docs/00-setup.md) - Set up your development environment
 2. [MCP Server Development](./docs/01-mcp-server.md) - Build your MCP server locally
-3. [MCP Remote Server](./docs/02-mcp-remote-server.md) - Deploy your server to Azure
-4. [MCP Client](./docs/03-mcp-client.md) - Create a client application
+3. [MCP Remote Server Deployment](./docs/02-mcp-remote-server.md) - Deploy your server to Azure
+4. [MCP Client Development](./docs/03-mcp-client.md) - Create a client application
 
 ## Resources
 
