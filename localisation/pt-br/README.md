@@ -31,10 +31,10 @@ Este material do workshop está atualmente disponível nos seguintes idiomas:
 
 Siga as instruções passo a passo na documentação do workshop:
 
-1. [Configuração do Ambiente de Desenvolvimento](../../docs/00-setup.md) - Configure seu ambiente de desenvolvimento
-1. [Desenvolvimento do Servidor MCP](../../docs/01-mcp-server.md) - Construa seu servidor MCP localmente
-1. [Implantação do Servidor MCP Remoto](../../docs/02-mcp-remote-server.md) - Implante seu servidor no Azure
-1. [Desenvolvimento do Cliente MCP](../../docs/03-mcp-client.md) - Crie uma aplicação cliente
+1. [Configuração do Ambiente de Desenvolvimento](./docs/00-setup.md) - Configure seu ambiente de desenvolvimento
+1. [Desenvolvimento do Servidor MCP](./docs/01-mcp-server.md) - Construa seu servidor MCP localmente
+1. [Implantação do Servidor MCP Remoto](./docs/02-mcp-remote-server.md) - Implante seu servidor no Azure
+1. [Desenvolvimento do Cliente MCP](./docs/03-mcp-client.md) - Crie uma aplicação cliente
 
 ## Recursos
 

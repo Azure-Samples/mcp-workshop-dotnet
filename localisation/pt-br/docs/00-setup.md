@@ -134,12 +134,12 @@ Nesta seção, você está configurando os servidores MCP para o workshop.
 
 1. Clique no ícone do GitHub Copilot no topo do GitHub Codespace ou VS Code e abra a janela do GitHub Copilot.
 
-   ![Open GitHub Copilot Chat](./images/setup-02.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-02.png)
 
 1. Se for solicitado para fazer login ou se inscrever, faça-o. É gratuito.
 1. Certifique-se de estar usando o Modo Agente do GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](./images/setup-03.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-03.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
 
@@ -149,4 +149,4 @@ Nesta seção, você está configurando os servidores MCP para o workshop.
 
 ---
 
-Este documento foi localizado pelo [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Portanto, pode conter erros. Se você encontrar alguma tradução inadequada ou erro, por favor, crie um [issue](../../issues).
+Este documento foi localizado pelo [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Portanto, pode conter erros. Se você encontrar alguma tradução inadequada ou erro, por favor, crie um [issue](../../../issues).

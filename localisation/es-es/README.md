@@ -31,10 +31,10 @@ Este material del taller está actualmente disponible en los siguientes idiomas:
 
 Sigue las instrucciones paso a paso en la documentación del taller:
 
-1. [Configuración del Entorno de Desarrollo](../../docs/00-setup.md) - Configura tu entorno de desarrollo
-1. [Desarrollo del Servidor MCP](../../docs/01-mcp-server.md) - Construye tu servidor MCP localmente
-1. [Despliegue del Servidor MCP Remoto](../../docs/02-mcp-remote-server.md) - Despliega tu servidor a Azure
-1. [Desarrollo del Cliente MCP](../../docs/03-mcp-client.md) - Crea una aplicación cliente
+1. [Configuración del Entorno de Desarrollo](./docs/00-setup.md) - Configura tu entorno de desarrollo
+1. [Desarrollo del Servidor MCP](./docs/01-mcp-server.md) - Construye tu servidor MCP localmente
+1. [Despliegue del Servidor MCP Remoto](./docs/02-mcp-remote-server.md) - Despliega tu servidor a Azure
+1. [Desarrollo del Cliente MCP](./docs/03-mcp-client.md) - Crea una aplicación cliente
 
 ## Recursos
 

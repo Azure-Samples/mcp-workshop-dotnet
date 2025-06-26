@@ -31,10 +31,10 @@
 
 按照工作坊文档中的分步说明操作：
 
-1. [开发环境设置](../../docs/00-setup.md) - 设置您的开发环境
-1. [MCP 服务器开发](../../docs/01-mcp-server.md) - 在本地构建您的 MCP 服务器
-1. [MCP 远程服务器部署](../../docs/02-mcp-remote-server.md) - 将您的服务器部署到 Azure
-1. [MCP 客户端开发](../../docs/03-mcp-client.md) - 创建客户端应用程序
+1. [开发环境设置](./docs/00-setup.md) - 设置您的开发环境
+1. [MCP 服务器开发](./docs/01-mcp-server.md) - 在本地构建您的 MCP 服务器
+1. [MCP 远程服务器部署](./docs/02-mcp-remote-server.md) - 将您的服务器部署到 Azure
+1. [MCP 客户端开发](./docs/03-mcp-client.md) - 创建客户端应用程序
 
 ## 资源
 

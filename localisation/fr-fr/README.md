@@ -31,10 +31,10 @@ Ce matériel d'atelier est actuellement fourni dans les langues suivantes :
 
 Suivez les instructions étape par étape dans la documentation de l'atelier :
 
-1. [Configuration de l'Environnement de Développement](../../docs/00-setup.md) - Configurez votre environnement de développement
-1. [Développement du Serveur MCP](../../docs/01-mcp-server.md) - Construisez votre serveur MCP localement
-1. [Déploiement du Serveur MCP Distant](../../docs/02-mcp-remote-server.md) - Déployez votre serveur sur Azure
-1. [Développement du Client MCP](../../docs/03-mcp-client.md) - Créez une application cliente
+1. [Configuration de l'Environnement de Développement](./docs/00-setup.md) - Configurez votre environnement de développement
+1. [Développement du Serveur MCP](./docs/01-mcp-server.md) - Construisez votre serveur MCP localement
+1. [Déploiement du Serveur MCP Distant](./docs/02-mcp-remote-server.md) - Déployez votre serveur sur Azure
+1. [Développement du Client MCP](./docs/03-mcp-client.md) - Créez une application cliente
 
 ## Ressources
 

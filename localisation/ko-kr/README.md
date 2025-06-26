@@ -31,10 +31,10 @@ MCP 서버 구축에 관심이 있으신가요? MCP 클라이언트는 어떠세
 
 워크샵 문서의 단계별 지침을 따르세요:
 
-1. [개발 환경 설정](../../docs/00-setup.md) - 개발 환경 설정
-1. [MCP 서버 개발](../../docs/01-mcp-server.md) - MCP 서버를 로컬로 구축
-1. [MCP 원격 서버 배포](../../docs/02-mcp-remote-server.md) - 서버를 Azure에 배포
-1. [MCP 클라이언트 개발](../../docs/03-mcp-client.md) - 클라이언트 애플리케이션 생성
+1. [개발 환경 설정](./docs/00-setup.md) - 개발 환경 설정
+1. [MCP 서버 개발](./docs/01-mcp-server.md) - MCP 서버를 로컬로 구축
+1. [MCP 원격 서버 배포](./docs/02-mcp-remote-server.md) - 서버를 Azure에 배포
+1. [MCP 클라이언트 개발](./docs/03-mcp-client.md) - 클라이언트 애플리케이션 생성
 
 ## 리소스
 
