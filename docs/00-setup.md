@@ -16,6 +16,8 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
   - [Install Docker Desktop](#install-docker-desktop)
   - [Install Visual Studio Code](#install-visual-studio-code)
   - [Start Visual Studio Code](#start-visual-studio-code)
+- [Set-up MCP Servers](#set-up-mcp-servers)
+- [Check GitHub Copilot Agent Mode](#check-github-copilot-agent-mode)
 
 ## Use GitHub Codespaces
 
@@ -54,7 +56,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you see something different from above, delete the GitHub Codespace instance and recreate it.
 
-1. Move down to bottom of this page.
+1. Move down to the [Set-up MCP Servers](#set-up-mcp-servers) section.
 
 **👇👇👇 If you'd like to use VS Code on your local machine instead, follow the instruction below. The section below doesn't apply to those who use GitHub Codespaces. 👇👇👇**
 
@@ -243,6 +245,50 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     ```bash
     code --install-extension "github.copilot" --force && code --install-extension "github.copilot-chat" --force
     ```
+
+## Set-up MCP Servers
+
+1. Set the environment variable of `$REPOSITORY_ROOT`.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Copy MCP server settings.
+
+    ```bash
+    # bash/zsh
+    cp -r $REPOSITORY_ROOT/docs/.vscode/. \
+          $REPOSITORY_ROOT/.vscode/
+    ```
+
+    ```powershell
+    # PowerShell
+    Copy-Item -Path $REPOSITORY_ROOT/docs/.vscode/* `
+              -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
+    ```
+
+1. Open Command Palette by typing `F1` or `Ctrl`+`Shift`+`P` on Windows or `Cmd`+`Shift`+`P` on Mac OS, and search `MCP: List Servers`.
+1. Choose `context7` then click `Start Server`.
+
+## Check GitHub Copilot Agent Mode
+
+1. Click the GitHub Copilot icon on the top of GitHub Codespace or VS Code and open GitHub Copilot window.
+
+   ![Open GitHub Copilot Chat](./images/setup-02.png)
+
+1. If you're asked to login or sign up, do it. It's free of charge.
+1. Make sure you're using GitHub Copilot Agent Mode.
+
+   ![GitHub Copilot Agent Mode](./images/setup-03.png)
+
+1. Select model to either `GPT-4.1` or `Claude Sonnet 4`.
 
 ---
 
