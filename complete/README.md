@@ -1,4 +1,4 @@
-# MCP Server: Todo App
+# MCP Server: To-Do App
 
 This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview), that manages to-do list items.
 
@@ -132,7 +132,7 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 1. Enter prompts. These are just examples:
 
     ```text
-    - Show me the list to do
+    - Show me the to-do list
     - Add "meeting at 11am"
     - Complete the to-do item #1
     - Delete the to-do item #2
@@ -173,7 +173,7 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 1. Enter prompts. These are just examples:
 
     ```text
-    - Show me the list to do
+    - Show me the to-do list
     - Add "meeting at 11am"
     - Complete the to-do item #1
     - Delete the to-do item #2
@@ -189,7 +189,7 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 1. Enter prompts. These are just examples:
 
     ```text
-    - Show me the list to do
+    - Show me the to-do list
     - Add "meeting at 11am"
     - Complete the to-do item #1
     - Delete the to-do item #2

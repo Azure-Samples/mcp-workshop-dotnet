@@ -1,6 +1,6 @@
 # 00: Development Environment
 
-In this step, you're setting up development environment for the workshop.
+In this step, you're setting up the development environment for the workshop.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 1. Click this link 👉 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/mcp-workshop-dotnet)
 
-1. Once the GitHub Codespace instance is ready, open a terminal and run the following command to check out everything you need has been properly installed or not.
+1. Once the GitHub Codespace instance is ready, open a terminal and run the following commands to verify that everything you need has been properly installed.
 
     ```bash
     # Node.js
@@ -41,13 +41,13 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     pwsh --version
     ```
 
-1. Check out your repository status.
+1. Check your repository status.
 
     ```bash
     git remote -v
     ```
 
-   You should be able to see the following.
+   You should see the following output:
 
     ```bash
     origin  https://github.com/Azure-Samples/mcp-workshop-dotnet.git (fetch)
@@ -64,7 +64,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 ### Install PowerShell 👉 For Windows Users
 
-1. Check whether you've already installed PowerShell or not.
+1. Check whether you've already installed PowerShell.
 
     ```bash
     # Bash/Zsh
@@ -78,17 +78,17 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you don't see the command path of `pwsh`, it means you haven't installed PowerShell yet. Visit [PowerShell installation page](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) and follow the instructions.
 
-1. Check out the version of your PowerShell.
+1. Check the version of your PowerShell.
 
     ```bash
     pwsh --version
     ```
 
-   `7.5.0` or higher is recommended. If yours is lower than that, visit [PowerShell installation page](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) and follow the instructions.
+   Version `7.5.0` or higher is recommended. If your version is lower than that, visit the [PowerShell installation page](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) and follow the instructions.
 
 ### Install git CLI
 
-1. Check whether you've already installed git CLI or not.
+1. Check whether you've already installed git CLI.
 
     ```bash
     # Bash/Zsh
@@ -102,17 +102,17 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you don't see the command path of `git`, it means you haven't installed the git CLI yet. Visit [git CLI installation page](https://git-scm.com/downloads) and follow the instructions.
 
-1. Check out the version of your git CLI.
+1. Check the version of your git CLI.
 
     ```bash
     git --version
     ```
 
-   `2.39.0` or higher is recommended. If yours is lower than that, visit [git CLI installation page](https://git-scm.com/downloads) and follow the instructions.
+   Version `2.39.0` or higher is recommended. If your version is lower than that, visit the [git CLI installation page](https://git-scm.com/downloads) and follow the instructions.
 
 ### Install GitHub CLI
 
-1. Check whether you've already installed GitHub CLI or not.
+1. Check whether you've already installed GitHub CLI.
 
     ```bash
     # Bash/Zsh
@@ -126,25 +126,25 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you don't see the command path of `gh`, it means you haven't installed the GitHub CLI yet. Visit [GitHub CLI installation page](https://cli.github.com/) and follow the instructions.
 
-1. Check out the version of your GitHub CLI.
+1. Check the version of your GitHub CLI.
 
     ```bash
     gh --version
     ```
 
-   `2.65.0` or higher is recommended. If yours is lower than that, visit [GitHub CLI installation page](https://cli.github.com/) and follow the instructions.
+   Version `2.65.0` or higher is recommended. If your version is lower than that, visit the [GitHub CLI installation page](https://cli.github.com/) and follow the instructions.
 
-1. Check whether you've signed into GitHub or not.
+1. Check whether you've signed into GitHub.
 
     ```bash
     gh auth status
     ```
 
-   If you haven't signed in yet, run `gh auth login` and sign-in.
+   If you haven't signed in yet, run `gh auth login` and sign in.
 
 ### Install Docker Desktop
 
-1. Check whether you've already installed Docker Desktop or not.
+1. Check whether you've already installed Docker Desktop.
 
     ```bash
     # Bash/Zsh
@@ -158,17 +158,17 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you don't see the command path of `docker`, it means you haven't installed Docker Desktop yet. Visit [Docker Desktop installation page](https://docs.docker.com/get-started/introduction/get-docker-desktop/) and follow the instructions.
 
-1. Check out the version of your Docker CLI.
+1. Check the version of your Docker CLI.
 
     ```bash
     docker --version
     ```
 
-   `28.0.4` or higher is recommended. If yours is lower than that, visit [Docker Desktop installation page](https://docs.docker.com/get-started/introduction/get-docker-desktop/) and follow the instructions.
+   Version `28.0.4` or higher is recommended. If your version is lower than that, visit the [Docker Desktop installation page](https://docs.docker.com/get-started/introduction/get-docker-desktop/) and follow the instructions.
 
 ### Install Visual Studio Code
 
-1. Check whether you've already installed VS Code or not.
+1. Check whether you've already installed VS Code.
 
     ```bash
     # Bash/Zsh
@@ -182,13 +182,13 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
    If you don't see the command path of `code`, it means you haven't installed VS Code yet. Visit [Visual Studio Code installation page](https://code.visualstudio.com/) and follow the instructions.
 
-1. Check out the version of your VS Code.
+1. Check the version of your VS Code.
 
     ```bash
     code --version
     ```
 
-   `1.99.0` or higher is recommended. If yours is lower than that, visit [Visual Studio Code installation page](https://code.visualstudio.com/) and follow the instructions.
+   Version `1.99.0` or higher is recommended. If your version is lower than that, visit the [Visual Studio Code installation page](https://code.visualstudio.com/) and follow the instructions.
 
    > **NOTE**: You might not be able to execute the `code` command. In this case, follow [this document](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) for setup.
 
@@ -213,13 +213,13 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     code .
     ```
 
-1. Open a new terminal within VS Code and run the following command to check out your repository status.
+1. Open a new terminal within VS Code and run the following command to check your repository status.
 
     ```bash
     git remote -v
     ```
 
-   You should be able to see the following. If you see `Azure-Samples` in `origin`, you should clone it again from your forked repository.
+   You should see the following output. If you see `Azure-Samples` in the `origin`, you should clone it again from your forked repository.
 
     ```bash
     origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (fetch)
@@ -228,7 +228,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet.git (push)
     ```
 
-1. Check out whether both extensions have been installed or not &ndash; [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat).
+1. Check whether both extensions have been installed: [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) and [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat).
 
     ```bash
     # Bash/Zsh

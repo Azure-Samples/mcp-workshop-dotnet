@@ -386,18 +386,18 @@ In the `start` directory, an ASP.NET Core Minimal API app is already scaffolded.
 1. Enter one of the prompts below:
 
     ```text
-    Show me the list to do.
+    Show me the to-do list.
     Add "lunch at 12pm".
-    Lunch completed.
+    Mark lunch as completed.
     Add "meeting at 3pm".
-    Change the meeting to 3.30pm.
-    The meeting is cancelled.
+    Change the meeting to 3:30pm.
+    Cancel the meeting.
     ```
 
-1. If an error occurs, ask GitHub Copilot to fix it like:
+1. If an error occurs, ask GitHub Copilot to fix it:
 
     ```text
-    I got an error "xxx". Find the issue and fix it.
+    I got an error "xxx". Please find the issue and fix it.
     ```
 
 ---

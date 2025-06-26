@@ -4,7 +4,7 @@ Are you interested in building an MCP server? What about an MCP client? Where wo
 
 ## Workshop Objectives
 
-- Build a todo list MCP server in two different ways.
+- Build a to-do list MCP server in two different ways.
 - Build a Blazor web app as an MCP client.
 - Containerize the MCP server.
 - Run the MCP server locally and remotely on Azure.
@@ -29,8 +29,15 @@ This workshop material is currently provided in the following languages:
 
 ## Getting Started
 
-TBD
+Follow the step-by-step instructions in the workshop documentation:
+
+1. [Development Environment Setup](./docs/00-setup.md) - Set up your development environment
+2. [MCP Server Development](./docs/01-mcp-server.md) - Build your MCP server locally
+3. [MCP Remote Server](./docs/02-mcp-remote-server.md) - Deploy your server to Azure
+4. [MCP Client](./docs/03-mcp-client.md) - Create a client application
 
 ## Resources
 
-TBD
+- [Model Context Protocol Documentation](https://modelcontextprotocol.io/)
+- [Azure Container Apps Documentation](https://learn.microsoft.com/azure/container-apps/)
+- [.NET 9 Documentation](https://learn.microsoft.com/dotnet/)
