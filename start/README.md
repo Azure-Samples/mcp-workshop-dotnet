@@ -7,10 +7,11 @@ This directory contains the initial scaffolding for your MCP server project. You
 ## What's Next?
 
 Follow the workshop instructions to:
+
 1. Set up your development environment
-2. Build your MCP server
-3. Deploy to Azure
-4. Create an MCP client
+1. Build your MCP server
+1. Deploy to Azure
+1. Create an MCP client
 
 If you want to see the complete example, check out the [/complete](../complete) directory.
 
