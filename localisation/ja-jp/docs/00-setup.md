@@ -134,12 +134,12 @@ Windowsを使用している場合は、PowerShellをインストールする必
 
 1. GitHub CodespaceまたはVS Codeの上部にあるGitHub Copilotアイコンをクリックして、GitHub Copilotウィンドウを開きます。
 
-   ![Open GitHub Copilot Chat](../../../docs/images/setup-02.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. ログインまたはサインアップを求められた場合は、そうしてください。無料です。
 1. GitHub Copilotエージェントモードを使用していることを確認してください。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-03.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. モデルを`GPT-4.1`または`Claude Sonnet 4`に選択してください。
 
@@ -149,4 +149,4 @@ Windowsを使用している場合は、PowerShellをインストールする必
 
 ---
 
-このドキュメントは[GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)によってローカライズされました。そのため、誤りが含まれる可能性があります。不適切または間違った翻訳を見つけた場合は、[issue](../../../issues)を作成してください。
+このドキュメントは[GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)によってローカライズされました。そのため、誤りが含まれる可能性があります。不適切または間違った翻訳を見つけた場合は、[issue](../../../../../issues)を作成してください。

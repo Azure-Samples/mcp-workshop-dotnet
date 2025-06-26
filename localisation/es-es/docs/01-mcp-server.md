@@ -26,7 +26,7 @@ Consulta el documento [README](../README.md#prerequisites) para la preparación.
 1. Si se te pide iniciar sesión o registrarte, hazlo. Es gratuito.
 1. Asegúrate de estar usando el Modo Agente de GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. Selecciona el modelo como `GPT-4.1` o `Claude Sonnet 4`.
 1. Asegúrate de haber configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).
@@ -225,4 +225,4 @@ Perfecto. Has completado el paso "Desarrollo del Servidor MCP". Ahora vamos al [
 
 ---
 
-Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../issues).
+Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../../../issues).

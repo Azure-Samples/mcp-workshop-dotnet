@@ -134,12 +134,12 @@ Windows를 사용하는 경우 PowerShell을 설치해야 합니다. 이미 Powe
 
 1. GitHub Codespace 또는 VS Code 상단의 GitHub Copilot 아이콘을 클릭하고 GitHub Copilot 창을 엽니다.
 
-   ![Open GitHub Copilot Chat](../../../docs/images/setup-02.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. 로그인하거나 가입하라는 메시지가 표시되면 그렇게 하세요. 무료입니다.
 1. GitHub Copilot 에이전트 모드를 사용하고 있는지 확인하세요.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-03.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 모델을 `GPT-4.1` 또는 `Claude Sonnet 4`로 선택합니다.
 
@@ -149,4 +149,4 @@ Windows를 사용하는 경우 PowerShell을 설치해야 합니다. 이미 Powe
 
 ---
 
-이 문서는 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)에 의해 현지화되었습니다. 따라서 오류가 포함될 수 있습니다. 부적절하거나 잘못된 번역을 발견하면 [issue](../../../issues)를 생성해 주세요.
+이 문서는 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)에 의해 현지화되었습니다. 따라서 오류가 포함될 수 있습니다. 부적절하거나 잘못된 번역을 발견하면 [issue](../../../../../issues)를 생성해 주세요.

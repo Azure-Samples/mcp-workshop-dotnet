@@ -281,12 +281,12 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 1. Click the GitHub Copilot icon on the top of GitHub Codespace or VS Code and open GitHub Copilot window.
 
-   ![Open GitHub Copilot Chat](./images/setup-02.png)
+   ![Open GitHub Copilot Chat](./images/setup-01.png)
 
 1. If you're asked to login or sign up, do it. It's free of charge.
 1. Make sure you're using GitHub Copilot Agent Mode.
 
-   ![GitHub Copilot Agent Mode](./images/setup-03.png)
+   ![GitHub Copilot Agent Mode](./images/setup-02.png)
 
 1. Select model to either `GPT-4.1` or `Claude Sonnet 4`.
 

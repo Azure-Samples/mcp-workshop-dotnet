@@ -26,7 +26,7 @@
 1. 로그인하거나 가입하라는 메시지가 표시되면 그렇게 하세요. 무료입니다.
 1. GitHub Copilot 에이전트 모드를 사용하고 있는지 확인하세요.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. 모델을 `GPT-4.1` 또는 `Claude Sonnet 4`로 선택합니다.
 1. [MCP 서버](./00-setup.md#set-up-mcp-servers)를 구성했는지 확인하세요.
@@ -227,4 +227,4 @@
 
 ---
 
-이 문서는 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)에 의해 현지화되었습니다. 따라서 오류가 포함될 수 있습니다. 부적절하거나 잘못된 번역을 발견하면 [issue](../../../issues)를 생성해 주세요.
+이 문서는 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)에 의해 현지화되었습니다. 따라서 오류가 포함될 수 있습니다. 부적절하거나 잘못된 번역을 발견하면 [issue](../../../../../issues)를 생성해 주세요.
