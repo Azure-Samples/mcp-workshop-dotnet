@@ -226,45 +226,156 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 
 ## Convertir en Serveur MCP
 
-1. Ouvrez GitHub Copilot Chat en Mode Agent.
-1. Utilisez le prompt suivant pour convertir l'application en serveur MCP.
+1. Ajouter le paquet NuGet pour le serveur MCP.
 
-    ```text
-    J'aimerais convertir cette application en serveur MCP. Suivez les instructions.
-
-    - Utilisez context7.
-    - Identifiez d'abord toutes les étapes que vous allez faire.
-    - Votre répertoire de travail est `workshop/src/McpTodoServer.ContainerApp`.
-    - Ajoutez les packages NuGet nécessaires pour MCP.
-    - Implémentez le serveur MCP qui peut gérer les requêtes de gestion de liste de tâches.
-    - Les méthodes doivent inclure : lister les tâches, créer une tâche, mettre à jour une tâche, compléter une tâche et supprimer une tâche.
-    - Assurez-vous que l'application se construit après la conversion.
+    ```bash
+    dotnet add package ModelContextProtocol.AspNetCore --prerelease
     ```
 
-1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
+1. Ouvrez `Program.cs`, trouvez `var app = builder.Build();` et ajoutez le fragment de code suivant juste au-dessus de la ligne :
+
+    ```csharp
+    // 👇👇👇 Ajouter 👇👇👇
+    builder.Services.AddMcpServer()
+                    .WithHttpTransport(o => o.Stateless = true)
+                    .WithToolsFromAssembly();
+    // 👆👆👆 Ajouter 👆👆👆
+    
+    var app = builder.Build();
+    ```
+
+1. Dans le même `Program.cs`, trouvez `app.Run();` et ajoutez le fragment de code suivant juste au-dessus de la ligne :
+
+    ```csharp
+    // 👇👇👇 Ajouter 👇👇👇
+    app.MapMcp("/mcp");
+    // 👆👆👆 Ajouter 👆👆👆
+    
+    app.Run();
+    ```
+
+1. Ouvrez `TodoTool.cs` et ajoutez des décorateurs comme ci-dessous.
+
+   > **NOTE** : Les noms de méthodes peuvent être différents selon la façon dont GitHub Copilot les génère.
+
+    ```csharp
+    // 👇👇👇 Ajouter 👇👇👇
+    [McpServerToolType]
+    // 👆👆👆 Ajouter 👆👆👆
+    public class TodoTool
+    
+    ...
+    
+        // 👇👇👇 Ajouter 👇👇👇
+        [McpServerTool(Name = "add_todo_item", Title = "Add a to-do item")]
+        [Description("Adds a to-do item to database.")]
+        // 👆👆👆 Ajouter 👆👆👆
+        public async Task<TodoItem> CreateAsync(string text)
+    
+    ...
+    
+        // 👇👇👇 Ajouter 👇👇👇
+        [McpServerTool(Name = "get_todo_items", Title = "Get a list of to-do items")]
+        [Description("Gets a list of to-do items from database.")]
+        // 👆👆👆 Ajouter 👆👆👆
+        public async Task<List<TodoItem>> ListAsync()
+    
+    ...
+    
+        // 👇👇👇 Ajouter 👇👇👇
+        [McpServerTool(Name = "update_todo_item", Title = "Update a to-do item")]
+        [Description("Updates a to-do item in the database.")]
+        // 👆👆👆 Ajouter 👆👆👆
+        public async Task<TodoItem?> UpdateAsync(int id, string text)
+    
+    ...
+    
+        // 👇👇👇 Ajouter 👇👇👇
+        [McpServerTool(Name = "complete_todo_item", Title = "Complete a to-do item")]
+        [Description("Completes a to-do item in the database.")]
+        // 👆👆👆 Ajouter 👆👆👆
+        public async Task<TodoItem?> CompleteAsync(int id)
+    
+    ...
+    
+        // 👇👇👇 Ajouter 👇👇👇
+        [McpServerTool(Name = "delete_todo_item", Title = "Delete a to-do item")]
+        [Description("Deletes a to-do item from the database.")]
+        // 👆👆👆 Ajouter 👆👆👆
+        public async Task<bool> DeleteAsync(int id)
+    
+    ...
+    ```
+
+1. Dans le même `TodoTool.cs`, ajoutez des directives `using` supplémentaires :
+
+   > **NOTE** : L'espace de noms peut être différent selon la façon dont GitHub Copilot les génère.
+
+    ```csharp
+    // 👇👇👇 Ajouter 👇👇👇
+    using ModelContextProtocol.Server;
+    using System.ComponentModel;
+    // 👆👆👆 Ajouter 👆👆👆
+    
+    namespace McpTodoServer.ContainerApp.Tools;
+    ```
+
+1. Construire l'application.
+
+    ```bash
+    dotnet build
+    ```
 
 ## Exécuter le Serveur MCP
 
-1. Ouvrez un terminal et naviguez vers le répertoire de l'application.
+1. Assurez-vous d'avoir la variable d'environnement `$REPOSITORY_ROOT`.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Naviguez vers le projet d'application.
 
     ```bash
-    cd workshop/src/McpTodoServer.ContainerApp
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. Exécutez l'application.
+1. Exécutez l'application serveur MCP.
 
     ```bash
     dotnet run
     ```
 
-   Vous devriez voir une sortie similaire à celle-ci :
+1. Ouvrez la Palette de Commandes en appuyant sur `F1` ou `Ctrl`+`Shift`+`P` sur Windows ou `Cmd`+`Shift`+`P` sur Mac OS, et recherchez `MCP: Add Server...`.
+1. Choisissez `HTTP (HTTP or Server-Sent Events)`.
+1. Entrez `http://localhost:5242` comme URL du serveur.
+1. Entrez `mcp-todo-list` comme ID du serveur.
+1. Choisissez `Workspace settings` comme emplacement pour sauvegarder les paramètres MCP.
+1. Ouvrez `.vscode/mcp.json` et vérifiez que le serveur MCP a été ajouté.
 
-    ```bash
-    info: Microsoft.Hosting.Lifetime[14]
-          Now listening on: http://localhost:5242
-    info: Microsoft.Hosting.Lifetime[0]
-          Application started. Press Ctrl+C to shut down.
-    ```
+    ```jsonc
+    {
+      "servers": {
+        "context7": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ]
+        },
+        // 👇👇👇 Ajouté 👇👇👇
+        "mcp-todo-list": {
+            "url": "http://localhost:5242/mcp"
+        }
+        // 👆👆👆 Ajouté 👆👆👆
+      }
+    }
 
 ## Tester le Serveur MCP
 

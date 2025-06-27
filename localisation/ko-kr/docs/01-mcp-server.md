@@ -144,64 +144,234 @@
 
 ## API 로직 제거
 
-1. GitHub Copilot Chat을 에이전트 모드로 엽니다.
-1. 다음과 같은 프롬프트를 사용하여 API 로직을 제거합니다.
+1. `$REPOSITORY_ROOT` 환경 변수가 설정되어 있는지 확인하세요.
 
-    ```text
-    애플리케이션에서 모든 API 로직을 제거하고 싶습니다. 지침을 따르세요.
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
 
-    - context7을 사용하세요.
-    - 먼저 수행할 모든 단계를 식별하세요.
-    - 작업 디렉토리는 `workshop/src/McpTodoServer.ContainerApp`입니다.
-    - 모든 API 엔드포인트를 제거하되 모델과 도구 클래스는 유지하세요.
-    - API 로직을 제거한 후에도 애플리케이션이 빌드되는지 확인하세요.
-    ```
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
 
-1. GitHub Copilot의 ![the keep button image](https://img.shields.io/badge/keep-blue) 버튼을 클릭하여 변경 사항을 적용합니다.
-
-## MCP 서버로 변환
-
-1. GitHub Copilot Chat을 에이전트 모드로 엽니다.
-1. 다음과 같은 프롬프트를 사용하여 애플리케이션을 MCP 서버로 변환합니다.
-
-    ```text
-    이 애플리케이션을 MCP 서버로 변환하고 싶습니다. 지침을 따르세요.
-
-    - context7을 사용하세요.
-    - 먼저 수행할 모든 단계를 식별하세요.
-    - 작업 디렉토리는 `workshop/src/McpTodoServer.ContainerApp`입니다.
-    - MCP에 필요한 NuGet 패키지를 추가하세요.
-    - 할 일 목록 관리 요청을 처리할 수 있는 MCP 서버를 구현하세요.
-    - 메서드에는 작업 목록, 작업 생성, 작업 업데이트, 작업 완료, 작업 삭제가 포함되어야 합니다.
-    - 변환 후 애플리케이션이 빌드되는지 확인하세요.
-    ```
-
-1. GitHub Copilot의 ![the keep button image](https://img.shields.io/badge/keep-blue) 버튼을 클릭하여 변경 사항을 적용합니다.
-
-## MCP 서버 실행
-
-1. 터미널을 열고 애플리케이션 디렉토리로 이동합니다.
+1. 애플리케이션 프로젝트로 이동합니다.
 
     ```bash
-    cd workshop/src/McpTodoServer.ContainerApp
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. 애플리케이션을 실행합니다.
+1. `Program.cs`를 열고 다음을 모두 제거합니다:
+
+   ```csharp
+   // 👇👇👇 제거 👇👇👇
+   // Add services to the container.
+   // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+   builder.Services.AddOpenApi();
+   // 👆👆👆 제거 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 제거 👇👇👇
+   // Configure the HTTP request pipeline.
+   if (app.Environment.IsDevelopment())
+   {
+       app.MapOpenApi();
+   }
+   // 👆👆👆 제거 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 제거 👇👇👇
+   var summaries = new[]
+   {
+       "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+   };
+   // 👆👆👆 제거 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 제거 👇👇👇
+   app.MapGet("/weatherforecast", () =>
+   {
+       var forecast =  Enumerable.Range(1, 5).Select(index =>
+           new WeatherForecast
+           (
+               DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+               Random.Shared.Next(-20, 55),
+               summaries[Random.Shared.Next(summaries.Length)]
+           ))
+           .ToArray();
+       return forecast;
+   })
+   .WithName("GetWeatherForecast");
+   // 👆👆👆 제거 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 제거 👇👇👇
+   record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+   {
+       public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+   }
+   // 👆👆👆 제거 👆👆👆
+   ```
+
+1. NuGet 패키지를 제거합니다.
+
+    ```bash
+    dotnet remove package Microsoft.AspNetCore.OpenApi
+    ```## MCP 서버로 변환
+
+1. MCP 서버용 NuGet 패키지를 추가합니다.
+
+    ```bash
+    dotnet add package ModelContextProtocol.AspNetCore --prerelease
+    ```
+
+1. `Program.cs`를 열고 `var app = builder.Build();`를 찾아 해당 라인 바로 위에 다음 코드 스니펫을 추가합니다:
+
+    ```csharp
+    // 👇👇👇 추가 👇👇👇
+    builder.Services.AddMcpServer()
+                    .WithHttpTransport(o => o.Stateless = true)
+                    .WithToolsFromAssembly();
+    // 👆👆👆 추가 👆👆👆
+    
+    var app = builder.Build();
+    ```
+
+1. 같은 `Program.cs`에서 `app.Run();`를 찾아 해당 라인 바로 위에 다음 코드 스니펫을 추가합니다:
+
+    ```csharp
+    // 👇👇👇 추가 👇👇👇
+    app.MapMcp("/mcp");
+    // 👆👆👆 추가 👆👆👆
+    
+    app.Run();
+    ```
+
+1. `TodoTool.cs`를 열고 아래와 같이 데코레이터를 추가합니다.
+
+   > **참고**: GitHub Copilot이 생성하는 방식에 따라 메서드 이름이 다를 수 있습니다.
+
+    ```csharp
+    // 👇👇👇 추가 👇👇👇
+    [McpServerToolType]
+    // 👆👆👆 추가 👆👆👆
+    public class TodoTool
+    
+    ...
+    
+        // 👇👇👇 추가 👇👇👇
+        [McpServerTool(Name = "add_todo_item", Title = "Add a to-do item")]
+        [Description("Adds a to-do item to database.")]
+        // 👆👆👆 추가 👆👆👆
+        public async Task<TodoItem> CreateAsync(string text)
+    
+    ...
+    
+        // 👇👇👇 추가 👇👇👇
+        [McpServerTool(Name = "get_todo_items", Title = "Get a list of to-do items")]
+        [Description("Gets a list of to-do items from database.")]
+        // 👆👆👆 추가 👆👆👆
+        public async Task<List<TodoItem>> ListAsync()
+    
+    ...
+    
+        // 👇👇👇 추가 👇👇👇
+        [McpServerTool(Name = "update_todo_item", Title = "Update a to-do item")]
+        [Description("Updates a to-do item in the database.")]
+        // 👆👆👆 추가 👆👆👆
+        public async Task<TodoItem?> UpdateAsync(int id, string text)
+    
+    ...
+    
+        // 👇👇👇 추가 👇👇👇
+        [McpServerTool(Name = "complete_todo_item", Title = "Complete a to-do item")]
+        [Description("Completes a to-do item in the database.")]
+        // 👆👆👆 추가 👆👆👆
+        public async Task<TodoItem?> CompleteAsync(int id)
+    
+    ...
+    
+        // 👇👇👇 추가 👇👇👇
+        [McpServerTool(Name = "delete_todo_item", Title = "Delete a to-do item")]
+        [Description("Deletes a to-do item from the database.")]
+        // 👆👆👆 추가 👆👆👆
+        public async Task<bool> DeleteAsync(int id)
+    
+    ...
+    ```
+
+1. 같은 `TodoTool.cs`에서 추가 `using` 지시문을 추가합니다:
+
+   > **참고**: GitHub Copilot이 생성하는 방식에 따라 네임스페이스가 다를 수 있습니다.
+
+    ```csharp
+    // 👇👇👇 추가 👇👇👇
+    using ModelContextProtocol.Server;
+    using System.ComponentModel;
+    // 👆👆👆 추가 👆👆👆
+    
+    namespace McpTodoServer.ContainerApp.Tools;
+    ```
+
+1. 애플리케이션을 빌드합니다.
+
+    ```bash
+    dotnet build
+    ```## MCP 서버 실행
+
+1. `$REPOSITORY_ROOT` 환경 변수가 설정되어 있는지 확인하세요.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. 애플리케이션 프로젝트로 이동합니다.
+
+    ```bash
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
+    ```
+
+1. MCP 서버 애플리케이션을 실행합니다.
 
     ```bash
     dotnet run
     ```
 
-   다음과 같은 출력이 표시되어야 합니다:
+1. `F1`을 누르거나 Windows에서 `Ctrl`+`Shift`+`P`, Mac OS에서 `Cmd`+`Shift`+`P`를 눌러 명령 팔레트를 열고 `MCP: Add Server...`를 검색합니다.
+1. `HTTP (HTTP or Server-Sent Events)`를 선택합니다.
+1. 서버 URL로 `http://localhost:5242`를 입력합니다.
+1. 서버 ID로 `mcp-todo-list`를 입력합니다.
+1. MCP 설정을 저장할 위치로 `Workspace settings`를 선택합니다.
+1. `.vscode/mcp.json`을 열어 MCP 서버가 추가되었는지 확인합니다.
 
-    ```bash
-    info: Microsoft.Hosting.Lifetime[14]
-          Now listening on: http://localhost:5242
-    info: Microsoft.Hosting.Lifetime[0]
-          Application started. Press Ctrl+C to shut down.
-    ```
-
-## MCP 서버 테스트
+    ```jsonc
+    {
+      "servers": {
+        "context7": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ]
+        },
+        // 👇👇👇 추가됨 👇👇👇
+        "mcp-todo-list": {
+            "url": "http://localhost:5242/mcp"
+        }
+        // 👆👆👆 추가됨 👆👆👆
+      }
+    }## MCP 서버 테스트
 
 1. GitHub Copilot Chat을 에이전트 모드로 엽니다.
 1. 다음 프롬프트 중 하나를 입력합니다:
