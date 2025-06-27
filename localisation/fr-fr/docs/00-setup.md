@@ -64,9 +64,27 @@ Référez-vous au document [README](../README.md#prerequisites) pour la prépara
 
 ### Installer PowerShell 👉 Pour les Utilisateurs Windows
 
-Si vous utilisez Windows, vous devez installer PowerShell. Si vous avez déjà PowerShell installé, vous pouvez ignorer cette étape.
+1. Vérifiez si vous avez déjà installé PowerShell.
 
-1. Allez sur le [site officiel de PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell) et installez la dernière version.
+    ```bash
+    # Bash/Zsh
+    which pwsh
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command pwsh
+    ```
+
+   Si vous ne voyez pas le chemin de la commande `pwsh`, cela signifie que vous n'avez pas encore installé PowerShell. Visitez la [page d'installation de PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) et suivez les instructions.
+
+1. Vérifiez la version de votre PowerShell.
+
+    ```bash
+    pwsh --version
+    ```
+
+   La version `7.5.0` ou supérieure est recommandée. Si votre version est inférieure, visitez la [page d'installation de PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) et suivez les instructions.
 
 ### Installer git CLI
 

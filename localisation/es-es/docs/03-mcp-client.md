@@ -15,7 +15,3 @@ Esta sección te guiará a través de la creación de una aplicación web Blazor
 ---
 
 ¡Felicitaciones! 🎉 ¡Has completado todas las sesiones del taller exitosamente!
-
----
-
-Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../../../issues).
