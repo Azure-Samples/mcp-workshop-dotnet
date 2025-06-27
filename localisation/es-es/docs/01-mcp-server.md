@@ -142,62 +142,238 @@ En el directorio `start`, ya hay una aplicación ASP.NET Core Minimal API estruc
 
 ## Remover Lógica de API
 
-1. Abre GitHub Copilot Chat como Modo Agente.
-1. Usa el prompt como el siguiente para remover la lógica de API.
+1. Asegúrate de tener la variable de entorno `$REPOSITORY_ROOT`.
 
-    ```text
-    Me gustaría remover toda la lógica de API de la aplicación. Sigue las instrucciones.
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
 
-    - Usa context7.
-    - Identifica todos los pasos primero, que vas a hacer.
-    - Tu directorio de trabajo es `workshop/src/McpTodoServer.ContainerApp`.
-    - Remueve todos los endpoints de API pero mantén los modelos y clases de herramientas.
-    - Asegúrate de que la aplicación aún se construya después de remover la lógica de API.
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Navega al proyecto de la aplicación.
+
+    ```bash
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. Haz clic en el botón ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot para tomar los cambios.
+1. Abre `Program.cs` y remueve todo lo siguiente:
+
+   ```csharp
+   // 👇👇👇 Remover 👇👇👇
+   // Add services to the container.
+   // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+   builder.Services.AddOpenApi();
+   // 👆👆👆 Remover 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Remover 👇👇👇
+   // Configure the HTTP request pipeline.
+   if (app.Environment.IsDevelopment())
+   {
+       app.MapOpenApi();
+   }
+   // 👆👆👆 Remover 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Remover 👇👇👇
+   var summaries = new[]
+   {
+       "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+   };
+   // 👆👆👆 Remover 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Remover 👇👇👇
+   app.MapGet("/weatherforecast", () =>
+   {
+       var forecast =  Enumerable.Range(1, 5).Select(index =>
+           new WeatherForecast
+           (
+               DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+               Random.Shared.Next(-20, 55),
+               summaries[Random.Shared.Next(summaries.Length)]
+           ))
+           .ToArray();
+       return forecast;
+   })
+   .WithName("GetWeatherForecast");
+   // 👆👆👆 Remover 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Remover 👇👇👇
+   record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+   {
+       public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+   }
+   // 👆👆👆 Remover 👆👆👆
+   ```
+
+1. Remover el paquete NuGet.
+
+    ```bash
+    dotnet remove package Microsoft.AspNetCore.OpenApi
+    ```
 
 ## Convertir a Servidor MCP
 
-1. Abre GitHub Copilot Chat como Modo Agente.
-1. Usa el prompt como el siguiente para convertir la aplicación a un servidor MCP.
+1. Agregar paquete NuGet para el servidor MCP.
 
-    ```text
-    Me gustaría convertir esta aplicación a un servidor MCP. Sigue las instrucciones.
-
-    - Usa context7.
-    - Identifica todos los pasos primero, que vas a hacer.
-    - Tu directorio de trabajo es `workshop/src/McpTodoServer.ContainerApp`.
-    - Agrega los paquetes NuGet necesarios para MCP.
-    - Implementa el servidor MCP que puede manejar solicitudes de gestión de lista de tareas.
-    - Los métodos deben incluir: listar tareas, crear tarea, actualizar tarea, completar tarea y eliminar tarea.
-    - Asegúrate de que la aplicación se construya después de la conversión.
+    ```bash
+    dotnet add package ModelContextProtocol.AspNetCore --prerelease
     ```
 
-1. Haz clic en el botón ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot para tomar los cambios.
+1. Abre `Program.cs`, busca `var app = builder.Build();` y agrega el siguiente fragmento de código justo encima de la línea:
+
+    ```csharp
+    // 👇👇👇 Agregar 👇👇👇
+    builder.Services.AddMcpServer()
+                    .WithHttpTransport(o => o.Stateless = true)
+                    .WithToolsFromAssembly();
+    // 👆👆👆 Agregar 👆👆👆
+    
+    var app = builder.Build();
+    ```
+
+1. En el mismo `Program.cs`, busca `app.Run();` y agrega el siguiente fragmento de código justo encima de la línea:
+
+    ```csharp
+    // 👇👇👇 Agregar 👇👇👇
+    app.MapMcp("/mcp");
+    // 👆👆👆 Agregar 👆👆👆
+    
+    app.Run();
+    ```
+
+1. Abre `TodoTool.cs` y agrega decoradores como se muestra a continuación.
+
+   > **NOTA**: Los nombres de los métodos pueden ser diferentes dependiendo de cómo los genere GitHub Copilot.
+
+    ```csharp
+    // 👇👇👇 Agregar 👇👇👇
+    [McpServerToolType]
+    // 👆👆👆 Agregar 👆👆👆
+    public class TodoTool
+    
+    ...
+    
+        // 👇👇👇 Agregar 👇👇👇
+        [McpServerTool(Name = "add_todo_item", Title = "Add a to-do item")]
+        [Description("Adds a to-do item to database.")]
+        // 👆👆👆 Agregar 👆👆👆
+        public async Task<TodoItem> CreateAsync(string text)
+    
+    ...
+    
+        // 👇👇👇 Agregar 👇👇👇
+        [McpServerTool(Name = "get_todo_items", Title = "Get a list of to-do items")]
+        [Description("Gets a list of to-do items from database.")]
+        // 👆👆👆 Agregar 👆👆👆
+        public async Task<List<TodoItem>> ListAsync()
+    
+    ...
+    
+        // 👇👇👇 Agregar 👇👇👇
+        [McpServerTool(Name = "update_todo_item", Title = "Update a to-do item")]
+        [Description("Updates a to-do item in the database.")]
+        // 👆👆👆 Agregar 👆👆👆
+        public async Task<TodoItem?> UpdateAsync(int id, string text)
+    
+    ...
+    
+        // 👇👇👇 Agregar 👇👇👇
+        [McpServerTool(Name = "complete_todo_item", Title = "Complete a to-do item")]
+        [Description("Completes a to-do item in the database.")]
+        // 👆👆👆 Agregar 👆👆👆
+        public async Task<TodoItem?> CompleteAsync(int id)
+    
+    ...
+    
+        // 👇👇👇 Agregar 👇👇👇
+        [McpServerTool(Name = "delete_todo_item", Title = "Delete a to-do item")]
+        [Description("Deletes a to-do item from the database.")]
+        // 👆👆👆 Agregar 👆👆👆
+        public async Task<bool> DeleteAsync(int id)
+    
+    ...
+    ```
+
+1. En el mismo `TodoTool.cs`, agrega directivas `using` adicionales:
+
+   > **NOTA**: El espacio de nombres puede ser diferente dependiendo de cómo los genere GitHub Copilot.
+
+    ```csharp
+    // 👇👇👇 Agregar 👇👇👇
+    using ModelContextProtocol.Server;
+    using System.ComponentModel;
+    // 👆👆👆 Agregar 👆👆👆
+    
+    namespace McpTodoServer.ContainerApp.Tools;
+    ```
+
+1. Construir la aplicación.
+
+    ```bash
+    dotnet build
+    ```
 
 ## Ejecutar Servidor MCP
 
-1. Abre un terminal y navega al directorio de la aplicación.
+1. Asegúrate de tener la variable de entorno `$REPOSITORY_ROOT`.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Navega al proyecto de la aplicación.
 
     ```bash
-    cd workshop/src/McpTodoServer.ContainerApp
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. Ejecuta la aplicación.
+1. Ejecuta la aplicación del servidor MCP.
 
     ```bash
     dotnet run
     ```
 
-   Deberías ver una salida similar a la siguiente:
+1. Abre la Paleta de Comandos presionando `F1` o `Ctrl`+`Shift`+`P` en Windows o `Cmd`+`Shift`+`P` en Mac OS, y busca `MCP: Add Server...`.
+1. Elige `HTTP (HTTP or Server-Sent Events)`.
+1. Ingresa `http://localhost:5242` como la URL del servidor.
+1. Ingresa `mcp-todo-list` como ID del servidor.
+1. Elige `Workspace settings` como la ubicación para guardar la configuración de MCP.
+1. Abre `.vscode/mcp.json` y verifica que el servidor MCP fue agregado.
 
-    ```bash
-    info: Microsoft.Hosting.Lifetime[14]
-          Now listening on: http://localhost:5242
-    info: Microsoft.Hosting.Lifetime[0]
-          Application started. Press Ctrl+C to shut down.
-    ```
+    ```jsonc
+    {
+      "servers": {
+        "context7": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ]
+        },
+        // 👇👇👇 Agregado 👇👇👇
+        "mcp-todo-list": {
+            "url": "http://localhost:5242/mcp"
+        }
+        // 👆👆👆 Agregado 👆👆👆
+      }
+    }
 
 ## Probar Servidor MCP
 

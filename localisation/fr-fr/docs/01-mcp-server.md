@@ -144,20 +144,85 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 
 ## Supprimer la Logique API
 
-1. Ouvrez GitHub Copilot Chat en Mode Agent.
-1. Utilisez le prompt suivant pour supprimer la logique API.
+1. Assurez-vous d'avoir la variable d'environnement `$REPOSITORY_ROOT`.
 
-    ```text
-    J'aimerais supprimer toute la logique API de l'application. Suivez les instructions.
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
 
-    - Utilisez context7.
-    - Identifiez d'abord toutes les étapes que vous allez faire.
-    - Votre répertoire de travail est `workshop/src/McpTodoServer.ContainerApp`.
-    - Supprimez tous les endpoints API mais gardez les modèles et classes d'outils.
-    - Assurez-vous que l'application se construit toujours après avoir supprimé la logique API.
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Naviguez vers le projet d'application.
+
+    ```bash
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
+1. Ouvrez `Program.cs` et supprimez tout ce qui suit :
+
+   ```csharp
+   // 👇👇👇 Supprimer 👇👇👇
+   // Add services to the container.
+   // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+   builder.Services.AddOpenApi();
+   // 👆👆👆 Supprimer 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Supprimer 👇👇👇
+   // Configure the HTTP request pipeline.
+   if (app.Environment.IsDevelopment())
+   {
+       app.MapOpenApi();
+   }
+   // 👆👆👆 Supprimer 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Supprimer 👇👇👇
+   var summaries = new[]
+   {
+       "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+   };
+   // 👆👆👆 Supprimer 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Supprimer 👇👇👇
+   app.MapGet("/weatherforecast", () =>
+   {
+       var forecast =  Enumerable.Range(1, 5).Select(index =>
+           new WeatherForecast
+           (
+               DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+               Random.Shared.Next(-20, 55),
+               summaries[Random.Shared.Next(summaries.Length)]
+           ))
+           .ToArray();
+       return forecast;
+   })
+   .WithName("GetWeatherForecast");
+   // 👆👆👆 Supprimer 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 Supprimer 👇👇👇
+   record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+   {
+       public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+   }
+   // 👆👆👆 Supprimer 👆👆👆
+   ```
+
+1. Supprimer le paquet NuGet.
+
+    ```bash
+    dotnet remove package Microsoft.AspNetCore.OpenApi
+    ```
 
 ## Convertir en Serveur MCP
 

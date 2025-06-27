@@ -144,62 +144,238 @@
 
 ## 删除 API 逻辑
 
-1. 以代理模式打开 GitHub Copilot Chat。
-1. 使用如下提示来删除 API 逻辑。
+1. 确保您已设置 `$REPOSITORY_ROOT` 环境变量。
 
-    ```text
-    我想从应用程序中删除所有 API 逻辑。按照指示操作。
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
 
-    - 使用 context7。
-    - 首先识别您要执行的所有步骤。
-    - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
-    - 删除所有 API 端点但保留模型和工具类。
-    - 确保在删除 API 逻辑后应用程序仍能构建。
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. 导航到应用程序项目。
+
+    ```bash
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
+1. 打开 `Program.cs` 并删除以下所有内容：
+
+   ```csharp
+   // 👇👇👇 删除 👇👇👇
+   // Add services to the container.
+   // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+   builder.Services.AddOpenApi();
+   // 👆👆👆 删除 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 删除 👇👇👇
+   // Configure the HTTP request pipeline.
+   if (app.Environment.IsDevelopment())
+   {
+       app.MapOpenApi();
+   }
+   // 👆👆👆 删除 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 删除 👇👇👇
+   var summaries = new[]
+   {
+       "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+   };
+   // 👆👆👆 删除 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 删除 👇👇👇
+   app.MapGet("/weatherforecast", () =>
+   {
+       var forecast =  Enumerable.Range(1, 5).Select(index =>
+           new WeatherForecast
+           (
+               DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+               Random.Shared.Next(-20, 55),
+               summaries[Random.Shared.Next(summaries.Length)]
+           ))
+           .ToArray();
+       return forecast;
+   })
+   .WithName("GetWeatherForecast");
+   // 👆👆👆 删除 👆👆👆
+   ```
+
+   ```csharp
+   // 👇👇👇 删除 👇👇👇
+   record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+   {
+       public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+   }
+   // 👆👆👆 删除 👆👆👆
+   ```
+
+1. 移除 NuGet 包。
+
+    ```bash
+    dotnet remove package Microsoft.AspNetCore.OpenApi
+    ```
 
 ## 转换为 MCP 服务器
 
-1. 以代理模式打开 GitHub Copilot Chat。
-1. 使用如下提示将应用程序转换为 MCP 服务器。
+1. 为 MCP 服务器添加 NuGet 包。
 
-    ```text
-    我想将此应用程序转换为 MCP 服务器。按照指示操作。
-
-    - 使用 context7。
-    - 首先识别您要执行的所有步骤。
-    - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
-    - 添加 MCP 所需的 NuGet 包。
-    - 实现可以处理待办事项列表管理请求的 MCP 服务器。
-    - 方法应包括：列出任务、创建任务、更新任务、完成任务和删除任务。
-    - 确保转换后应用程序能够构建。
+    ```bash
+    dotnet add package ModelContextProtocol.AspNetCore --prerelease
     ```
 
-1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
+1. 打开 `Program.cs`，找到 `var app = builder.Build();` 并在该行之前添加以下代码段：
+
+    ```csharp
+    // 👇👇👇 添加 👇👇👇
+    builder.Services.AddMcpServer()
+                    .WithHttpTransport(o => o.Stateless = true)
+                    .WithToolsFromAssembly();
+    // 👆👆👆 添加 👆👆👆
+    
+    var app = builder.Build();
+    ```
+
+1. 在同一个 `Program.cs` 中，找到 `app.Run();` 并在该行之前添加以下代码段：
+
+    ```csharp
+    // 👇👇👇 添加 👇👇👇
+    app.MapMcp("/mcp");
+    // 👆👆👆 添加 👆👆👆
+    
+    app.Run();
+    ```
+
+1. 打开 `TodoTool.cs` 并添加如下装饰器。
+
+   > **注意**：方法名称可能因 GitHub Copilot 生成方式而异。
+
+    ```csharp
+    // 👇👇👇 添加 👇👇👇
+    [McpServerToolType]
+    // 👆👆👆 添加 👆👆👆
+    public class TodoTool
+    
+    ...
+    
+        // 👇👇👇 添加 👇👇👇
+        [McpServerTool(Name = "add_todo_item", Title = "Add a to-do item")]
+        [Description("Adds a to-do item to database.")]
+        // 👆👆👆 添加 👆👆👆
+        public async Task<TodoItem> CreateAsync(string text)
+    
+    ...
+    
+        // 👇👇👇 添加 👇👇👇
+        [McpServerTool(Name = "get_todo_items", Title = "Get a list of to-do items")]
+        [Description("Gets a list of to-do items from database.")]
+        // 👆👆👆 添加 👆👆👆
+        public async Task<List<TodoItem>> ListAsync()
+    
+    ...
+    
+        // 👇👇👇 添加 👇👇👇
+        [McpServerTool(Name = "update_todo_item", Title = "Update a to-do item")]
+        [Description("Updates a to-do item in the database.")]
+        // 👆👆👆 添加 👆👆👆
+        public async Task<TodoItem?> UpdateAsync(int id, string text)
+    
+    ...
+    
+        // 👇👇👇 添加 👇👇👇
+        [McpServerTool(Name = "complete_todo_item", Title = "Complete a to-do item")]
+        [Description("Completes a to-do item in the database.")]
+        // 👆👆👆 添加 👆👆👆
+        public async Task<TodoItem?> CompleteAsync(int id)
+    
+    ...
+    
+        // 👇👇👇 添加 👇👇👇
+        [McpServerTool(Name = "delete_todo_item", Title = "Delete a to-do item")]
+        [Description("Deletes a to-do item from the database.")]
+        // 👆👆👆 添加 👆👆👆
+        public async Task<bool> DeleteAsync(int id)
+    
+    ...
+    ```
+
+1. 在同一个 `TodoTool.cs` 中，添加额外的 `using` 指令：
+
+   > **注意**：命名空间可能因 GitHub Copilot 生成方式而异。
+
+    ```csharp
+    // 👇👇👇 添加 👇👇👇
+    using ModelContextProtocol.Server;
+    using System.ComponentModel;
+    // 👆👆👆 添加 👆👆👆
+    
+    namespace McpTodoServer.ContainerApp.Tools;
+    ```
+
+1. 构建应用程序。
+
+    ```bash
+    dotnet build
+    ```
 
 ## 运行 MCP 服务器
 
-1. 打开终端并导航到应用程序目录。
+1. 确保您已设置 `$REPOSITORY_ROOT` 环境变量。
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. 导航到应用程序项目。
 
     ```bash
-    cd workshop/src/McpTodoServer.ContainerApp
+    cd $REPOSITORY_ROOT/workshop/src/McpTodoServer.ContainerApp
     ```
 
-1. 运行应用程序。
+1. 运行 MCP 服务器应用程序。
 
     ```bash
     dotnet run
     ```
 
-   您应该看到类似以下的输出：
+1. 按 `F1` 或在 Windows 上按 `Ctrl`+`Shift`+`P`，在 Mac OS 上按 `Cmd`+`Shift`+`P` 打开命令面板，然后搜索 `MCP: Add Server...`。
+1. 选择 `HTTP (HTTP or Server-Sent Events)`。
+1. 输入 `http://localhost:5242` 作为服务器 URL。
+1. 输入 `mcp-todo-list` 作为服务器 ID。
+1. 选择 `Workspace settings` 作为保存 MCP 设置的位置。
+1. 打开 `.vscode/mcp.json` 查看已添加的 MCP 服务器。
 
-    ```bash
-    info: Microsoft.Hosting.Lifetime[14]
-          Now listening on: http://localhost:5242
-    info: Microsoft.Hosting.Lifetime[0]
-          Application started. Press Ctrl+C to shut down.
-    ```
+    ```jsonc
+    {
+      "servers": {
+        "context7": {
+          "command": "npx",
+          "args": [
+            "-y",
+            "@upstash/context7-mcp"
+          ]
+        },
+        // 👇👇👇 已添加 👇👇👇
+        "mcp-todo-list": {
+            "url": "http://localhost:5242/mcp"
+        }
+        // 👆👆👆 已添加 👆👆👆
+      }
+    }
 
 ## 测试 MCP 服务器
 
