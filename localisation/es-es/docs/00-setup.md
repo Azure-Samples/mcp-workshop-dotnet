@@ -64,71 +64,218 @@ Consulta el documento [README](../README.md#prerequisites) para la preparación.
 
 ### Instalar PowerShell 👉 Para Usuarios de Windows
 
-Si estás usando Windows, necesitas instalar PowerShell. Si ya tienes PowerShell instalado, puedes omitir este paso.
+1. Verifica si ya tienes PowerShell instalado.
 
-1. Ve al [sitio web oficial de PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-powershell) e instala la última versión.
+    ```bash
+    # Bash/Zsh
+    which pwsh
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command pwsh
+    ```
+
+   Si no ves la ruta del comando `pwsh`, significa que aún no has instalado PowerShell. Visita la [página de instalación de PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) y sigue las instrucciones.
+
+1. Verifica la versión de tu PowerShell.
+
+    ```bash
+    pwsh --version
+    ```
+
+   Se recomienda la versión `7.5.0` o superior. Si tu versión es inferior, visita la [página de instalación de PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) y sigue las instrucciones.
 
 ### Instalar git CLI
 
-Si ya tienes git CLI instalado, puedes omitir este paso.
+1. Verifica si ya tienes git CLI instalado.
 
-1. Ve al [sitio web oficial de git](https://git-scm.com/downloads) e instala la última versión.
+    ```bash
+    # Bash/Zsh
+    which git
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command git
+    ```
+
+   Si no ves la ruta del comando `git`, significa que aún no has instalado git CLI. Visita la [página de instalación de git CLI](https://git-scm.com/downloads) y sigue las instrucciones.
+
+1. Verifica la versión de tu git CLI.
+
+    ```bash
+    git --version
+    ```
+
+   Se recomienda la versión `2.39.0` o superior. Si tu versión es inferior, visita la [página de instalación de git CLI](https://git-scm.com/downloads) y sigue las instrucciones.
 
 ### Instalar GitHub CLI
 
-Si ya tienes GitHub CLI instalado, puedes omitir este paso.
+1. Verifica si ya tienes GitHub CLI instalado.
 
-1. Ve al [sitio web oficial de GitHub CLI](https://cli.github.com/) e instala la última versión.
+    ```bash
+    # Bash/Zsh
+    which gh
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command gh
+    ```
+
+   Si no ves la ruta del comando `gh`, significa que aún no has instalado GitHub CLI. Visita la [página de instalación de GitHub CLI](https://cli.github.com/) y sigue las instrucciones.
+
+1. Verifica la versión de tu GitHub CLI.
+
+    ```bash
+    gh --version
+    ```
+
+   Se recomienda la versión `2.65.0` o superior. Si tu versión es inferior, visita la [página de instalación de GitHub CLI](https://cli.github.com/) y sigue las instrucciones.
+
+1. Verifica si has iniciado sesión en GitHub.
+
+    ```bash
+    gh auth status
+    ```
+
+   Si aún no has iniciado sesión, ejecuta `gh auth login` e inicia sesión.
 
 ### Instalar Docker Desktop
 
-Si ya tienes Docker Desktop instalado, puedes omitir este paso.
+1. Verifica si ya tienes Docker Desktop instalado.
 
-1. Ve al [sitio web oficial de Docker Desktop](https://docs.docker.com/get-started/get-docker/) e instala la última versión.
+    ```bash
+    # Bash/Zsh
+    which docker
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command docker
+    ```
+
+   Si no ves la ruta del comando `docker`, significa que aún no has instalado Docker Desktop. Visita la [página de instalación de Docker Desktop](https://docs.docker.com/get-started/introduction/get-docker-desktop/) y sigue las instrucciones.
+
+1. Verifica la versión de tu Docker CLI.
+
+    ```bash
+    docker --version
+    ```
+
+   Se recomienda la versión `28.0.4` o superior. Si tu versión es inferior, visita la [página de instalación de Docker Desktop](https://docs.docker.com/get-started/introduction/get-docker-desktop/) y sigue las instrucciones.
 
 ### Instalar Visual Studio Code
 
-Si ya tienes Visual Studio Code instalado, puedes omitir este paso.
+1. Verifica si ya tienes VS Code instalado.
 
-1. Ve al [sitio web oficial de Visual Studio Code](https://code.visualstudio.com/) e instala la última versión.
+    ```bash
+    # Bash/Zsh
+    which code
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command code
+    ```
+
+   Si no ves la ruta del comando `code`, significa que aún no has instalado VS Code. Visita la [página de instalación de Visual Studio Code](https://code.visualstudio.com/) y sigue las instrucciones.
+
+1. Verifica la versión de tu VS Code.
+
+    ```bash
+    code --version
+    ```
+
+   Se recomienda la versión `1.99.0` o superior. Si tu versión es inferior, visita la [página de instalación de Visual Studio Code](https://code.visualstudio.com/) y sigue las instrucciones.
+
+   > **NOTA**: Es posible que no puedas ejecutar el comando `code`. En este caso, sigue [este documento](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) para la configuración.
 
 ### Iniciar Visual Studio Code
 
-1. Abre una terminal y ejecuta el siguiente comando para clonar este repositorio:
+1. Crea un directorio de trabajo.
+1. Ejecuta el comando para hacer fork de este repositorio y clonarlo en tu máquina local.
 
     ```bash
-    git clone https://github.com/Azure-Samples/mcp-workshop-dotnet.git
+    gh repo fork Azure-Samples/mcp-workshop-dotnet --clone
     ```
 
-1. Navega al directorio del repositorio:
+1. Navega al directorio clonado.
 
     ```bash
     cd mcp-workshop-dotnet
     ```
 
-1. Abre Visual Studio Code:
+1. Ejecuta VS Code desde la terminal.
 
     ```bash
     code .
     ```
 
-## Configurar Servidores MCP
-
-En esta sección, estás configurando los servidores MCP para el taller.
-
-1. Instala las extensiones necesarias de Visual Studio Code. Abre Visual Studio Code y ve a la vista de Extensiones (`Ctrl+Shift+X` o `Cmd+Shift+X`).
-
-1. Busca e instala las siguientes extensiones:
-   - **C# Dev Kit** - Para desarrollo .NET
-   - **GitHub Copilot** - Para asistencia de IA
-
-1. Una vez instaladas, reinicia Visual Studio Code.
-
-1. Instala los paquetes npm necesarios ejecutando el siguiente comando en la terminal:
+1. Abre una nueva terminal dentro de VS Code y ejecuta el siguiente comando para verificar el estado de tu repositorio.
 
     ```bash
-    npm install -g @modelcontextprotocol/inspector
+    git remote -v
     ```
+
+   Deberías ver la siguiente salida. Si ves `Azure-Samples` en el `origin`, deberías clonarlo nuevamente desde tu repositorio forkeado.
+
+    ```bash
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (fetch)
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (push)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet.git (fetch)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet.git (push)
+    ```
+
+1. Verifica si ambas extensiones han sido instaladas: [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) y [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat).
+
+    ```bash
+    # Bash/Zsh
+    code --list-extensions | grep github.copilot
+    ```
+
+    ```powershell
+    # PowerShell
+    code --list-extensions | Select-String "github.copilot"
+    ```
+
+   Si no ves nada, significa que aún no has instalado esas extensiones. Ejecuta el siguiente comando para instalar las extensiones.
+
+    ```bash
+    code --install-extension "github.copilot" --force && code --install-extension "github.copilot-chat" --force
+    ```
+
+## Configurar Servidores MCP
+
+1. Establece la variable de entorno `$REPOSITORY_ROOT`.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Copia la configuración del servidor MCP.
+
+    ```bash
+    # bash/zsh
+    cp -r $REPOSITORY_ROOT/docs/.vscode/. \
+          $REPOSITORY_ROOT/.vscode/
+    ```
+
+    ```powershell
+    # PowerShell
+    Copy-Item -Path $REPOSITORY_ROOT/docs/.vscode/* `
+              -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
+    ```
+
+1. Abre la Paleta de Comandos presionando `F1` o `Ctrl`+`Shift`+`P` en Windows o `Cmd`+`Shift`+`P` en Mac OS, y busca `MCP: List Servers`.
+1. Elige `context7` y luego haz clic en `Start Server`.
 
 ## Verificar Modo Agente de GitHub Copilot
 
