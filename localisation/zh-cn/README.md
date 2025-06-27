@@ -19,28 +19,43 @@
 ## 先决条件
 
 - [Azure 订阅](https://azure.microsoft.com/free)
+
+在此工作坊期间，强烈推荐使用 [GitHub Codespaces](https://docs.github.com/codespaces/about-codespaces/what-are-codespaces)，因为除了网络浏览器外，无需任何准备工作。
+
+[![在 GitHub Codespaces 中打开](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/mcp-workshop-dotnet)
+
+但是，如果您确实需要使用自己的机器，请确保已安装下面标识的所有内容。
+
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Visual Studio](https://visualstudio.microsoft.com/vs) 或带有 [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 的 [Visual Studio Code](https://code.visualstudio.com)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 扩展
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
-- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 或更高版本
+- 💥 Windows 用户 👉 [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 或更高版本
 - [Docker Desktop](https://docs.docker.com/desktop/)
 
-## 开始使用
+## 工作坊说明
 
-按照工作坊文档中的分步说明操作：
+这是一个自定进度的工作坊。请按照工作坊文档中的分步说明进行操作：
 
-1. [开发环境设置](./docs/00-setup.md) - 设置您的开发环境
-1. [MCP 服务器开发](./docs/01-mcp-server.md) - 在本地构建您的 MCP 服务器
-1. [MCP 远程服务器部署](./docs/02-mcp-remote-server.md) - 将您的服务器部署到 Azure
-1. [MCP 客户端开发](./docs/03-mcp-client.md) - 创建客户端应用程序
+| 步骤                              | 链接                                                      |
+|-----------------------------------|-----------------------------------------------------------|
+| 00: 开发环境设置 | [00-setup.md](./docs/00-setup.md)                         |
+| 01: MCP 服务器开发        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
+| 02: MCP 远程服务器部署  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
+| 03: MCP 客户端开发        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
 
-## 资源
+## 完整示例
 
-- [模型上下文协议文档](https://modelcontextprotocol.io/)
-- [Azure Container Apps 文档](https://learn.microsoft.com/azure/container-apps/)
-- [.NET 9 文档](https://learn.microsoft.com/dotnet/)
+如果您在按照上述说明操作时遇到困难，可以在这里找到完整的示例 👉 [complete](./complete/)
+
+## 了解更多...
+
+- [MCP 官方文档](https://modelcontextprotocol.io/)
+- [MCP C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- [MCP C# 示例](https://github.com/microsoft/mcp-dotnet-samples)
+- [GitHub Copilot Vibe Coding Workshop](https://github.com/microsoft/github-copilot-vibe-coding-workshop)
 
 ---
 

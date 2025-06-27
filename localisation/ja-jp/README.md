@@ -19,28 +19,43 @@ MCPサーバーの構築に興味はありますか？MCPクライアントは�
 ## 前提条件
 
 - [Azureサブスクリプション](https://azure.microsoft.com/free)
+
+このワークショップでは、Webブラウザ以外の準備が不要なため、[GitHub Codespaces](https://docs.github.com/codespaces/about-codespaces/what-are-codespaces) を強く推奨します。
+
+[![GitHub Codespaces で開く](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/mcp-workshop-dotnet)
+
+ただし、本当にご自身のマシンを使用する必要がある場合は、以下で確認されたすべてをインストールしていることを確認してください。
+
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Visual Studio](https://visualstudio.microsoft.com/vs) または [Visual Studio Code](https://code.visualstudio.com) と [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 拡張機能
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
-- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7以降
+- 💥 Windows ユーザー向け 👉 [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7以降
 - [Docker Desktop](https://docs.docker.com/desktop/)
 
-## はじめに
+## ワークショップの手順
 
-ワークショップドキュメントのステップバイステップの手順に従ってください：
+これは自分のペースで進めるワークショップです。ワークショップドキュメントのステップバイステップの手順に従ってください：
 
-1. [開発環境セットアップ](./docs/00-setup.md) - 開発環境をセットアップする
-1. [MCPサーバー開発](./docs/01-mcp-server.md) - MCPサーバーをローカルで構築する
-1. [MCPリモートサーバーデプロイメント](./docs/02-mcp-remote-server.md) - サーバーをAzureにデプロイする
-1. [MCPクライアント開発](./docs/03-mcp-client.md) - クライアントアプリケーションを作成する
+| ステップ                              | リンク                                                      |
+|-----------------------------------|-----------------------------------------------------------|
+| 00: 開発環境セットアップ | [00-setup.md](./docs/00-setup.md)                         |
+| 01: MCPサーバー開発        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
+| 02: MCPリモートサーバーデプロイメント  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
+| 03: MCPクライアント開発        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
 
-## リソース
+## 完全なサンプル
 
-- [モデルコンテキストプロトコルドキュメント](https://modelcontextprotocol.io/)
-- [Azure Container Apps ドキュメント](https://learn.microsoft.com/azure/container-apps/)
-- [.NET 9 ドキュメント](https://learn.microsoft.com/dotnet/)
+上記の手順を実行中に行き詰まった場合は、こちらで完全な例を見つけることができます 👉 [complete](./complete/)
+
+## 詳細を読む...
+
+- [MCP公式ドキュメント](https://modelcontextprotocol.io/)
+- [MCP C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- [MCP C# サンプル](https://github.com/microsoft/mcp-dotnet-samples)
+- [GitHub Copilot Vibe Coding ワークショップ](https://github.com/microsoft/github-copilot-vibe-coding-workshop)
 
 ---
 

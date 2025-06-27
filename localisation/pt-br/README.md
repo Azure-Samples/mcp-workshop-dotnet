@@ -19,28 +19,43 @@ Este material do workshop está atualmente disponível nos seguintes idiomas:
 ## Pré-requisitos
 
 - [Assinatura do Azure](https://azure.microsoft.com/free)
+
+Durante este workshop, [GitHub Codespaces](https://docs.github.com/codespaces/about-codespaces/what-are-codespaces) é altamente recomendado porque não há necessidade de preparação, exceto um navegador web.
+
+[![Abrir no GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/mcp-workshop-dotnet)
+
+No entanto, se você realmente precisar usar sua máquina, certifique-se de ter instalado tudo identificado abaixo.
+
 - [SDK do .NET 9](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Visual Studio](https://visualstudio.microsoft.com/vs) ou [Visual Studio Code](https://code.visualstudio.com) com [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - Extensão [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
-- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 ou posterior
+- 💥 Para usuários do Windows 👉 [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 ou posterior
 - [Docker Desktop](https://docs.docker.com/desktop/)
 
-## Começando
+## Instruções do Workshop
 
-Siga as instruções passo a passo na documentação do workshop:
+Este é um workshop de ritmo próprio. Siga as instruções passo a passo na documentação do workshop:
 
-1. [Configuração do Ambiente de Desenvolvimento](./docs/00-setup.md) - Configure seu ambiente de desenvolvimento
-1. [Desenvolvimento do Servidor MCP](./docs/01-mcp-server.md) - Construa seu servidor MCP localmente
-1. [Implantação do Servidor MCP Remoto](./docs/02-mcp-remote-server.md) - Implante seu servidor no Azure
-1. [Desenvolvimento do Cliente MCP](./docs/03-mcp-client.md) - Crie uma aplicação cliente
+| Passo                              | Link                                                      |
+|-----------------------------------|-----------------------------------------------------------|
+| 00: Configuração do Ambiente de Desenvolvimento | [00-setup.md](./docs/00-setup.md)                         |
+| 01: Desenvolvimento do Servidor MCP        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
+| 02: Implantação do Servidor MCP Remoto  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
+| 03: Desenvolvimento do Cliente MCP        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
 
-## Recursos
+## Amostra Completa
 
-- [Documentação do Protocolo de Contexto de Modelo](https://modelcontextprotocol.io/)
-- [Documentação do Azure Container Apps](https://learn.microsoft.com/azure/container-apps/)
-- [Documentação do .NET 9](https://learn.microsoft.com/dotnet/)
+Se você ficar preso enquanto segue as instruções acima, pode encontrar o exemplo completo aqui 👉 [complete](./complete/)
+
+## Leia Mais...
+
+- [Documentação Oficial do MCP](https://modelcontextprotocol.io/)
+- [SDK do MCP C#](https://github.com/modelcontextprotocol/csharp-sdk)
+- [Amostras do MCP C#](https://github.com/microsoft/mcp-dotnet-samples)
+- [Workshop GitHub Copilot Vibe Coding](https://github.com/microsoft/github-copilot-vibe-coding-workshop)
 
 ---
 

@@ -19,28 +19,43 @@ MCP 서버 구축에 관심이 있으신가요? MCP 클라이언트는 어떠세
 ## 전제 조건
 
 - [Azure 구독](https://azure.microsoft.com/free)
+
+이 워크샵 동안 웹 브라우저 외에는 준비가 필요하지 않기 때문에 [GitHub Codespaces](https://docs.github.com/codespaces/about-codespaces/what-are-codespaces)를 강력히 권장합니다.
+
+[![GitHub Codespaces에서 열기](https://github.com/codespaces/badge.svg)](https://codespaces.new/Azure-Samples/mcp-workshop-dotnet)
+
+그러나 정말로 본인의 기기를 사용해야 한다면, 아래에서 확인된 모든 것이 설치되어 있는지 확인하세요.
+
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- [Visual Studio](https://visualstudio.microsoft.com/vs) 또는 [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)이 포함된 [Visual Studio Code](https://code.visualstudio.com)
+- [Visual Studio Code](https://code.visualstudio.com)
+  - [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) 확장
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/overview)
 - [Azure CLI](https://learn.microsoft.com/cli/azure/what-is-azure-cli)
 - [GitHub CLI](https://docs.github.com/github-cli/github-cli/about-github-cli)
-- [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 이상
+- 💥 Windows 사용자용 👉 [PowerShell](https://learn.microsoft.com/powershell/scripting/overview) v7 이상
 - [Docker Desktop](https://docs.docker.com/desktop/)
 
-## 시작하기
+## 워크샵 지침
 
-워크샵 문서의 단계별 지침을 따르세요:
+이것은 자율 진행 워크샵입니다. 워크샵 문서의 단계별 지침을 따르세요:
 
-1. [개발 환경 설정](./docs/00-setup.md) - 개발 환경 설정
-1. [MCP 서버 개발](./docs/01-mcp-server.md) - MCP 서버를 로컬로 구축
-1. [MCP 원격 서버 배포](./docs/02-mcp-remote-server.md) - 서버를 Azure에 배포
-1. [MCP 클라이언트 개발](./docs/03-mcp-client.md) - 클라이언트 애플리케이션 생성
+| 단계                              | 링크                                                      |
+|-----------------------------------|-----------------------------------------------------------|
+| 00: 개발 환경 설정 | [00-setup.md](./docs/00-setup.md)                         |
+| 01: MCP 서버 개발        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
+| 02: MCP 원격 서버 배포  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
+| 03: MCP 클라이언트 개발        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
 
-## 리소스
+## 완전한 샘플
 
-- [모델 컨텍스트 프로토콜 문서](https://modelcontextprotocol.io/)
-- [Azure Container Apps 문서](https://learn.microsoft.com/azure/container-apps/)
-- [.NET 9 문서](https://learn.microsoft.com/dotnet/)
+위의 지침을 따르다가 막히면 여기에서 완전한 예제를 찾을 수 있습니다 👉 [complete](./complete/)
+
+## 더 읽어보기...
+
+- [MCP 공식 문서](https://modelcontextprotocol.io/)
+- [MCP C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- [MCP C# 샘플](https://github.com/microsoft/mcp-dotnet-samples)
+- [GitHub Copilot Vibe Coding 워크샵](https://github.com/microsoft/github-copilot-vibe-coding-workshop)
 
 ---
 
