@@ -15,3 +15,7 @@
 ---
 
 完了しました。「MCPリモートサーバーデプロイメント」ステップを完了しました。次は[ステップ03：MCPクライアント](./03-mcp-client.md)に進みましょう。
+
+---
+
+このドキュメントは[GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)によってローカライズされました。そのため、誤りが含まれる可能性があります。不適切または間違った翻訳を見つけた場合は、[issue](../../../../../issues)を作成してください。

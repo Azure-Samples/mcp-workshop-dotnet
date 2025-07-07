@@ -15,3 +15,7 @@
 ---
 
 很好。您已完成"MCP 远程服务器部署"步骤。让我们继续进行 [步骤 03: MCP 客户端](./03-mcp-client.md)。
+
+---
+
+本文档由 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot) 本地化。因此，可能包含错误。如果您发现任何不当或错误的翻译，请创建 [issue](../../../../../issues)。

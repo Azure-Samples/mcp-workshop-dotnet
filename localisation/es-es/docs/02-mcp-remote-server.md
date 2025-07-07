@@ -15,3 +15,7 @@ Esta sección te guiará a través del despliegue de tu servidor MCP a Azure Con
 ---
 
 Perfecto. Has completado el paso "Despliegue del Servidor MCP Remoto". Ahora vamos al [PASO 03: Cliente MCP](./03-mcp-client.md).
+
+---
+
+Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../../../issues).
