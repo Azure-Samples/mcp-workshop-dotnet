@@ -26,10 +26,10 @@ Consulta el documento [README](../README.md#prerequisites) para la preparación.
 1. Si se te pide iniciar sesión o registrarte, hazlo. Es gratuito.
 1. Asegúrate de estar usando el Modo Agente de GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. Selecciona el modelo como `GPT-4.1` o `Claude Sonnet 4`.
-1. Asegúrate de haber configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).
+1. Asegúrate de haber configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).
 
 ## Preparar Instrucciones Personalizadas
 
@@ -98,17 +98,34 @@ En el directorio `start`, ya hay una aplicación ASP.NET Core Minimal API estruc
 1. Usa el prompt como el siguiente para implementar la lógica de gestión de lista de tareas.
 
     ```text
-    Me gustaría desarrollar una aplicación de lista de tareas usando ASP.NET Core. Sigue las instrucciones.
-
+    Me gustaría implementar una lógica de gestión de lista de tareas en la aplicación ASP.NET Core Minimal API. Sigue las instrucciones a continuación para el desarrollo de la aplicación.
+    
     - Usa context7.
     - Identifica todos los pasos primero, que vas a hacer.
     - Tu directorio de trabajo es `workshop/src/McpTodoServer.ContainerApp`.
-    - La aplicación debe incluir modelos para gestión de tareas con las propiedades: ID, título, descripción, estado completado, fecha de creación y fecha de actualización.
+    - Usa SQLite como base de datos y debe usar la función en memoria.
+    - Usa EntityFramework Core para transacciones de base de datos.
+    - Inicializa la base de datos al inicio de la aplicación.
+    - El elemento de tarea solo contiene columnas `ID`, `Text` e `IsCompleted`.
+    - La gestión de lista de tareas tiene 5 características - crear, listar, actualizar, completar y eliminar.
     - Si es necesario, agrega paquetes NuGet que sean compatibles con .NET 9.
     - NO implementes endpoints de API para la gestión de lista de tareas.
     - NO agregues datos iniciales.
     - NO hagas referencia al directorio `complete`.
     - NO hagas referencia al directorio `start`.
+    ```
+
+1. Haz clic en el botón ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot para tomar los cambios.
+1. Usa el prompt como el siguiente para verificar el resultado del desarrollo.
+
+    ```text
+    Me gustaría agregar la clase `TodoTool` a la aplicación. Sigue las instrucciones.
+
+    - Usa context7.
+    - Identifica todos los pasos primero, que vas a hacer.
+    - Tu directorio de trabajo es `workshop/src/McpTodoServer.ContainerApp`.
+    - La clase `TodoTool` debe contener 5 métodos - crear, listar, actualizar, completar y eliminar.
+    - NO registres dependencia.
     ```
 
 1. Haz clic en el botón ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot para tomar los cambios.
@@ -126,19 +143,6 @@ En el directorio `start`, ya hay una aplicación ASP.NET Core Minimal API estruc
    >
    > - Hasta que la construcción tenga éxito, itera este paso.
    > - Si la construcción sigue fallando, revisa los mensajes de error y pregúntales a GitHub Copilot Agent para resolverlos.
-
-1. Haz clic en el botón ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot para aplicar los cambios.
-1. Usa el prompt siguiente para verificar el resultado del desarrollo.
-
-    ```text
-    Me gustaría agregar la clase `TodoTool` a la aplicación. Sigue las instrucciones.
-
-    - Usa context7.
-    - Identifica primero todos los pasos que vas a hacer.
-    - Tu directorio de trabajo es `workshop/src/McpTodoServer.ContainerApp`.
-    - La clase `TodoTool` debe contener 5 métodos - crear, listar, actualizar, completar y eliminar.
-    - NO registres dependencias.
-    ```
 
 ## Remover Lógica de API
 
@@ -374,7 +378,6 @@ En el directorio `start`, ya hay una aplicación ASP.NET Core Minimal API estruc
         // 👆👆👆 Agregado 👆👆👆
       }
     }
-    ```
 
 ## Probar Servidor MCP
 

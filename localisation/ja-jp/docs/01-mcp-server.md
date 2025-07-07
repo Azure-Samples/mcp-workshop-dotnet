@@ -26,7 +26,7 @@
 1. ログインまたはサインアップを求められた場合は、そうしてください。無料です。
 1. GitHub Copilotエージェントモードを使用していることを確認してください。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. モデルを`GPT-4.1`または`Claude Sonnet 4`に選択してください。
 1. [MCPサーバー](./00-setup.md#set-up-mcp-servers)を設定していることを確認してください。
@@ -98,12 +98,16 @@
 1. 以下のようなプロンプトを使用してTo-Doリスト管理ロジックを実装します。
 
     ```text
-    ASP.NET Coreを使用してTo-Doリストアプリケーションを開発したいと思います。指示に従ってください。
-
+    ASP.NET Core Minimal APIアプリケーションでTo-Doリスト管理ロジックを実装したいと思います。アプリケーション開発のために以下の指示に従ってください。
+    
     - context7を使用してください。
     - 最初に実行する全てのステップを特定してください。
     - 作業ディレクトリは`workshop/src/McpTodoServer.ContainerApp`です。
-    - アプリケーションには、ID、タイトル、説明、完了ステータス、作成日、更新日のプロパティを持つタスク管理のモデルを含める必要があります。
+    - データベースとしてSQLiteを使用し、インメモリ機能を使用する必要があります。
+    - データベーストランザクションにEntityFramework Coreを使用してください。
+    - アプリケーション開始時にデータベースを初期化してください。
+    - To-Doアイテムには`ID`、`Text`、`IsCompleted`カラムのみが含まれます。
+    - To-Doリスト管理には5つの機能があります - 作成、リスト、更新、完了、削除。
     - 必要に応じて、.NET 9と互換性のあるNuGetパッケージを追加してください。
     - To-Doリスト管理のAPIエンドポイントは実装しないでください。
     - 初期データは追加しないでください。
@@ -112,6 +116,21 @@
     ```
 
 1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
+
+1. 以下のようなプロンプトを使用してTodoToolクラスを追加します。
+
+    ```text
+    アプリケーションに`TodoTool`クラスを追加したいと思います。指示に従ってください。
+
+    - context7を使用してください。
+    - 最初に実行する全てのステップを特定してください。
+    - 作業ディレクトリは`workshop/src/McpTodoServer.ContainerApp`です。
+    - `TodoTool`クラスには5つのメソッドが含まれている必要があります - 作成、一覧表示、更新、完了、削除。
+    - 依存関係を登録しないでください。
+    ```
+
+1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
+
 1. 以下のようなプロンプトを使用してアプリケーションをビルドします。
 
     ```text
@@ -126,19 +145,6 @@
    >
    > - ビルドが成功するまでこのステップを繰り返してください。
    > - ビルドが失敗し続ける場合は、エラーメッセージを確認してGitHub Copilot Agentに解決を依頼してください。
-
-1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
-1. 以下のようなプロンプトを使用して開発結果を確認します。
-
-    ```text
-    アプリケーションに`TodoTool`クラスを追加したいと思います。指示に従ってください。
-
-    - context7を使用してください。
-    - 実行する全ての手順を最初に特定してください。
-    - 作業ディレクトリは`workshop/src/McpTodoServer.ContainerApp`です。
-    - `TodoTool`クラスは5つのメソッドを含む必要があります - 作成、リスト、更新、完了、削除。
-    - 依存関係を登録しないでください。
-    ```
 
 ## APIロジックを削除
 
@@ -220,9 +226,7 @@
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```
-
-## MCPサーバーに変換
+    ```## MCPサーバーに変換
 
 1. MCPサーバー用のNuGetパッケージを追加します。
 
@@ -322,9 +326,7 @@
 
     ```bash
     dotnet build
-    ```
-
-## MCPサーバーを実行
+    ```## MCPサーバーを実行
 
 1. `$REPOSITORY_ROOT` 環境変数を設定していることを確認してください。
 
@@ -373,10 +375,7 @@
         }
         // 👆👆👆 追加済み 👆👆👆
       }
-    }
-    ```
-
-## MCPサーバーをテスト
+    }## MCPサーバーをテスト
 
 1. GitHub Copilot Chatをエージェントモードで開きます。
 1. 以下のプロンプトのいずれかを入力します：

@@ -26,10 +26,10 @@ Référez-vous au document [README](../README.md#prerequisites) pour la prépara
 1. Si on vous demande de vous connecter ou de vous inscrire, faites-le. C'est gratuit.
 1. Assurez-vous d'utiliser le Mode Agent GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. Sélectionnez le modèle comme `GPT-4.1` ou `Claude Sonnet 4`.
-1. Assurez-vous d'avoir configuré [Serveurs MCP](./00-setup.md#configurer-les-serveurs-mcp).
+1. Assurez-vous d'avoir configuré [Serveurs MCP](./00-setup.md#set-up-mcp-servers).
 
 ## Préparer les Instructions Personnalisées
 
@@ -98,12 +98,16 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 1. Utilisez le prompt suivant pour implémenter la logique de gestion de liste de tâches.
 
     ```text
-    J'aimerais développer une application de liste de tâches en utilisant ASP.NET Core. Suivez les instructions.
-
+    J'aimerais implémenter une logique de gestion de liste de tâches dans l'application ASP.NET Core Minimal API. Suivez les instructions ci-dessous pour le développement de l'application.
+    
     - Utilisez context7.
     - Identifiez d'abord toutes les étapes que vous allez faire.
     - Votre répertoire de travail est `workshop/src/McpTodoServer.ContainerApp`.
-    - L'application doit inclure des modèles pour la gestion des tâches avec les propriétés : ID, titre, description, statut complété, date de création et date de mise à jour.
+    - Utilisez SQLite comme base de données et utilisez la fonctionnalité en mémoire.
+    - Utilisez EntityFramework Core pour les transactions de base de données.
+    - Initialisez la base de données au démarrage de l'application.
+    - L'élément de tâche ne contient que les colonnes `ID`, `Text` et `IsCompleted`.
+    - La gestion de liste de tâches a 5 fonctionnalités - créer, lister, mettre à jour, compléter et supprimer.
     - Si nécessaire, ajoutez des packages NuGet compatibles avec .NET 9.
     - N'implémentez PAS les endpoints API pour la gestion de liste de tâches.
     - N'ajoutez PAS de données initiales.
@@ -112,6 +116,21 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
     ```
 
 1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
+
+1. Utilisez le prompt suivant pour ajouter la classe TodoTool.
+
+    ```text
+    J'aimerais ajouter la classe `TodoTool` à l'application. Suivez les instructions.
+
+    - Utilisez context7.
+    - Identifiez d'abord toutes les étapes que vous allez faire.
+    - Votre répertoire de travail est `workshop/src/McpTodoServer.ContainerApp`.
+    - La classe `TodoTool` doit contenir 5 méthodes - créer, lister, mettre à jour, compléter et supprimer.
+    - N'enregistrez PAS de dépendance.
+    ```
+
+1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
+
 1. Utilisez le prompt suivant pour construire l'application.
 
     ```text
@@ -126,19 +145,6 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
    >
    > - Jusqu'à ce que la construction réussisse, itérez cette étape.
    > - Si la construction continue d'échouer, vérifiez les messages d'erreur et demandez à GitHub Copilot Agent de les résoudre.
-
-1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
-1. Utilisez le prompt suivant pour vérifier le résultat du développement.
-
-    ```text
-    J'aimerais ajouter la classe `TodoTool` à l'application. Suivez les instructions.
-
-    - Utilisez context7.
-    - Identifiez d'abord toutes les étapes que vous allez faire.
-    - Votre répertoire de travail est `workshop/src/McpTodoServer.ContainerApp`.
-    - La classe `TodoTool` doit contenir 5 méthodes - créer, lister, mettre à jour, compléter et supprimer.
-    - N'enregistrez PAS de dépendance.
-    ```
 
 ## Supprimer la Logique API
 
@@ -374,7 +380,6 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
         // 👆👆👆 Ajouté 👆👆👆
       }
     }
-    ```
 
 ## Tester le Serveur MCP
 

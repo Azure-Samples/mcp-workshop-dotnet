@@ -26,10 +26,10 @@
 1. 如果要求您登录或注册，请照做。这是免费的。
 1. 确保您正在使用 GitHub Copilot 代理模式。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
-1. 确保您已配置 [MCP 服务器](./00-setup.md#设置-mcp-服务器)。
+1. 确保您已配置 [MCP 服务器](./00-setup.md#set-up-mcp-servers)。
 
 ## 准备自定义指令
 
@@ -98,12 +98,16 @@
 1. 使用如下提示来实现待办事项列表管理逻辑。
 
     ```text
-    我想使用 ASP.NET Core 开发一个待办事项列表应用程序。按照指示操作。
-
+    我想在 ASP.NET Core Minimal API 应用程序中实现待办事项列表管理逻辑。请按照以下应用程序开发指示操作。
+    
     - 使用 context7。
     - 首先识别您要执行的所有步骤。
     - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
-    - 应用程序应包含任务管理模型，具有以下属性：ID、标题、描述、完成状态、创建日期和更新日期。
+    - 使用 SQLite 作为数据库，并应使用内存功能。
+    - 使用 EntityFramework Core 进行数据库事务。
+    - 在应用程序启动时初始化数据库。
+    - 待办事项只包含 `ID`、`Text` 和 `IsCompleted` 列。
+    - 待办事项列表管理有 5 个功能 - 创建、列表、更新、完成和删除。
     - 如有必要，添加与 .NET 9 兼容的 NuGet 包。
     - 不要为待办事项列表管理实现 API 端点。
     - 不要添加初始数据。
@@ -112,6 +116,21 @@
     ```
 
 1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
+
+1. 使用如下提示来添加 TodoTool 类。
+
+    ```text
+    我想向应用程序添加 `TodoTool` 类。按照指示操作。
+
+    - 使用 context7。
+    - 首先识别您要执行的所有步骤。
+    - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
+    - `TodoTool` 类应包含 5 个方法 - 创建、列表、更新、完成和删除。
+    - 不要注册依赖项。
+    ```
+
+1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
+
 1. 使用如下提示来构建应用程序。
 
     ```text
@@ -126,19 +145,6 @@
    >
    > - 直到构建成功，重复此步骤。
    > - 如果构建持续失败，检查错误消息并要求 GitHub Copilot Agent 解决它们。
-
-1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-1. 使用如下提示来验证开发结果。
-
-    ```text
-    我想向应用程序添加 `TodoTool` 类。按照指示操作。
-
-    - 使用 context7。
-    - 首先确定你要执行的所有步骤。
-    - 你的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
-    - `TodoTool` 类应该包含 5 个方法 - 创建、列表、更新、完成和删除。
-    - 不要注册依赖项。
-    ```
 
 ## 删除 API 逻辑
 
@@ -374,7 +380,6 @@
         // 👆👆👆 已添加 👆👆👆
       }
     }
-    ```
 
 ## 测试 MCP 服务器
 

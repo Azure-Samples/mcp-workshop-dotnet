@@ -26,10 +26,10 @@ Consulte o documento [README](../README.md#prerequisites) para preparação.
 1. Se for solicitado para fazer login ou se inscrever, faça-o. É gratuito.
 1. Certifique-se de estar usando o Modo Agente do GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
-1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).
+1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).
 
 ## Preparar Instruções Personalizadas
 
@@ -98,12 +98,16 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 1. Use o prompt como abaixo para implementar a lógica de gerenciamento de lista de tarefas.
 
     ```text
-    Gostaria de desenvolver uma aplicação de lista de tarefas usando ASP.NET Core. Siga as instruções.
-
+    Gostaria de implementar uma lógica de gerenciamento de lista de tarefas na aplicação ASP.NET Core Minimal API. Siga as instruções abaixo para o desenvolvimento da aplicação.
+    
     - Use context7.
     - Identifique primeiro todos os passos que você vai fazer.
     - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
-    - A aplicação deve incluir modelos para gerenciamento de tarefas com as propriedades: ID, título, descrição, status completado, data de criação e data de atualização.
+    - Use SQLite como banco de dados e deve usar o recurso em memória.
+    - Use EntityFramework Core para transações de banco de dados.
+    - Inicialize o banco de dados no início da aplicação.
+    - O item de tarefa contém apenas as colunas `ID`, `Text` e `IsCompleted`.
+    - O gerenciamento de lista de tarefas tem 5 recursos - criar, listar, atualizar, completar e excluir.
     - Se necessário, adicione pacotes NuGet compatíveis com .NET 9.
     - NÃO implemente endpoints de API para gerenciamento de lista de tarefas.
     - NÃO adicione dados iniciais.
@@ -112,6 +116,21 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```
 
 1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
+
+1. Use o prompt como abaixo para adicionar a classe TodoTool.
+
+    ```text
+    Gostaria de adicionar a classe `TodoTool` à aplicação. Siga as instruções.
+
+    - Use context7.
+    - Identifique primeiro todos os passos que você vai fazer.
+    - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
+    - A classe `TodoTool` deve conter 5 métodos - criar, listar, atualizar, completar e excluir.
+    - NÃO registre dependência.
+    ```
+
+1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
+
 1. Use o prompt como abaixo para construir a aplicação.
 
     ```text
@@ -126,19 +145,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
    >
    > - Até que a construção seja bem-sucedida, itere este passo.
    > - Se a construção continuar falhando, verifique as mensagens de erro e peça ao GitHub Copilot Agent para resolvê-los.
-
-1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aplicar as mudanças.
-1. Use o prompt como abaixo para verificar o resultado do desenvolvimento.
-
-    ```text
-    Gostaria de adicionar a classe `TodoTool` à aplicação. Siga as instruções.
-
-    - Use context7.
-    - Identifique primeiro todos os passos que você vai fazer.
-    - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
-    - A classe `TodoTool` deve conter 5 métodos - criar, listar, atualizar, completar e deletar.
-    - NÃO registre dependências.
-    ```
 
 ## Remover Lógica de API
 
@@ -220,9 +226,7 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```
-
-## Converter para Servidor MCP
+    ```## Converter para Servidor MCP
 
 1. Adicionar pacote NuGet para o servidor MCP.
 
@@ -322,9 +326,7 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet build
-    ```
-
-## Executar Servidor MCP
+    ```## Executar Servidor MCP
 
 1. Certifique-se de ter a variável de ambiente `$REPOSITORY_ROOT`.
 
@@ -373,10 +375,7 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
         }
         // 👆👆👆 Adicionado 👆👆👆
       }
-    }
-    ```
-
-## Testar Servidor MCP
+    }## Testar Servidor MCP
 
 1. Abra o GitHub Copilot Chat como Modo Agente.
 1. Digite um dos prompts abaixo:
