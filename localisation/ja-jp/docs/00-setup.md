@@ -64,71 +64,218 @@
 
 ### PowerShellをインストール 👉 Windowsユーザー向け
 
-Windowsを使用している場合は、PowerShellをインストールする必要があります。すでにPowerShellがインストールされている場合は、このステップをスキップできます。
+1. PowerShellがすでにインストールされているかを確認します。
 
-1. [PowerShell公式ウェブサイト](https://docs.microsoft.com/powershell/scripting/install/installing-powershell)にアクセスして、最新バージョンをインストールしてください。
+    ```bash
+    # Bash/Zsh
+    which pwsh
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command pwsh
+    ```
+
+   `pwsh`のコマンドパスが表示されない場合は、まだPowerShellがインストールされていません。[PowerShellインストールページ](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)にアクセスして、指示に従ってください。
+
+1. PowerShellのバージョンを確認します。
+
+    ```bash
+    pwsh --version
+    ```
+
+   バージョン `7.5.0` 以上が推奨されます。バージョンがそれより低い場合は、[PowerShellインストールページ](https://learn.microsoft.com/powershell/scripting/install/installing-powershell)にアクセスして、指示に従ってください。
 
 ### git CLIをインストール
 
-すでにgit CLIがインストールされている場合は、このステップをスキップできます。
+1. git CLIがすでにインストールされているかを確認します。
 
-1. [git公式ウェブサイト](https://git-scm.com/downloads)にアクセスして、最新バージョンをインストールしてください。
+    ```bash
+    # Bash/Zsh
+    which git
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command git
+    ```
+
+   `git`のコマンドパスが表示されない場合は、まだgit CLIがインストールされていません。[git CLIインストールページ](https://git-scm.com/downloads)にアクセスして、指示に従ってください。
+
+1. git CLIのバージョンを確認します。
+
+    ```bash
+    git --version
+    ```
+
+   バージョン `2.39.0` 以上が推奨されます。バージョンがそれより低い場合は、[git CLIインストールページ](https://git-scm.com/downloads)にアクセスして、指示に従ってください。
 
 ### GitHub CLIをインストール
 
-すでにGitHub CLIがインストールされている場合は、このステップをスキップできます。
+1. GitHub CLIがすでにインストールされているかを確認します。
 
-1. [GitHub CLI公式ウェブサイト](https://cli.github.com/)にアクセスして、最新バージョンをインストールしてください。
+    ```bash
+    # Bash/Zsh
+    which gh
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command gh
+    ```
+
+   `gh`のコマンドパスが表示されない場合は、まだGitHub CLIがインストールされていません。[GitHub CLIインストールページ](https://cli.github.com/)にアクセスして、指示に従ってください。
+
+1. GitHub CLIのバージョンを確認します。
+
+    ```bash
+    gh --version
+    ```
+
+   バージョン `2.65.0` 以上が推奨されます。バージョンがそれより低い場合は、[GitHub CLIインストールページ](https://cli.github.com/)にアクセスして、指示に従ってください。
+
+1. GitHubにサインインしているかを確認します。
+
+    ```bash
+    gh auth status
+    ```
+
+   まだサインインしていない場合は、`gh auth login`を実行してサインインしてください。
 
 ### Docker Desktopをインストール
 
-すでにDocker Desktopがインストールされている場合は、このステップをスキップできます。
+1. Docker Desktopがすでにインストールされているかを確認します。
 
-1. [Docker Desktop公式ウェブサイト](https://docs.docker.com/get-started/get-docker/)にアクセスして、最新バージョンをインストールしてください。
+    ```bash
+    # Bash/Zsh
+    which docker
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command docker
+    ```
+
+   `docker`のコマンドパスが表示されない場合は、まだDocker Desktopがインストールされていません。[Docker Desktopインストールページ](https://docs.docker.com/get-started/introduction/get-docker-desktop/)にアクセスして、指示に従ってください。
+
+1. Docker CLIのバージョンを確認します。
+
+    ```bash
+    docker --version
+    ```
+
+   バージョン `28.0.4` 以上が推奨されます。バージョンがそれより低い場合は、[Docker Desktopインストールページ](https://docs.docker.com/get-started/introduction/get-docker-desktop/)にアクセスして、指示に従ってください。
 
 ### Visual Studio Codeをインストール
 
-すでにVisual Studio Codeがインストールされている場合は、このステップをスキップできます。
+1. VS Codeがすでにインストールされているかを確認します。
 
-1. [Visual Studio Code公式ウェブサイト](https://code.visualstudio.com/)にアクセスして、最新バージョンをインストールしてください。
+    ```bash
+    # Bash/Zsh
+    which code
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command code
+    ```
+
+   `code`のコマンドパスが表示されない場合は、まだVS Codeがインストールされていません。[Visual Studio Codeインストールページ](https://code.visualstudio.com/)にアクセスして、指示に従ってください。
+
+1. VS Codeのバージョンを確認します。
+
+    ```bash
+    code --version
+    ```
+
+   バージョン `1.99.0` 以上が推奨されます。バージョンがそれより低い場合は、[Visual Studio Codeインストールページ](https://code.visualstudio.com/)にアクセスして、指示に従ってください。
+
+   > **注意**: `code`コマンドを実行できない場合があります。その場合は、セットアップのために[このドキュメント](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)に従ってください。
 
 ### Visual Studio Codeを開始
 
-1. ターミナルを開いて以下のコマンドを実行し、このリポジトリをクローンします：
+1. 作業ディレクトリを作成します。
+1. このリポジトリをフォークしてローカルマシンにクローンするコマンドを実行します。
 
     ```bash
-    git clone https://github.com/Azure-Samples/mcp-workshop-dotnet.git
+    gh repo fork Azure-Samples/mcp-workshop-dotnet --clone
     ```
 
-1. リポジトリディレクトリに移動します：
+1. クローンしたディレクトリに移動します。
 
     ```bash
     cd mcp-workshop-dotnet
     ```
 
-1. Visual Studio Codeを開きます：
+1. ターミナルからVS Codeを実行します。
 
     ```bash
     code .
     ```
 
-## MCPサーバーをセットアップ
-
-このセクションでは、ワークショップ用のMCPサーバーをセットアップします。
-
-1. 必要なVisual Studio Code拡張機能をインストールします。Visual Studio Codeを開いて拡張機能ビューに移動します（`Ctrl+Shift+X`または`Cmd+Shift+X`）。
-
-1. 以下の拡張機能を検索してインストールします：
-   - **C# Dev Kit** - .NET開発用
-   - **GitHub Copilot** - AIアシスタンス用
-
-1. インストール後、Visual Studio Codeを再起動します。
-
-1. ターミナルで以下のコマンドを実行して、必要なnpmパッケージをインストールします：
+1. VS Code内で新しいターミナルを開いて、以下のコマンドを実行してリポジトリのステータスを確認します。
 
     ```bash
-    npm install -g @modelcontextprotocol/inspector
+    git remote -v
     ```
+
+   以下の出力が表示されるはずです。`origin`に`Azure-Samples`が表示される場合は、フォークしたリポジトリから再度クローンしてください。
+
+    ```bash
+    origin  https://github.com/<あなたのGitHub ID>/mcp-workshop-dotnet.git (fetch)
+    origin  https://github.com/<あなたのGitHub ID>/mcp-workshop-dotnet.git (push)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet.git (fetch)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet.git (push)
+    ```
+
+1. 両方の拡張機能がインストールされているかを確認します：[GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)と[GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat)。
+
+    ```bash
+    # Bash/Zsh
+    code --list-extensions | grep github.copilot
+    ```
+
+    ```powershell
+    # PowerShell
+    code --list-extensions | Select-String "github.copilot"
+    ```
+
+   何も表示されない場合は、まだこれらの拡張機能がインストールされていません。以下のコマンドを実行して拡張機能をインストールしてください。
+
+    ```bash
+    code --install-extension "github.copilot" --force && code --install-extension "github.copilot-chat" --force
+    ```
+
+## MCPサーバーをセットアップ
+
+1. `$REPOSITORY_ROOT`の環境変数を設定します。
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. MCPサーバーの設定をコピーします。
+
+    ```bash
+    # bash/zsh
+    cp -r $REPOSITORY_ROOT/docs/.vscode/. \
+          $REPOSITORY_ROOT/.vscode/
+    ```
+
+    ```powershell
+    # PowerShell
+    Copy-Item -Path $REPOSITORY_ROOT/docs/.vscode/* `
+              -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
+    ```
+
+1. `F1`キーを押すか、Windowsでは`Ctrl`+`Shift`+`P`、Mac OSでは`Cmd`+`Shift`+`P`を押してコマンドパレットを開き、`MCP: List Servers`を検索します。
+1. `context7`を選択して`Start Server`をクリックします。
 
 ## GitHub Copilotエージェントモードを確認
 
