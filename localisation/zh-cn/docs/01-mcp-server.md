@@ -26,10 +26,10 @@
 1. 如果要求您登录或注册，请照做。这是免费的。
 1. 确保您正在使用 GitHub Copilot 代理模式。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
-1. 确保您已配置 [MCP 服务器](./00-setup.md#set-up-mcp-servers)。
+1. 确保您已配置 [MCP 服务器](./00-setup.md#设置-mcp-服务器)。
 
 ## 准备自定义指令
 
@@ -112,7 +112,6 @@
     ```
 
 1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-
 1. 使用如下提示来构建应用程序。
 
     ```text
@@ -375,6 +374,7 @@
         // 👆👆👆 已添加 👆👆👆
       }
     }
+    ```
 
 ## 测试 MCP 服务器
 

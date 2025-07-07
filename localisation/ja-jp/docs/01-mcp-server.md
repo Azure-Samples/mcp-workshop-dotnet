@@ -26,7 +26,7 @@
 1. ログインまたはサインアップを求められた場合は、そうしてください。無料です。
 1. GitHub Copilotエージェントモードを使用していることを確認してください。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. モデルを`GPT-4.1`または`Claude Sonnet 4`に選択してください。
 1. [MCPサーバー](./00-setup.md#set-up-mcp-servers)を設定していることを確認してください。
@@ -112,7 +112,6 @@
     ```
 
 1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
-
 1. 以下のようなプロンプトを使用してアプリケーションをビルドします。
 
     ```text
@@ -221,7 +220,9 @@
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```## MCPサーバーに変換
+    ```
+
+## MCPサーバーに変換
 
 1. MCPサーバー用のNuGetパッケージを追加します。
 
@@ -321,7 +322,9 @@
 
     ```bash
     dotnet build
-    ```## MCPサーバーを実行
+    ```
+
+## MCPサーバーを実行
 
 1. `$REPOSITORY_ROOT` 環境変数を設定していることを確認してください。
 
@@ -370,7 +373,10 @@
         }
         // 👆👆👆 追加済み 👆👆👆
       }
-    }## MCPサーバーをテスト
+    }
+    ```
+
+## MCPサーバーをテスト
 
 1. GitHub Copilot Chatをエージェントモードで開きます。
 1. 以下のプロンプトのいずれかを入力します：

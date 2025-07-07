@@ -26,10 +26,10 @@ Référez-vous au document [README](../README.md#prerequisites) pour la prépara
 1. Si on vous demande de vous connecter ou de vous inscrire, faites-le. C'est gratuit.
 1. Assurez-vous d'utiliser le Mode Agent GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Sélectionnez le modèle comme `GPT-4.1` ou `Claude Sonnet 4`.
-1. Assurez-vous d'avoir configuré [Serveurs MCP](./00-setup.md#set-up-mcp-servers).
+1. Assurez-vous d'avoir configuré [Serveurs MCP](./00-setup.md#configurer-les-serveurs-mcp).
 
 ## Préparer les Instructions Personnalisées
 
@@ -112,7 +112,6 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
     ```
 
 1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
-
 1. Utilisez le prompt suivant pour construire l'application.
 
     ```text
@@ -375,6 +374,7 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
         // 👆👆👆 Ajouté 👆👆👆
       }
     }
+    ```
 
 ## Tester le Serveur MCP
 

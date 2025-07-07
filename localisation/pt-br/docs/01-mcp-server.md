@@ -26,10 +26,10 @@ Consulte o documento [README](../README.md#prerequisites) para preparação.
 1. Se for solicitado para fazer login ou se inscrever, faça-o. É gratuito.
 1. Certifique-se de estar usando o Modo Agente do GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
-1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).
+1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).
 
 ## Preparar Instruções Personalizadas
 
@@ -112,7 +112,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```
 
 1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
-
 1. Use o prompt como abaixo para construir a aplicação.
 
     ```text
@@ -221,7 +220,9 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```## Converter para Servidor MCP
+    ```
+
+## Converter para Servidor MCP
 
 1. Adicionar pacote NuGet para o servidor MCP.
 
@@ -321,7 +322,9 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet build
-    ```## Executar Servidor MCP
+    ```
+
+## Executar Servidor MCP
 
 1. Certifique-se de ter a variável de ambiente `$REPOSITORY_ROOT`.
 
@@ -370,7 +373,10 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
         }
         // 👆👆👆 Adicionado 👆👆👆
       }
-    }## Testar Servidor MCP
+    }
+    ```
+
+## Testar Servidor MCP
 
 1. Abra o GitHub Copilot Chat como Modo Agente.
 1. Digite um dos prompts abaixo:
