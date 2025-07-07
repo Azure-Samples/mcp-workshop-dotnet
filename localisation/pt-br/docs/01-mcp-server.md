@@ -113,20 +113,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
 1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
 
-1. Use o prompt como abaixo para adicionar a classe TodoTool.
-
-    ```text
-    Gostaria de adicionar a classe `TodoTool` à aplicação. Siga as instruções.
-
-    - Use context7.
-    - Identifique primeiro todos os passos que você vai fazer.
-    - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
-    - A classe `TodoTool` deve conter 5 métodos - criar, listar, atualizar, completar e excluir.
-    - NÃO registre dependência.
-    ```
-
-1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
-
 1. Use o prompt como abaixo para construir a aplicação.
 
     ```text
@@ -141,6 +127,19 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
    >
    > - Até que a construção seja bem-sucedida, itere este passo.
    > - Se a construção continuar falhando, verifique as mensagens de erro e peça ao GitHub Copilot Agent para resolvê-los.
+
+1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aplicar as mudanças.
+1. Use o prompt como abaixo para verificar o resultado do desenvolvimento.
+
+    ```text
+    Gostaria de adicionar a classe `TodoTool` à aplicação. Siga as instruções.
+
+    - Use context7.
+    - Identifique primeiro todos os passos que você vai fazer.
+    - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
+    - A classe `TodoTool` deve conter 5 métodos - criar, listar, atualizar, completar e deletar.
+    - NÃO registre dependências.
+    ```
 
 ## Remover Lógica de API
 

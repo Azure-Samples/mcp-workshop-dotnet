@@ -113,20 +113,6 @@
 
 1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
 
-1. 以下のようなプロンプトを使用してTodoToolクラスを追加します。
-
-    ```text
-    アプリケーションに`TodoTool`クラスを追加したいと思います。指示に従ってください。
-
-    - context7を使用してください。
-    - 最初に実行する全てのステップを特定してください。
-    - 作業ディレクトリは`workshop/src/McpTodoServer.ContainerApp`です。
-    - `TodoTool`クラスには5つのメソッドが含まれている必要があります - 作成、一覧表示、更新、完了、削除。
-    - 依存関係を登録しないでください。
-    ```
-
-1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
-
 1. 以下のようなプロンプトを使用してアプリケーションをビルドします。
 
     ```text
@@ -141,6 +127,19 @@
    >
    > - ビルドが成功するまでこのステップを繰り返してください。
    > - ビルドが失敗し続ける場合は、エラーメッセージを確認してGitHub Copilot Agentに解決を依頼してください。
+
+1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
+1. 以下のようなプロンプトを使用して開発結果を確認します。
+
+    ```text
+    アプリケーションに`TodoTool`クラスを追加したいと思います。指示に従ってください。
+
+    - context7を使用してください。
+    - 実行する全ての手順を最初に特定してください。
+    - 作業ディレクトリは`workshop/src/McpTodoServer.ContainerApp`です。
+    - `TodoTool`クラスは5つのメソッドを含む必要があります - 作成、リスト、更新、完了、削除。
+    - 依存関係を登録しないでください。
+    ```
 
 ## APIロジックを削除
 
