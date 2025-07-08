@@ -26,7 +26,7 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 1. Si se te pide iniciar sesión o registrarte, hazlo. Es gratuito.
 1. Asegúrate de estar usando el Modo Agente de GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Selecciona el modelo como `GPT-4.1` o `Claude Sonnet 4`.
 1. Asegúrate de haber configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).

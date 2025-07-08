@@ -26,7 +26,7 @@
 1. 如果要求您登录或注册，请照做。这是免费的。
 1. 确保您正在使用 GitHub Copilot 代理模式。
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
 1. 确保您已配置 [MCP 服务器](./00-setup.md#set-up-mcp-servers)。
