@@ -1,12 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
-name: todo-list-containerapp
+name: mcptodoserver-containerapp
 
 metadata:
-  template: azd-init@1.14.0
+  template: azd-init@1.17.2
 
 services:
-  mcp-todo-list:
+  mcptodoserver-containerapp:
     project: src/McpTodoServer.ContainerApp
     host: containerapp
     language: dotnet
@@ -14,3 +14,8 @@ services:
       path: ../../Dockerfile
       context: ../../
       remoteBuild: true
+
+resources:
+  mcptodoserver-containerapp:
+    type: host.containerapp
+    port: 8080

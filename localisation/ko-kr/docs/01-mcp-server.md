@@ -4,7 +4,7 @@
 
 ## 전제 조건
 
-준비를 위해 [README](../README.md#prerequisites) 문서를 참조하세요.
+준비를 위해 [README](../README.md#전제-조건) 문서를 참조하세요.
 
 ## 시작하기
 

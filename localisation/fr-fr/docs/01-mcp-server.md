@@ -4,7 +4,7 @@ Dans cette étape, vous construisez un serveur MCP pour la gestion de liste de t
 
 ## Prérequis
 
-Référez-vous au document [README](../README.md#prerequisites) pour la préparation.
+Référez-vous au document [README](../README.md#prérequis) pour la préparation.
 
 ## Commencer
 

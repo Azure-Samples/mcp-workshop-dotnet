@@ -4,7 +4,7 @@
 
 ## 前提条件
 
-準備については[README](../README.md#prerequisites)ドキュメントを参照してください。
+準備については[README](../README.md#前提条件)ドキュメントを参照してください。
 
 ## はじめに
 

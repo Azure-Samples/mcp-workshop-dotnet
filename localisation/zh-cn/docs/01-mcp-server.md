@@ -4,7 +4,7 @@
 
 ## 先决条件
 
-请参考 [README](../README.md#prerequisites) 文档进行准备。
+请参考 [README](../README.md#先决条件) 文档进行准备。
 
 ## 开始使用
 

@@ -4,7 +4,7 @@ Dans cette étape, vous déployez le serveur MCP sur Azure.
 
 ## Prérequis
 
-Référez-vous au document [README](../README.md#prerequisites) pour la préparation.
+Référez-vous au document [README](../README.md#prérequis) pour la préparation.
 
 ## Commencer
 

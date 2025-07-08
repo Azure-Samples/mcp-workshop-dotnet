@@ -4,7 +4,7 @@ Neste passo, você está construindo um cliente MCP para gerenciamento de lista 
 
 ## Pré-requisitos
 
-Consulte o documento [README](../README.md#prerequisites) para preparação.
+Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
 ## Começando
 

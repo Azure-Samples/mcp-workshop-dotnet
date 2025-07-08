@@ -4,7 +4,7 @@ Dans cette étape, vous configurez l'environnement de développement pour l'atel
 
 ## Prérequis
 
-Référez-vous au document [README](../README.md#prerequisites) pour la préparation.
+Référez-vous au document [README](../README.md#prérequis) pour la préparation.
 
 ## Commencer
 

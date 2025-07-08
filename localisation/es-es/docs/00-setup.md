@@ -4,7 +4,7 @@ En este paso, estás configurando el entorno de desarrollo para el taller.
 
 ## Requisitos Previos
 
-Consulta el documento [README](../README.md#prerequisites) para la preparación.
+Consulta el documento [README](../README.md#requisitos-previos) para la preparación.
 
 ## Comenzando
 

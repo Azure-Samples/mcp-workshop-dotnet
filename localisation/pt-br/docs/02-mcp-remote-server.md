@@ -4,7 +4,7 @@ Neste passo, você está implantando o servidor MCP no Azure.
 
 ## Pré-requisitos
 
-Consulte o documento [README](../README.md#prerequisites) para preparação.
+Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
 ## Começando
 
