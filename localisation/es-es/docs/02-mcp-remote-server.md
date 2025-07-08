@@ -227,3 +227,7 @@ En la [sesión anterior](./01-mcp-server.md), ya has creado una aplicación de s
 ---
 
 Perfecto. Has completado el paso "Despliegue del Servidor MCP Remoto". Ahora vamos al [PASO 03: Cliente MCP](./03-mcp-client.md).
+
+---
+
+Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../../../issues).
