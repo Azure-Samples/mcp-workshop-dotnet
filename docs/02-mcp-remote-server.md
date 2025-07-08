@@ -8,7 +8,10 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 ## Getting Started
 
-## Create `Dockerfile`
+- [Containerize MCP Server with `Dockerfile`](#containerize-mcp-server-with-dockerfile)
+- [Deploy MCP Server to Azure with `azd`](#deploy-mcp-server-to-azure-with-azd)
+
+## Containerize MCP Server with `Dockerfile`
 
 In the [previous session](./01-mcp-server.md), you've already created an MCP server app. Let's keep using it.
 
@@ -111,7 +114,7 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
     docker rm $(docker ps -a -q --filter ancestor=mcp-todo-http)
     ```
 
-## Prepare `azd` Templates
+## Deploy MCP Server to Azure with `azd`
 
 1. Make sure you've got Azure logged in.
 
