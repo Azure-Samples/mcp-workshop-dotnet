@@ -116,7 +116,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```
 
 1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
-
 1. Use o prompt como abaixo para adicionar a classe TodoTool.
 
     ```text
@@ -130,7 +129,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```
 
 1. Clique no botão ![the keep button image](https://img.shields.io/badge/keep-blue) do GitHub Copilot para aceitar as mudanças.
-
 1. Use o prompt como abaixo para construir a aplicação.
 
     ```text
@@ -226,7 +224,9 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```## Converter para Servidor MCP
+    ```
+
+## Converter para Servidor MCP
 
 1. Adicionar pacote NuGet para o servidor MCP.
 
@@ -326,7 +326,9 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
     ```bash
     dotnet build
-    ```## Executar Servidor MCP
+    ```
+
+## Executar Servidor MCP
 
 1. Certifique-se de ter a variável de ambiente `$REPOSITORY_ROOT`.
 
@@ -376,6 +378,7 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
         // 👆👆👆 Adicionado 👆👆👆
       }
     }
+    ```
 
 ## Testar Servidor MCP
 

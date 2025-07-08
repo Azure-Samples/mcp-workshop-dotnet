@@ -116,7 +116,6 @@
     ```
 
 1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
-
 1. 以下のようなプロンプトを使用してTodoToolクラスを追加します。
 
     ```text
@@ -130,7 +129,6 @@
     ```
 
 1. GitHub Copilotの![the keep button image](https://img.shields.io/badge/keep-blue)ボタンをクリックして変更を適用します。
-
 1. 以下のようなプロンプトを使用してアプリケーションをビルドします。
 
     ```text
@@ -226,7 +224,9 @@
 
     ```bash
     dotnet remove package Microsoft.AspNetCore.OpenApi
-    ```## MCPサーバーに変換
+    ```
+
+## MCPサーバーに変換
 
 1. MCPサーバー用のNuGetパッケージを追加します。
 
@@ -326,7 +326,9 @@
 
     ```bash
     dotnet build
-    ```## MCPサーバーを実行
+    ```
+
+## MCPサーバーを実行
 
 1. `$REPOSITORY_ROOT` 環境変数を設定していることを確認してください。
 
@@ -376,6 +378,7 @@
         // 👆👆👆 追加済み 👆👆👆
       }
     }
+    ```
 
 ## MCPサーバーをテスト
 

@@ -378,6 +378,7 @@ En el directorio `start`, ya hay una aplicación ASP.NET Core Minimal API estruc
         // 👆👆👆 Agregado 👆👆👆
       }
     }
+    ```
 
 ## Probar Servidor MCP
 

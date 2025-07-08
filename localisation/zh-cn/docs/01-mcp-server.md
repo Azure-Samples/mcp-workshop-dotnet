@@ -116,7 +116,6 @@
     ```
 
 1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-
 1. 使用如下提示来添加 TodoTool 类。
 
     ```text
@@ -130,7 +129,6 @@
     ```
 
 1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-
 1. 使用如下提示来构建应用程序。
 
     ```text
@@ -380,6 +378,7 @@
         // 👆👆👆 已添加 👆👆👆
       }
     }
+    ```
 
 ## 测试 MCP 服务器
 

@@ -116,7 +116,6 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
     ```
 
 1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
-
 1. Utilisez le prompt suivant pour ajouter la classe TodoTool.
 
     ```text
@@ -130,7 +129,6 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
     ```
 
 1. Cliquez sur le bouton ![the keep button image](https://img.shields.io/badge/keep-blue) de GitHub Copilot pour prendre les modifications.
-
 1. Utilisez le prompt suivant pour construire l'application.
 
     ```text
@@ -380,6 +378,7 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
         // 👆👆👆 Ajouté 👆👆👆
       }
     }
+    ```
 
 ## Tester le Serveur MCP
 
