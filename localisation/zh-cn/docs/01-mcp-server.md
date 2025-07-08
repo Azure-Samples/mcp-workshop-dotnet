@@ -116,20 +116,7 @@
     ```
 
 1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-1. 使用如下提示来添加 TodoTool 类。
-
-    ```text
-    我想向应用程序添加 `TodoTool` 类。按照指示操作。
-
-    - 使用 context7。
-    - 首先识别您要执行的所有步骤。
-    - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
-    - `TodoTool` 类应包含 5 个方法 - 创建、列表、更新、完成和删除。
-    - 不要注册依赖项。
-    ```
-
-1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
-1. 使用如下提示来构建应用程序。
+1. 使用如下提示来验证开发结果。
 
     ```text
     我想构建应用程序。按照指示操作。
@@ -143,6 +130,19 @@
    >
    > - 直到构建成功，重复此步骤。
    > - 如果构建持续失败，检查错误消息并要求 GitHub Copilot Agent 解决它们。
+
+1. 点击 GitHub Copilot 的 ![the keep button image](https://img.shields.io/badge/keep-blue) 按钮来应用更改。
+1. 使用如下提示来验证开发结果。
+
+    ```text
+    我想向应用程序添加 `TodoTool` 类。按照指示操作。
+
+    - 使用 context7。
+    - 首先识别您要执行的所有步骤。
+    - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
+    - `TodoTool` 类应包含 5 个方法 - 创建、列表、更新、完成和删除。
+    - 不要注册依赖项。
+    ```
 
 ## 删除 API 逻辑
 
