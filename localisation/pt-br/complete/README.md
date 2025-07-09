@@ -41,7 +41,7 @@ Este é um servidor MCP, hospedado no [Azure Container Apps](https://learn.micro
 1. Executar a aplicação servidor MCP.
 
     ```bash
-    cd $REPOSITORY_ROOT/todo-list
+    cd $REPOSITORY_ROOT/complete
     dotnet run --project ./src/McpTodoServer.ContainerApp
     ```
 
@@ -253,6 +253,121 @@ Este é um servidor MCP, hospedado no [Azure Container Apps](https://learn.micro
 
 1. Clicar em **List Tools**.
 1. Clicar em uma ferramenta e **Run Tool** com valores apropriados.
+
+#### Aplicação Cliente MCP + Servidor MCP local
+
+1. Obter a raiz do repositório.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navegar para o diretório da aplicação cliente MCP.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Executar a aplicação cliente MCP.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Abrir um navegador web e inserir prompts. Estes são apenas exemplos:
+
+    ```text
+    - Mostre-me a lista de tarefas
+    - Adicionar "reunião às 11h"
+    - Completar o item de tarefa #1
+    - Excluir o item de tarefa #2
+    ```
+
+1. Confirmar o resultado.
+
+#### Aplicação Cliente MCP + Servidor MCP local em contêiner
+
+1. Obter a raiz do repositório.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navegar para o diretório da aplicação cliente MCP.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Abrir `Program.cs`, substituir `http://localhost:5242` por `http://localhost:8080` e salvá-lo.
+
+1. Executar a aplicação cliente MCP.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Abrir um navegador web e inserir prompts. Estes são apenas exemplos:
+
+    ```text
+    - Mostre-me a lista de tarefas
+    - Adicionar "reunião às 11h"
+    - Completar o item de tarefa #1
+    - Excluir o item de tarefa #2
+    ```
+
+1. Confirmar o resultado.
+
+#### Aplicação Cliente MCP + Servidor MCP remoto
+
+1. Obter a raiz do repositório.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navegar para o diretório da aplicação cliente MCP.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Abrir `Program.cs`, substituir `http://localhost:5242` pela URL do Azure Container Apps e salvá-lo.
+
+1. Executar a aplicação cliente MCP.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Abrir um navegador web e inserir prompts. Estes são apenas exemplos:
+
+    ```text
+    - Mostre-me a lista de tarefas
+    - Adicionar "reunião às 11h"
+    - Completar o item de tarefa #1
+    - Excluir o item de tarefa #2
+    ```
+
+1. Confirmar o resultado.
 
 ---
 

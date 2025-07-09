@@ -41,7 +41,7 @@
 1. MCPサーバーアプリを実行する。
 
     ```bash
-    cd $REPOSITORY_ROOT/todo-list
+    cd $REPOSITORY_ROOT/complete
     dotnet run --project ./src/McpTodoServer.ContainerApp
     ```
 
@@ -253,6 +253,121 @@
 
 1. **List Tools**をクリックする。
 1. ツールをクリックし、適切な値で**Run Tool**する。
+
+#### MCPクライアントアプリ + ローカルMCPサーバー
+
+1. リポジトリルートを取得する。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCPクライアントアプリディレクトリに移動する。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. MCPクライアントアプリを実行する。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Webブラウザを開いてプロンプトを入力する。これらは例です：
+
+    ```text
+    - To-Doリストを表示して
+    - "午前11時に会議"を追加
+    - To-Do項目#1を完了
+    - To-Do項目#2を削除
+    ```
+
+1. 結果を確認する。
+
+#### MCPクライアントアプリ + コンテナ内ローカルMCPサーバー
+
+1. リポジトリルートを取得する。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCPクライアントアプリディレクトリに移動する。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. `Program.cs`を開き、`http://localhost:5242`を`http://localhost:8080`に置き換えて保存する。
+
+1. MCPクライアントアプリを実行する。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Webブラウザを開いてプロンプトを入力する。これらは例です：
+
+    ```text
+    - To-Doリストを表示して
+    - "午前11時に会議"を追加
+    - To-Do項目#1を完了
+    - To-Do項目#2を削除
+    ```
+
+1. 結果を確認する。
+
+#### MCPクライアントアプリ + リモートMCPサーバー
+
+1. リポジトリルートを取得する。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCPクライアントアプリディレクトリに移動する。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. `Program.cs`を開き、`http://localhost:5242`をAzure Container AppsのURLに置き換えて保存する。
+
+1. MCPクライアントアプリを実行する。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Webブラウザを開いてプロンプトを入力する。これらは例です：
+
+    ```text
+    - To-Doリストを表示して
+    - "午前11時に会議"を追加
+    - To-Do項目#1を完了
+    - To-Do項目#2を削除
+    ```
+
+1. 結果を確認する。
 
 ---
 

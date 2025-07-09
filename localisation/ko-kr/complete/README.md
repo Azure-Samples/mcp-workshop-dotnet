@@ -41,7 +41,7 @@
 1. MCP 서버 앱을 실행합니다.
 
     ```bash
-    cd $REPOSITORY_ROOT/todo-list
+    cd $REPOSITORY_ROOT/complete
     dotnet run --project ./src/McpTodoServer.ContainerApp
     ```
 
@@ -253,6 +253,121 @@
 
 1. **List Tools**를 클릭합니다.
 1. 도구를 클릭하고 적절한 값으로 **Run Tool**합니다.
+
+#### MCP 클라이언트 앱 + 로컬 MCP 서버
+
+1. 저장소 루트를 가져옵니다.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCP 클라이언트 앱 디렉토리로 이동합니다.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. MCP 클라이언트 앱을 실행합니다.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 웹 브라우저를 열고 프롬프트를 입력합니다. 다음은 예시입니다:
+
+    ```text
+    - 할 일 목록을 보여주세요
+    - "오전 11시 회의" 추가
+    - 할 일 항목 #1 완료
+    - 할 일 항목 #2 삭제
+    ```
+
+1. 결과를 확인합니다.
+
+#### MCP 클라이언트 앱 + 컨테이너의 로컬 MCP 서버
+
+1. 저장소 루트를 가져옵니다.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCP 클라이언트 앱 디렉토리로 이동합니다.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. `Program.cs`를 열고 `http://localhost:5242`를 `http://localhost:8080`으로 바꾸고 저장합니다.
+
+1. MCP 클라이언트 앱을 실행합니다.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 웹 브라우저를 열고 프롬프트를 입력합니다. 다음은 예시입니다:
+
+    ```text
+    - 할 일 목록을 보여주세요
+    - "오전 11시 회의" 추가
+    - 할 일 항목 #1 완료
+    - 할 일 항목 #2 삭제
+    ```
+
+1. 결과를 확인합니다.
+
+#### MCP 클라이언트 앱 + 원격 MCP 서버
+
+1. 저장소 루트를 가져옵니다.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. MCP 클라이언트 앱 디렉토리로 이동합니다.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. `Program.cs`를 열고 `http://localhost:5242`를 Azure Container Apps URL로 바꾸고 저장합니다.
+
+1. MCP 클라이언트 앱을 실행합니다.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 웹 브라우저를 열고 프롬프트를 입력합니다. 다음은 예시입니다:
+
+    ```text
+    - 할 일 목록을 보여주세요
+    - "오전 11시 회의" 추가
+    - 할 일 항목 #1 완료
+    - 할 일 항목 #2 삭제
+    ```
+
+1. 결과를 확인합니다.
 
 ---
 

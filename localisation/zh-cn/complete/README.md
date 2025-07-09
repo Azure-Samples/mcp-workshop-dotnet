@@ -41,7 +41,7 @@
 1. 运行 MCP 服务器应用。
 
     ```bash
-    cd $REPOSITORY_ROOT/todo-list
+    cd $REPOSITORY_ROOT/complete
     dotnet run --project ./src/McpTodoServer.ContainerApp
     ```
 
@@ -253,6 +253,121 @@
 
 1. 点击 **List Tools**。
 1. 点击一个工具并使用适当的值 **Run Tool**。
+
+#### MCP 客户端应用 + 本地 MCP 服务器
+
+1. 获取存储库根目录。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. 导航到 MCP 客户端应用目录。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. 运行 MCP 客户端应用。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 打开网络浏览器并输入提示。这些只是示例：
+
+    ```text
+    - 显示待办事项列表
+    - 添加"上午11点开会"
+    - 完成待办事项 #1
+    - 删除待办事项 #2
+    ```
+
+1. 确认结果。
+
+#### MCP 客户端应用 + 容器中的本地 MCP 服务器
+
+1. 获取存储库根目录。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. 导航到 MCP 客户端应用目录。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. 打开 `Program.cs`，将 `http://localhost:5242` 替换为 `http://localhost:8080` 并保存。
+
+1. 运行 MCP 客户端应用。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 打开网络浏览器并输入提示。这些只是示例：
+
+    ```text
+    - 显示待办事项列表
+    - 添加"上午11点开会"
+    - 完成待办事项 #1
+    - 删除待办事项 #2
+    ```
+
+1. 确认结果。
+
+#### MCP 客户端应用 + 远程 MCP 服务器
+
+1. 获取存储库根目录。
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. 导航到 MCP 客户端应用目录。
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. 打开 `Program.cs`，将 `http://localhost:5242` 替换为 Azure Container Apps 的 URL 并保存。
+
+1. 运行 MCP 客户端应用。
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. 打开网络浏览器并输入提示。这些只是示例：
+
+    ```text
+    - 显示待办事项列表
+    - 添加"上午11点开会"
+    - 完成待办事项 #1
+    - 删除待办事项 #2
+    ```
+
+1. 确认结果。
 
 ---
 
