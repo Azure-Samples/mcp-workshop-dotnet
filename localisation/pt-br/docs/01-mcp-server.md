@@ -29,7 +29,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
    ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
-1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#set-up-mcp-servers).
+1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).
 
 ## Preparar Instruções Personalizadas
 

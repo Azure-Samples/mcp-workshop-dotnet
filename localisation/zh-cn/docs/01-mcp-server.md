@@ -29,7 +29,7 @@
    ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
-1. 确保您已配置 [MCP 服务器](./00-setup.md#set-up-mcp-servers)。
+1. 确保您已配置 [MCP 服务器](./00-setup.md#设置-mcp-服务器)。
 
 ## 准备自定义指令
 
