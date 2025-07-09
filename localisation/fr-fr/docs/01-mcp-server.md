@@ -356,8 +356,8 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 
 1. Ouvrez la Palette de Commandes en appuyant sur `F1` ou `Ctrl`+`Shift`+`P` sur Windows ou `Cmd`+`Shift`+`P` sur Mac OS, et recherchez `MCP: Add Server...`.
 1. Choisissez `HTTP (HTTP or Server-Sent Events)`.
-1. Entrez `http://localhost:5242` comme URL du serveur.
-1. Entrez `mcp-todo-local` comme ID du serveur.
+1. Entrez `http://localhost:5242/mcp` comme URL du serveur.
+1. Entrez `mcp-todo` comme ID du serveur.
 1. Choisissez `Workspace settings` comme emplacement pour sauvegarder les paramètres MCP.
 1. Ouvrez `.vscode/mcp.json` et vérifiez que le serveur MCP a été ajouté.
 
@@ -372,7 +372,7 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
           ]
         },
         // 👇👇👇 Ajouté 👇👇👇
-        "mcp-todo-local": {
+        "mcp-todo": {
             "url": "http://localhost:5242/mcp"
         }
         // 👆👆👆 Ajouté 👆👆👆

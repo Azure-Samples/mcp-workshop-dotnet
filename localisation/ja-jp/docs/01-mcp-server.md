@@ -356,8 +356,8 @@
 
 1. `F1` を押すか、Windowsでは `Ctrl`+`Shift`+`P`、Mac OSでは `Cmd`+`Shift`+`P` を押してコマンドパレットを開き、`MCP: Add Server...` を検索します。
 1. `HTTP (HTTP or Server-Sent Events)` を選択します。
-1. サーバーURLとして `http://localhost:5242` を入力します。
-1. サーバーIDとして `mcp-todo-local` を入力します。
+1. サーバーURLとして `http://localhost:5242/mcp` を入力します。
+1. サーバーIDとして `mcp-todo` を入力します。
 1. MCP設定を保存する場所として `Workspace settings` を選択します。
 1. `.vscode/mcp.json` を開いて、MCPサーバーが追加されたことを確認します。
 
@@ -372,7 +372,7 @@
           ]
         },
         // 👇👇👇 追加済み 👇👇👇
-        "mcp-todo-local": {
+        "mcp-todo": {
             "url": "http://localhost:5242/mcp"
         }
         // 👆👆👆 追加済み 👆👆👆
