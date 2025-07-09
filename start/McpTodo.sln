@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpTodoServer.ContainerApp", "src\McpTodoServer.ContainerApp\McpTodoServer.ContainerApp.csproj", "{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpTodoServer.ContainerApp", "src\McpTodoServer.ContainerApp\McpTodoServer.ContainerApp.csproj", "{ADDA20B9-5F2F-454D-91E2-668DABEF1231}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "McpTodoClient.BlazorApp", "src\McpTodoClient.BlazorApp\McpTodoClient.BlazorApp.csproj", "{828E3633-E228-4144-9900-A24F2F5A3973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,23 +19,36 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|x64.Build.0 = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Debug|x86.Build.0 = Debug|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|x64.ActiveCfg = Release|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|x64.Build.0 = Release|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|x86.ActiveCfg = Release|Any CPU
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D}.Release|x86.Build.0 = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|x64.Build.0 = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Debug|x86.Build.0 = Debug|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|x64.ActiveCfg = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|x64.Build.0 = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|x86.ActiveCfg = Release|Any CPU
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231}.Release|x86.Build.0 = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|x64.Build.0 = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Debug|x86.Build.0 = Debug|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|x64.ActiveCfg = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|x64.Build.0 = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|x86.ActiveCfg = Release|Any CPU
+		{828E3633-E228-4144-9900-A24F2F5A3973}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4AB0D714-AEC9-49EB-9564-484BC73BBA1D} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{ADDA20B9-5F2F-454D-91E2-668DABEF1231} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{828E3633-E228-4144-9900-A24F2F5A3973} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 EndGlobal

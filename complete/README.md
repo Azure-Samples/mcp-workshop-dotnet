@@ -23,6 +23,9 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
   - [MCP Inspector + Local MCP server](#mcp-inspector--local-mcp-server)
   - [MCP Inspector + Local MCP server in a container](#mcp-inspector--local-mcp-server-in-a-container)
   - [MCP Inspector + Remote MCP server](#mcp-inspector--remote-mcp-server)
+  - [MCP Client App + Local MCP server](#mcp-client-app--local-mcp-server)
+  - [MCP Client App + Local MCP server in a container](#mcp-client-app--local-mcp-server-in-a-container)
+  - [MCP Client App + Remote MCP server](#mcp-client-app--remote-mcp-server)
 
 ### Run ASP.NET Core MCP server locally
 
@@ -41,7 +44,7 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 1. Run the MCP server app.
 
     ```bash
-    cd $REPOSITORY_ROOT/todo-list
+    cd $REPOSITORY_ROOT/complete
     dotnet run --project ./src/McpTodoServer.ContainerApp
     ```
 
@@ -89,13 +92,7 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 
    While provisioning and deploying, you'll be asked to provide subscription ID, location, environment name.
 
-1. After the deployment is complete, get the information by running the following commands:
-
-   - Azure Container Apps FQDN:
-
-     ```bash
-     azd env get-value AZURE_RESOURCE_MCP_TODO_LIST_FQDN
-     ```
+1. After the deployment is complete, get the URL information from the terminal.
 
 ### Connect MCP server to an MCP host/client
 
@@ -253,3 +250,118 @@ This is an MCP server, hosted on [Azure Container Apps](https://learn.microsoft.
 
 1. Click **List Tools**.
 1. Click on a tool and **Run Tool** with appropriate values.
+
+#### MCP Client App + Local MCP server
+
+1. Get the repository root.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navigate to the MCP client app directory.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Run MCP client app.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Open a web browser and enter prompts. These are just examples:
+
+    ```text
+    - Show me the to-do list
+    - Add "meeting at 11am"
+    - Complete the to-do item #1
+    - Delete the to-do item #2
+    ```
+
+1. Confirm the result.
+
+#### MCP Client App + Local MCP server in a container
+
+1. Get the repository root.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navigate to the MCP client app directory.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Open `Program.cs`, replace `http://localhost:5242` with `http://localhost:8080` and save it.
+
+1. Run MCP client app.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Open a web browser and enter prompts. These are just examples:
+
+    ```text
+    - Show me the to-do list
+    - Add "meeting at 11am"
+    - Complete the to-do item #1
+    - Delete the to-do item #2
+    ```
+
+1. Confirm the result.
+
+#### MCP Client App + Remote MCP server
+
+1. Get the repository root.
+
+    ```bash
+    # bash/zsh
+    REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+    ```
+
+    ```powershell
+    # PowerShell
+    $REPOSITORY_ROOT = git rev-parse --show-toplevel
+    ```
+
+1. Navigate to the MCP client app directory.
+
+    ```bash
+    cd $REPOSITORY_ROOT/complete/src/McpTodoClient.BlazorApp
+    ```
+
+1. Open `Program.cs`, replace `http://localhost:5242` with the URL from Azure Container Apps and save it.
+
+1. Run MCP client app.
+
+    ```bash
+    dotnet watch run
+    ```
+
+1. Open a web browser and enter prompts. These are just examples:
+
+    ```text
+    - Show me the to-do list
+    - Add "meeting at 11am"
+    - Complete the to-do item #1
+    - Delete the to-do item #2
+    ```
+
+1. Confirm the result.
