@@ -82,7 +82,7 @@
     docker run -d -p 8080:8080 mcp-todo-http:latest
     ```
 
-1. 打开 `.vscode/mcp.json` 并添加容器化的 MCP 服务器。
+1. 打开 `.vscode/mcp.json` 并将 MCP 服务器 URL 替换为容器化的 MCP 服务器。
 
     ```jsonc
     {
@@ -94,19 +94,19 @@
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        // 👇👇👇 添加 👇👇👇
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
+        "mcp-todo": {
+          // 之前
+          "url": "http://localhost:5242/mcp"
+
+          // 之后
+          "url": "http://localhost:8080/mcp"
         }
         // 👆👆👆 添加 👆👆👆
       }
     }
     ```
 
-1. 启动 MCP 服务器 `mcp-todo-http`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
+1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
 1. 测试完成后，停止容器并删除它。
 
     ```bash
@@ -195,7 +195,7 @@
    - `? Enter a value for the 'location' infrastructure parameter` 👉 选择要部署 MCP 服务器的位置。
 
 1. 完成后，您可以在终端中找到 MCP 服务器 URL，它看起来像 `https://mcptodoserver-containerapp.cherryblossom-xyz1234q.koreacentral.azurecontainerapps.io/`。记下这个 URL。
-1. 打开 `.vscode/mcp.json` 并添加已部署的 MCP 服务器。`{{azure-container-apps-url}}` 应该替换为从上一步获取的 URL。
+1. 打开 `.vscode/mcp.json` 并将 MCP 服务器 URL 替换为已部署的 MCP 服务器。`{{azure-container-apps-url}}` 应该替换为从上一步获取的 URL。
 
     ```jsonc
     {
@@ -207,22 +207,18 @@
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
-        },
-        // 👇👇👇 添加 👇👇👇
-        "mcp-todo-remote": {
-            "url": "http://{{azure-container-apps-url}}/mcp"
+        "mcp-todo": {
+          // 之前
+          "url": "http://localhost:8080/mcp"
+
+          // 之后
+          "url": "http://{{azure-container-apps-url}}/mcp"
         }
-        // 👆👆👆 添加 👆👆👆
       }
     }
     ```
 
-1. 启动 MCP 服务器 `mcp-todo-remote`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
+1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
 
 ---
 

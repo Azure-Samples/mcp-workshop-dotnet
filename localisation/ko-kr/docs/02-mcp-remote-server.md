@@ -82,7 +82,7 @@
     docker run -d -p 8080:8080 mcp-todo-http:latest
     ```
 
-1. `.vscode/mcp.json`을 열고 컨테이너화된 MCP 서버를 추가합니다.
+1. `.vscode/mcp.json`을 열고 MCP 서버 URL을 컨테이너화된 MCP 서버로 교체합니다.
 
     ```jsonc
     {
@@ -94,19 +94,19 @@
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        // 👇👇👇 추가 👇👇👇
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
+        "mcp-todo": {
+          // 이전
+          "url": "http://localhost:5242/mcp"
+
+          // 이후
+          "url": "http://localhost:8080/mcp"
         }
         // 👆👆👆 추가 👆👆👆
       }
     }
     ```
 
-1. MCP 서버 `mcp-todo-http`를 시작하고 [이 문서](./01-mcp-server.md#mcp-서버-테스트)를 따라 테스트합니다.
+1. MCP 서버 `mcp-todo`를 시작하고 [이 문서](./01-mcp-server.md#mcp-서버-테스트)를 따라 테스트합니다.
 1. 테스트가 완료되면 컨테이너를 중지하고 제거합니다.
 
     ```bash
@@ -195,7 +195,7 @@
    - `? Enter a value for the 'location' infrastructure parameter` 👉 MCP 서버를 배포할 위치를 선택하세요.
 
 1. 완료되면 터미널에서 MCP 서버 URL을 찾을 수 있습니다. 이는 `https://mcptodoserver-containerapp.cherryblossom-xyz1234q.koreacentral.azurecontainerapps.io/`와 같이 보입니다. 이 URL을 기록해 두세요.
-1. `.vscode/mcp.json`을 열고 배포된 MCP 서버를 추가합니다. `{{azure-container-apps-url}}`는 이전 단계에서 얻은 URL로 교체해야 합니다.
+1. `.vscode/mcp.json`을 열고 MCP 서버 URL을 배포된 MCP 서버로 교체합니다. `{{azure-container-apps-url}}`는 이전 단계에서 얻은 URL로 교체해야 합니다.
 
     ```jsonc
     {
@@ -207,22 +207,18 @@
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
-        },
-        // 👇👇👇 추가 👇👇👇
-        "mcp-todo-remote": {
-            "url": "http://{{azure-container-apps-url}}/mcp"
+        "mcp-todo": {
+          // 이전
+          "url": "http://localhost:8080/mcp"
+
+          // 이후
+          "url": "http://{{azure-container-apps-url}}/mcp"
         }
-        // 👆👆👆 추가 👆👆👆
       }
     }
     ```
 
-1. MCP 서버 `mcp-todo-remote`를 시작하고 [이 문서](./01-mcp-server.md#mcp-서버-테스트)를 따라 테스트합니다.
+1. MCP 서버 `mcp-todo`를 시작하고 [이 문서](./01-mcp-server.md#mcp-서버-테스트)를 따라 테스트합니다.
 
 ---
 
