@@ -92,13 +92,7 @@
 
    在配置和部署过程中，系统会要求您提供订阅 ID、位置和环境名称。
 
-1. 部署完成后，运行以下命令获取信息：
-
-   - Azure Container Apps FQDN:
-
-     ```bash
-     azd env get-value AZURE_RESOURCE_MCP_TODO_LIST_FQDN
-     ```
+1. 部署完成后，从终端获取 URL 信息。
 
 ### 将 MCP 服务器连接到 MCP 主机/客户端
 

@@ -92,13 +92,7 @@
 
    프로비저닝 및 배포 중에 구독 ID, 위치, 환경 이름을 제공하라는 메시지가 표시됩니다.
 
-1. 배포가 완료된 후 다음 명령을 실행하여 정보를 가져옵니다:
-
-   - Azure Container Apps FQDN:
-
-     ```bash
-     azd env get-value AZURE_RESOURCE_MCP_TODO_LIST_FQDN
-     ```
+1. 배포가 완료된 후 터미널에서 URL 정보를 가져옵니다.
 
 ### MCP 서버를 MCP 호스트/클라이언트에 연결
 

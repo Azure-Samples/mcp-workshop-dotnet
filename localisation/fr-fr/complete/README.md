@@ -92,13 +92,7 @@ Ceci est un serveur MCP, hébergé sur [Azure Container Apps](https://learn.micr
 
    Pendant l'approvisionnement et le déploiement, vous serez invité à fournir l'ID d'abonnement, l'emplacement et le nom d'environnement.
 
-1. Une fois le déploiement terminé, obtenez les informations en exécutant les commandes suivantes :
-
-   - FQDN d'Azure Container Apps :
-
-     ```bash
-     azd env get-value AZURE_RESOURCE_MCP_TODO_LIST_FQDN
-     ```
+1. Une fois le déploiement terminé, obtenez les informations d'URL à partir du terminal.
 
 ### Connecter le serveur MCP à un hôte/client MCP
 

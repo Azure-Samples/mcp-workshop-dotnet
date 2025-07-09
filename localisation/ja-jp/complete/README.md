@@ -92,13 +92,7 @@
 
    プロビジョニングとデプロイ中に、サブスクリプションID、場所、環境名の提供を求められます。
 
-1. デプロイが完了した後、以下のコマンドを実行して情報を取得する：
-
-   - Azure Container Apps FQDN:
-
-     ```bash
-     azd env get-value AZURE_RESOURCE_MCP_TODO_LIST_FQDN
-     ```
+1. デプロイが完了した後、ターミナルからURL情報を取得する。
 
 ### MCPサーバーをMCPホスト/クライアントに接続
 
