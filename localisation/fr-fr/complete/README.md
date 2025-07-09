@@ -23,6 +23,9 @@ Ceci est un serveur MCP, hébergé sur [Azure Container Apps](https://learn.micr
   - [MCP Inspector + Serveur MCP local](#mcp-inspector--serveur-mcp-local)
   - [MCP Inspector + Serveur MCP local dans un conteneur](#mcp-inspector--serveur-mcp-local-dans-un-conteneur)
   - [MCP Inspector + Serveur MCP distant](#mcp-inspector--serveur-mcp-distant)
+  - [Application Client MCP + Serveur MCP local](#application-client-mcp--serveur-mcp-local)
+  - [Application Client MCP + Serveur MCP local en conteneur](#application-client-mcp--serveur-mcp-local-en-conteneur)
+  - [Application Client MCP + Serveur MCP distant](#application-client-mcp--serveur-mcp-distant)
 
 ### Exécuter le serveur MCP ASP.NET Core localement
 

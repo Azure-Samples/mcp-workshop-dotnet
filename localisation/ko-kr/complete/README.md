@@ -23,6 +23,9 @@
   - [MCP Inspector + 로컬 MCP 서버](#mcp-inspector--로컬-mcp-서버)
   - [MCP Inspector + 컨테이너의 로컬 MCP 서버](#mcp-inspector--컨테이너의-로컬-mcp-서버)
   - [MCP Inspector + 원격 MCP 서버](#mcp-inspector--원격-mcp-서버)
+  - [MCP 클라이언트 앱 + 로컬 MCP 서버](#mcp-클라이언트-앱--로컬-mcp-서버)
+  - [MCP 클라이언트 앱 + 컨테이너의 로컬 MCP 서버](#mcp-클라이언트-앱--컨테이너의-로컬-mcp-서버)
+  - [MCP 클라이언트 앱 + 원격 MCP 서버](#mcp-클라이언트-앱--원격-mcp-서버)
 
 ### ASP.NET Core MCP 서버를 로컬에서 실행
 

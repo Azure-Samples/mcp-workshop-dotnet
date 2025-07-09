@@ -23,6 +23,9 @@
   - [MCP Inspector + ローカルMCPサーバー](#mcp-inspector--ローカルmcpサーバー)
   - [MCP Inspector + コンテナ内ローカルMCPサーバー](#mcp-inspector--コンテナ内ローカルmcpサーバー)
   - [MCP Inspector + リモートMCPサーバー](#mcp-inspector--リモートmcpサーバー)
+  - [MCPクライアントアプリ + ローカルMCPサーバー](#mcpクライアントアプリ--ローカルmcpサーバー)
+  - [MCPクライアントアプリ + コンテナ内ローカルMCPサーバー](#mcpクライアントアプリ--コンテナ内ローカルmcpサーバー)
+  - [MCPクライアントアプリ + リモートMCPサーバー](#mcpクライアントアプリ--リモートmcpサーバー)
 
 ### ASP.NET Core MCPサーバーをローカルで実行
 

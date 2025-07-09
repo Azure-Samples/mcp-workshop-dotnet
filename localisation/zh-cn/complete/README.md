@@ -23,6 +23,9 @@
   - [MCP Inspector + 本地 MCP 服务器](#mcp-inspector--本地-mcp-服务器)
   - [MCP Inspector + 容器中的本地 MCP 服务器](#mcp-inspector--容器中的本地-mcp-服务器)
   - [MCP Inspector + 远程 MCP 服务器](#mcp-inspector--远程-mcp-服务器)
+  - [MCP 客户端应用 + 本地 MCP 服务器](#mcp-客户端应用--本地-mcp-服务器)
+  - [MCP 客户端应用 + 容器中的本地 MCP 服务器](#mcp-客户端应用--容器中的本地-mcp-服务器)
+  - [MCP 客户端应用 + 远程 MCP 服务器](#mcp-客户端应用--远程-mcp-服务器)
 
 ### 在本地运行 ASP.NET Core MCP 服务器
 
