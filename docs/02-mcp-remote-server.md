@@ -82,7 +82,7 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
     docker run -d -p 8080:8080 mcp-todo-http:latest
     ```
 
-1. Open `.vscode/mcp.json` and add the containerized MCP server.
+1. Open `.vscode/mcp.json` and replace the MCP server URL with the containerized MCP server.
 
     ```jsonc
     {
@@ -94,19 +94,18 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        // 👇👇👇 Add 👇👇👇
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
+        "mcp-todo": {
+          // Before
+          "url": "http://localhost:5242/mcp"
+
+          // After
+          "url": "http://localhost:8080/mcp"
         }
-        // 👆👆👆 Add 👆👆👆
       }
     }
     ```
 
-1. Start the MCP server, `mcp-todo-http`, and test it by following [this document](./01-mcp-server.md#test-mcp-server).
+1. Start the MCP server, `mcp-todo`, and test it by following [this document](./01-mcp-server.md#test-mcp-server).
 1. Once the test is over, stop the container and remove it.
 
     ```bash
@@ -195,7 +194,7 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
    - `? Enter a value for the 'location' infrastructure parameter` 👉 Choose location for the MCP server to be deployed.
 
 1. Once completed, you can find the MCP server URL in the terminal, which looks like `https://mcptodoserver-containerapp.cherryblossom-xyz1234q.koreacentral.azurecontainerapps.io/`. Take note this URL.
-1. Open `.vscode/mcp.json` and add the deployed MCP server. `{{azure-container-apps-url}}` should be replaced with the URL taken from the previous step.
+1. Open `.vscode/mcp.json` and replace the MCP server URL with the deployed MCP server. `{{azure-container-apps-url}}` should be replaced with the URL taken from the previous step.
 
     ```jsonc
     {
@@ -207,22 +206,18 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
             "@upstash/context7-mcp"
           ]
         },
-        "mcp-todo-local": {
-            "url": "http://localhost:5242/mcp"
-        },
-        "mcp-todo-http": {
-            "url": "http://localhost:8080/mcp"
-        },
-        // 👇👇👇 Add 👇👇👇
-        "mcp-todo-remote": {
-            "url": "http://{{azure-container-apps-url}}/mcp"
+        "mcp-todo": {
+          // Before
+          "url": "http://localhost:8080/mcp"
+
+          // After
+          "url": "http://{{azure-container-apps-url}}/mcp"
         }
-        // 👆👆👆 Add 👆👆👆
       }
     }
     ```
 
-1. Start the MCP server, `mcp-todo-remote`, and test it by following [this document](./01-mcp-server.md#test-mcp-server).
+1. Start the MCP server, `mcp-todo`, and test it by following [this document](./01-mcp-server.md#test-mcp-server).
 
 ---
 
