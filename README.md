@@ -39,12 +39,13 @@ However, if you really need to use your machine, make sure you've installed ever
 
 This is a self-paced workshop. Follow the step-by-step instructions in the workshop documentation:
 
-| Step                              | Link                                                      |
-|-----------------------------------|-----------------------------------------------------------|
-| 00: Development Environment Setup | [00-setup.md](./docs/00-setup.md)                         |
-| 01: MCP Server Development        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
-| 02: MCP Remote Server Deployment  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
-| 03: MCP Client Development        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
+| Step                                | Link                                                      |
+|-------------------------------------|-----------------------------------------------------------|
+| 00: Development Environment Setup   | [00-setup.md](./docs/00-setup.md)                         |
+| 01: Monkey App Development with MCP | [01-monkey-app.md](./docs/01-monkey-app.md)               |
+| 02: MCP Server Development          | [02-mcp-server.md](./docs/02-mcp-server.md)               |
+| 03: MCP Remote Server Deployment    | [03-mcp-remote-server.md](./docs/03-mcp-remote-server.md) |
+| 04: MCP Client Development          | [04-mcp-client.md](./docs/04-mcp-client.md)               |
 
 ## Complete Sample
 

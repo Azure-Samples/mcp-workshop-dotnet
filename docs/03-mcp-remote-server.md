@@ -1,4 +1,4 @@
-# 02: MCP Remote Server
+# 03: MCP Remote Server
 
 In this step, you're deploying the MCP server to Azure.
 
@@ -221,4 +221,4 @@ In the [previous session](./01-mcp-server.md), you've already created an MCP ser
 
 ---
 
-OK. You've completed the "MCP Remote Server Deployment" step. Let's move onto [STEP 03: MCP Client](./03-mcp-client.md).
+OK. You've completed the "MCP Remote Server Deployment" step. Let's move onto [STEP 04: MCP Client](./04-mcp-client.md).
