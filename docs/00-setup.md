@@ -88,7 +88,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 ### Install node.js
 
-1. Check whether you've already installed git CLI.
+1. Check whether you've already installed node.js.
 
     ```bash
     # Bash/Zsh
