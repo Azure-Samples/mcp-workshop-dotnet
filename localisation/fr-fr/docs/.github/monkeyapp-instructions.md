@@ -1,35 +1,39 @@
-This project is .NET 9 and uses C# 13.
+Ce projet utilise .NET 9 et C# 13.
 
-Make sure all code generated is inside of the MyMonkeyApp project, which may be a subfolder inside of the main folder.
+Assurez-vous que tout le code généré se trouve dans le projet MyMonkeyApp, qui peut être un sous-dossier à l'intérieur du dossier principal.
 
-It is on GitHub at https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
+Il est sur GitHub à https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
 
-## Project Context
-This is a console application that manages monkey species data and integrates with GitHub through MCP servers.
+## Contexte du Projet
+Il s'agit d'une application console qui gère les données des espèces de singes et s'intègre avec GitHub via les serveurs MCP.
 
-## C# Coding Standards
-- Use PascalCase for class names, method names, and properties
-- Use camelCase for local variables and parameters
-- Use descriptive names that clearly indicate purpose
-- Add XML documentation comments for public methods and classes
-- Use `var` for local variables when the type is obvious
-- Prefer explicit types when it improves readability
-- Use async/await for asynchronous operations
-- Follow the repository pattern for data access
-- Use proper exception handling with try-catch blocks
-- Implement IDisposable when managing resources
-- Use nullable reference types to avoid null reference exceptions
-- use file-scoped namespaces for cleaner code organization
+## Normes de Codage C#
+- Utilisez PascalCase pour les noms de classes, méthodes et propriétés
+- Utilisez camelCase pour les variables locales et paramètres
+- Utilisez des noms descriptifs qui indiquent clairement le but
+- Ajoutez des commentaires de documentation XML pour les méthodes et classes publiques
+- Utilisez `var` pour les variables locales quand le type est évident
+- Préférez les types explicites quand cela améliore la lisibilité
+- Utilisez async/await pour les opérations asynchrones
+- Suivez le modèle repository pour l'accès aux données
+- Utilisez une gestion appropriée des exceptions avec des blocs try-catch
+- Implémentez IDisposable lors de la gestion des ressources
+- Utilisez les types de référence nullable pour éviter les exceptions de référence nulle
+- utilisez les espaces de noms à portée de fichier pour une organisation de code plus propre
 
-## Naming Conventions
-- Classes: `MonkeyHelper`, `Monkey`, `Program`
-- Methods: `GetMonkeys()`, `GetRandomMonkey()`, `GetMonkeyByName()`
-- Properties: `Name`, `Location`, `Population`
-- Variables: `selectedMonkey`, `monkeyCount`, `userInput`
-- Constants: `MAX_MONKEYS`, `DEFAULT_POPULATION`
+## Conventions de Nommage
+- Classes : `MonkeyHelper`, `Monkey`, `Program`
+- Méthodes : `GetMonkeys()`, `GetRandomMonkey()`, `GetMonkeyByName()`
+- Propriétés : `Name`, `Location`, `Population`
+- Variables : `selectedMonkey`, `monkeyCount`, `userInput`
+- Constantes : `MAX_MONKEYS`, `DEFAULT_POPULATION`
 
 ## Architecture
-- Console application with interactive menu
-- Static helper class for data management
-- Model classes for data representation
-- Separation of concerns between UI and business logic
+- Application console avec menu interactif
+- Classe d'aide statique pour la gestion des données
+- Classes de modèle pour la représentation des données
+- Séparation des préoccupations entre UI et logique métier
+
+---
+
+Ce document a été localisé par [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Par conséquent, il peut contenir des erreurs. Si vous trouvez une traduction inappropriée ou erronée, veuillez créer un [issue](../../../../../../issues).

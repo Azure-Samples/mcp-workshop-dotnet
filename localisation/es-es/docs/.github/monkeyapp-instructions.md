@@ -1,35 +1,39 @@
-This project is .NET 9 and uses C# 13.
+Este proyecto es .NET 9 y usa C# 13.
 
-Make sure all code generated is inside of the MyMonkeyApp project, which may be a subfolder inside of the main folder.
+Asegúrate de que todo el código generado esté dentro del proyecto MyMonkeyApp, que puede ser una subcarpeta dentro de la carpeta principal.
 
-It is on GitHub at https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
+Está en GitHub en https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
 
-## Project Context
-This is a console application that manages monkey species data and integrates with GitHub through MCP servers.
+## Contexto del Proyecto
+Esta es una aplicación de consola que gestiona datos de especies de monos e se integra con GitHub a través de servidores MCP.
 
-## C# Coding Standards
-- Use PascalCase for class names, method names, and properties
-- Use camelCase for local variables and parameters
-- Use descriptive names that clearly indicate purpose
-- Add XML documentation comments for public methods and classes
-- Use `var` for local variables when the type is obvious
-- Prefer explicit types when it improves readability
-- Use async/await for asynchronous operations
-- Follow the repository pattern for data access
-- Use proper exception handling with try-catch blocks
-- Implement IDisposable when managing resources
-- Use nullable reference types to avoid null reference exceptions
-- use file-scoped namespaces for cleaner code organization
+## Estándares de Codificación C#
+- Usa PascalCase para nombres de clases, métodos y propiedades
+- Usa camelCase para variables locales y parámetros
+- Usa nombres descriptivos que indiquen claramente el propósito
+- Agrega comentarios de documentación XML para métodos y clases públicos
+- Usa `var` para variables locales cuando el tipo sea obvio
+- Prefiere tipos explícitos cuando mejore la legibilidad
+- Usa async/await para operaciones asíncronas
+- Sigue el patrón repository para acceso a datos
+- Usa manejo apropiado de excepciones con bloques try-catch
+- Implementa IDisposable al gestionar recursos
+- Usa tipos de referencia anulables para evitar excepciones de referencia nula
+- usa namespaces con ámbito de archivo para organización de código más limpia
 
-## Naming Conventions
-- Classes: `MonkeyHelper`, `Monkey`, `Program`
-- Methods: `GetMonkeys()`, `GetRandomMonkey()`, `GetMonkeyByName()`
-- Properties: `Name`, `Location`, `Population`
+## Convenciones de Nomenclatura
+- Clases: `MonkeyHelper`, `Monkey`, `Program`
+- Métodos: `GetMonkeys()`, `GetRandomMonkey()`, `GetMonkeyByName()`
+- Propiedades: `Name`, `Location`, `Population`
 - Variables: `selectedMonkey`, `monkeyCount`, `userInput`
-- Constants: `MAX_MONKEYS`, `DEFAULT_POPULATION`
+- Constantes: `MAX_MONKEYS`, `DEFAULT_POPULATION`
 
-## Architecture
-- Console application with interactive menu
-- Static helper class for data management
-- Model classes for data representation
-- Separation of concerns between UI and business logic
+## Arquitectura
+- Aplicación de consola con menú interactivo
+- Clase auxiliar estática para gestión de datos
+- Clases modelo para representación de datos
+- Separación de responsabilidades entre UI y lógica de negocio
+
+---
+
+Este documento ha sido localizado por [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Por lo tanto, puede contener errores. Si encuentras alguna traducción inapropiada o errónea, por favor crea un [issue](../../../../../../issues).
