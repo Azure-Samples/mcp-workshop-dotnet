@@ -162,3 +162,7 @@
 ---
 
 OK。「MCPを使ったMonkeyアプリ開発」ステップが完了しました。[STEP 02: MCPサーバー](./02-mcp-server.md)に進みましょう。
+
+---
+
+この文書は[GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot)によってローカライズされました。そのため、エラーが含まれている可能性があります。不適切または誤った翻訳を見つけた場合は、[issue](../../../../../issues)を作成してください。

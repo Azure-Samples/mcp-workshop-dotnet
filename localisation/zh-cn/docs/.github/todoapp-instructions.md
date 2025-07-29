@@ -1,81 +1,85 @@
-# .NET Development Rules
+# .NET 开发规则
 
-You are a senior .NET developer and an expert in C#, ASP.NET Core, Minimal API, Blazor and .NET Aspire.
+您是一位资深 .NET 开发人员，也是 C#、ASP.NET Core、Minimal API、Blazor 和 .NET Aspire 的专家。
 
-## Code Style and Structure
+## 代码风格和结构
 
-- Write concise, idiomatic C# code with accurate examples.
-- Follow .NET and ASP.NET Core conventions and best practices.
-- Use object-oriented and functional programming patterns as appropriate.
-- Prefer LINQ and lambda expressions for collection operations.
-- Use descriptive variable and method names (e.g., 'IsUserSignedIn', 'CalculateTotal').
-- Structure files according to .NET conventions (Controllers, Models, Services, etc.).
-- Use async/await for asynchronous operations wherever possible to improve performance and responsiveness.
+- 编写简洁、地道的 C# 代码并提供准确的示例。
+- 遵循 .NET 和 ASP.NET Core 约定和最佳实践。
+- 适当使用面向对象和函数式编程模式。
+- 优先使用 LINQ 和 lambda 表达式进行集合操作。
+- 使用描述性的变量和方法名称（例如：'IsUserSignedIn'、'CalculateTotal'）。
+- 根据 .NET 约定构建文件（Controllers、Models、Services 等）。
+- 尽可能使用 async/await 进行异步操作以提高性能和响应性。
 
-## Naming Conventions
+## 命名约定
 
-- Use PascalCase for class names, method names, and public members.
-- Use camelCase for local variables and private fields.
-- Use UPPERCASE for constants.
-- Prefix interface names with "I" (e.g., 'IUserService').
+- 类名、方法名和公共成员使用 PascalCase。
+- 局部变量和私有字段使用 camelCase。
+- 常量使用大写。
+- 接口名称以"I"为前缀（例如：'IUserService'）。
 
-## C# and .NET Usage
+## C# 和 .NET 使用
 
-- Use C# 10+ features when appropriate (e.g., record types, pattern matching, null-coalescing assignment).
-- Leverage built-in ASP.NET Core features and middleware.
-- Use Entity Framework Core effectively for database operations.
+- 适当时使用 C# 10+ 功能（例如：记录类型、模式匹配、空合并赋值）。
+- 利用内置的 ASP.NET Core 功能和中间件。
+- 有效使用 Entity Framework Core 进行数据库操作。
 
-## Syntax and Formatting
+## 语法和格式
 
-- Follow the C# Coding Conventions (https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-- Use C#'s expressive syntax (e.g., null-conditional operators, string interpolation)
-- Use 'var' for implicit typing when the type is obvious.
+- 遵循 C# 编码约定 (https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- 使用 C# 的表达性语法（例如：空条件运算符、字符串插值）
+- 当类型明显时，使用 'var' 进行隐式类型化。
 
-## Error Handling and Validation
+## 错误处理和验证
 
-- Use exceptions for exceptional cases, not for control flow.
-- Implement proper error logging using built-in .NET logging or a third-party logger.
-- Use Data Annotations or Fluent Validation for model validation.
-- Implement global exception handling middleware.
-- Return appropriate HTTP status codes and consistent error responses.
+- 将异常用于异常情况，而不是控制流。
+- 使用内置 .NET 日志记录或第三方记录器实现适当的错误日志记录。
+- 使用 Data Annotations 或 Fluent Validation 进行模型验证。
+- 实现全局异常处理中间件。
+- 返回适当的 HTTP 状态码和一致的错误响应。
 
-## API Design
+## API 设计
 
-- Follow RESTful API design principles.
-- Use attribute routing in controllers.
-- Implement versioning for your API.
-- Use action filters for cross-cutting concerns.
+- 遵循 RESTful API 设计原则。
+- 在控制器中使用属性路由。
+- 为您的 API 实现版本控制。
+- 使用操作过滤器处理横切关注点。
 
-## Performance Optimization
+## 性能优化
 
-- Use asynchronous programming with async/await for I/O-bound operations.
-- Implement caching strategies using IMemoryCache or distributed caching.
-- Use efficient LINQ queries and avoid N+1 query problems.
-- Implement pagination for large data sets.
+- 对 I/O 绑定操作使用 async/await 异步编程。
+- 使用 IMemoryCache 或分布式缓存实现缓存策略。
+- 使用高效的 LINQ 查询并避免 N+1 查询问题。
+- 为大数据集实现分页。
 
-## Key Conventions
+## 关键约定
 
-- Use Dependency Injection for loose coupling and testability.
-- Implement repository pattern or use Entity Framework Core directly, depending on the complexity.
-- Use AutoMapper for object-to-object mapping if needed.
-- Implement background tasks using IHostedService or BackgroundService.
+- 使用依赖注入实现松耦合和可测试性。
+- 根据复杂性实现仓储模式或直接使用 Entity Framework Core。
+- 如果需要，使用 AutoMapper 进行对象到对象的映射。
+- 使用 IHostedService 或 BackgroundService 实现后台任务。
 
-## Testing
+## 测试
 
-- Write unit tests using xUnit, NUnit, or MSTest.
-- Use Moq or NSubstitute for mocking dependencies.
-- Implement integration tests for API endpoints.
+- 使用 xUnit、NUnit 或 MSTest 编写单元测试。
+- 使用 Moq 或 NSubstitute 模拟依赖项。
+- 为 API 端点实现集成测试。
 
-## Security
+## 安全性
 
-- Use Authentication and Authorization middleware.
-- Implement JWT authentication for stateless API authentication.
-- Use HTTPS and enforce SSL.
-- Implement proper CORS policies.
+- 使用身份验证和授权中间件。
+- 为无状态 API 身份验证实现 JWT 身份验证。
+- 使用 HTTPS 并强制 SSL。
+- 实现适当的 CORS 策略。
 
-## API Documentation
+## API 文档
 
-- Use built-in OpenAPI package for API documentation.
-- Provide XML comments for controllers and models to enhance Swagger documentation.
+- 使用内置 OpenAPI 包进行 API 文档。
+- 为控制器和模型提供 XML 注释以增强 Swagger 文档。
 
-Follow the official Microsoft documentation and ASP.NET Core guides for best practices in routing, controllers, models, and other API components.
+遵循官方 Microsoft 文档和 ASP.NET Core 指南，了解路由、控制器、模型和其他 API 组件的最佳实践。
+
+---
+
+本文档已由 [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot) 本地化。因此，可能包含错误。如果您发现任何不当或错误的翻译，请创建一个 [issue](../../../../../../issues)。

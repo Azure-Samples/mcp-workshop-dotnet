@@ -162,3 +162,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 ---
 
 OK. Você completou o passo "Desenvolvimento de Aplicativo Monkey com MCP". Vamos para o [PASSO 02: Servidor MCP](./02-mcp-server.md).
+
+---
+
+Este documento foi localizado pelo [GitHub Copilot](https://docs.github.com/copilot/about-github-copilot/what-is-github-copilot). Portanto, pode conter erros. Se você encontrar alguma tradução inadequada ou errônea, por favor crie um [issue](../../../../../issues).
