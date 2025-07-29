@@ -89,18 +89,18 @@
 1. 作成したコンソールアプリをプッシュするために、GitHub Copilotに以下のプロンプトを入力します。
 
     ```text
-    Push the current changes to the `main` branch of the repository.
+    現在の変更をリポジトリの`main`ブランチにプッシュしてください。
     ```
 
 1. リポジトリにissueを生成するために、GitHub Copilotに以下のプロンプトを入力します。
 
     ```text
-    Create a new GitHub issue in my repository titled 'Implement Monkey Console Application' with the following requirements:
+    私のリポジトリに「Monkey コンソールアプリケーションの実装」というタイトルで新しいGitHub issue を作成し、以下の要件を含めてください：
     
-    - Create a C# console app that can list all available monkeys, get details for a specific monkey by name, and pick a random monkey.
-    - The app should use a Monkey model class and include ASCII art for visual appeal.
-    - Add appropriate labels like 'enhancement' and 'good first issue'.
-    - Add some details about how we may go about implementing this and a checklist for what we will need to do.
+    - 利用可能なすべてのサルをリストし、名前で特定のサルの詳細を取得し、ランダムなサルを選ぶことができるC#コンソールアプリを作成する。
+    - アプリはMonkeyモデルクラスを使用し、視覚的な魅力のためにASCII アートを含める必要がある。
+    - 'enhancement' や 'good first issue' などの適切なラベルを追加する。
+    - これをどのように実装するかについての詳細と、実行する必要があることのチェックリストを追加する。
     ```
 
 1. issueに`@Copilot`をアサインし、何が起こっているかを観察します。
@@ -116,47 +116,47 @@
 1. サルのリストを取得するために以下のプロンプトを入力します。
 
     ```text
-    Get me a list of monkeys that are available and display them in a table with their details.
+    利用可能なサルのリストを取得し、詳細とともにテーブルで表示してください。
     ```
 
 1. サルのデータモデルのアイデアを得るために以下のプロンプトを入力します。
 
     ```text
-    What would a data model look like for this structure?
+    この構造のデータモデルはどのようなものになりますか？
     ```
 
 1. データモデルクラス用のファイルを作成するために以下のプロンプトを入力します。
 
     ```text
-    Let's create a new file for this class.
+    このクラス用の新しいファイルを作成しましょう。
     ```
 
 1. `MonkeyHelper`クラスを作成するために以下のプロンプトを入力します。
 
     ```text
-    Let's create a new class called MonkeyHelper that is static. It should manage a collection of monkey data. Include methods to get all monkeys, get a random monkey, find a monkey by name, and track access count to when a random monkey is picked. The data for the monkeys should come from the Monkey MCP server that we just got.
+    MonkeyHelperという静的な新しいクラスを作成しましょう。サルのデータのコレクションを管理する必要があります。すべてのサルを取得し、ランダムなサルを取得し、名前でサルを見つけ、ランダムなサルが選ばれたときのアクセス数を追跡するメソッドを含めてください。サルのデータは、先ほど取得したMonkey MCPサーバーから取得する必要があります。
     ```
 
 1. コンソールアプリを更新するために以下のプロンプトを入力します。
 
     ```text
-    Let's update the app now to have a nice menu with the following options that will call into that `MonkeyHelper`.
+    その`MonkeyHelper`を呼び出す以下のオプションを持つ素敵なメニューを持つようにアプリを更新しましょう。
     
-    1. List all monkeys
-    2. Get details for a specific monkey by name
-    3. Get a random monkey
-    4. Exit app
+    1. すべてのサルをリスト
+    2. 名前で特定のサルの詳細を取得
+    3. ランダムなサルを取得
+    4. アプリを終了
 
-    Also display some funny ASCII art randomly.
+    また、面白いASCIIアートをランダムに表示してください。
     ```
 
 1. 更新されたコンソールアプリをプッシュするために、GitHub Copilotに以下のプロンプトを入力します。
 
     ```text
-    Push the current changes to the `mymonkeyapp` branch of the repository.
-    With this branch, create a PR against the `main` branch.
-    Connect this PR to the issue created before.
-    Then, merge this PR and close the issue.
+    現在の変更をリポジトリの`mymonkeyapp`ブランチにプッシュしてください。
+    このブランチで、`main`ブランチに対してPRを作成してください。
+    このPRを以前に作成されたissueに接続してください。
+    その後、このPRをマージしてissueを閉じてください。
     ```
 
 ---

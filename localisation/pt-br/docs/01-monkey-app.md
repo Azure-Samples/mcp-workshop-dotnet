@@ -89,18 +89,18 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 1. Digite o seguinte prompt no GitHub Copilot para fazer push do aplicativo de console criado.
 
     ```text
-    Push the current changes to the `main` branch of the repository.
+    Envie as alterações atuais para o branch `main` do repositório.
     ```
 
 1. Digite o seguinte prompt no GitHub Copilot para gerar um issue no repositório.
 
     ```text
-    Create a new GitHub issue in my repository titled 'Implement Monkey Console Application' with the following requirements:
+    Crie uma nova issue do GitHub no meu repositório intitulada 'Implementar Aplicação de Console Monkey' com os seguintes requisitos:
     
-    - Create a C# console app that can list all available monkeys, get details for a specific monkey by name, and pick a random monkey.
-    - The app should use a Monkey model class and include ASCII art for visual appeal.
-    - Add appropriate labels like 'enhancement' and 'good first issue'.
-    - Add some details about how we may go about implementing this and a checklist for what we will need to do.
+    - Criar um app de console C# que possa listar todos os macacos disponíveis, obter detalhes de um macaco específico por nome, e escolher um macaco aleatório.
+    - O app deve usar uma classe modelo Monkey e incluir arte ASCII para apelo visual.
+    - Adicionar rótulos apropriados como 'enhancement' e 'good first issue'.
+    - Adicionar alguns detalhes sobre como podemos proceder para implementar isso e uma checklist do que precisaremos fazer.
     ```
 
 1. Atribua `@Copilot` ao issue e observe o que está acontecendo.
@@ -116,47 +116,47 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 1. Digite o seguinte prompt para obter a lista de macacos.
 
     ```text
-    Get me a list of monkeys that are available and display them in a table with their details.
+    Obtenha uma lista de macacos que estão disponíveis e exiba-os em uma tabela com seus detalhes.
     ```
 
 1. Digite o seguinte prompt para obter uma ideia do modelo de dados para um macaco.
 
     ```text
-    What would a data model look like for this structure?
+    Como seria um modelo de dados para esta estrutura?
     ```
 
 1. Digite o seguinte prompt para criar um arquivo para a classe do modelo de dados.
 
     ```text
-    Let's create a new file for this class.
+    Vamos criar um novo arquivo para esta classe.
     ```
 
 1. Digite o seguinte prompt para criar uma classe `MonkeyHelper`.
 
     ```text
-    Let's create a new class called MonkeyHelper that is static. It should manage a collection of monkey data. Include methods to get all monkeys, get a random monkey, find a monkey by name, and track access count to when a random monkey is picked. The data for the monkeys should come from the Monkey MCP server that we just got.
+    Vamos criar uma nova classe chamada MonkeyHelper que é estática. Ela deve gerenciar uma coleção de dados de macacos. Inclua métodos para obter todos os macacos, obter um macaco aleatório, encontrar um macaco por nome, e rastrear a contagem de acesso quando um macaco aleatório é escolhido. Os dados dos macacos devem vir do servidor Monkey MCP que acabamos de obter.
     ```
 
 1. Digite o seguinte prompt para atualizar o aplicativo de console.
 
     ```text
-    Let's update the app now to have a nice menu with the following options that will call into that `MonkeyHelper`.
+    Vamos atualizar o app agora para ter um menu bonito com as seguintes opções que chamará esse `MonkeyHelper`.
     
-    1. List all monkeys
-    2. Get details for a specific monkey by name
-    3. Get a random monkey
-    4. Exit app
+    1. Listar todos os macacos
+    2. Obter detalhes de um macaco específico por nome
+    3. Obter um macaco aleatório
+    4. Sair do app
 
-    Also display some funny ASCII art randomly.
+    Também exiba arte ASCII engraçada aleatoriamente.
     ```
 
 1. Digite o seguinte prompt no GitHub Copilot para fazer push do aplicativo de console atualizado.
 
     ```text
-    Push the current changes to the `mymonkeyapp` branch of the repository.
-    With this branch, create a PR against the `main` branch.
-    Connect this PR to the issue created before.
-    Then, merge this PR and close the issue.
+    Envie as alterações atuais para o branch `mymonkeyapp` do repositório.
+    Com este branch, crie um PR contra o branch `main`.
+    Conecte este PR à issue criada anteriormente.
+    Em seguida, faça merge deste PR e feche a issue.
     ```
 
 ---

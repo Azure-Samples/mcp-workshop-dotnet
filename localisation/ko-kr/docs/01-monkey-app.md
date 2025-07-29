@@ -89,18 +89,18 @@
 1. 생성된 콘솔 앱을 푸시하기 위해 GitHub Copilot에 다음 프롬프트를 입력합니다.
 
     ```text
-    Push the current changes to the `main` branch of the repository.
+    현재 변경사항을 저장소의 `main` 브랜치에 푸시하세요.
     ```
 
 1. 저장소에 이슈를 생성하기 위해 GitHub Copilot에 다음 프롬프트를 입력합니다.
 
     ```text
-    Create a new GitHub issue in my repository titled 'Implement Monkey Console Application' with the following requirements:
+    내 저장소에 'Monkey 콘솔 애플리케이션 구현'이라는 제목으로 다음 요구사항을 포함한 새 GitHub 이슈를 생성하세요:
     
-    - Create a C# console app that can list all available monkeys, get details for a specific monkey by name, and pick a random monkey.
-    - The app should use a Monkey model class and include ASCII art for visual appeal.
-    - Add appropriate labels like 'enhancement' and 'good first issue'.
-    - Add some details about how we may go about implementing this and a checklist for what we will need to do.
+    - 사용 가능한 모든 원숭이를 나열하고, 이름으로 특정 원숭이의 세부 정보를 가져오고, 무작위 원숭이를 선택할 수 있는 C# 콘솔 앱을 만드세요.
+    - 앱은 Monkey 모델 클래스를 사용하고 시각적 매력을 위해 ASCII 아트를 포함해야 합니다.
+    - 'enhancement' 및 'good first issue'와 같은 적절한 레이블을 추가하세요.
+    - 이를 구현하는 방법에 대한 세부 정보와 수행해야 할 작업의 체크리스트를 추가하세요.
     ```
 
 1. 이슈에 `@Copilot`을 할당하고 무슨 일이 일어나는지 관찰합니다.
@@ -116,47 +116,47 @@
 1. 원숭이 목록을 얻기 위해 다음 프롬프트를 입력합니다.
 
     ```text
-    Get me a list of monkeys that are available and display them in a table with their details.
+    사용 가능한 원숭이들의 목록을 가져와서 세부 정보와 함께 테이블로 표시해주세요.
     ```
 
 1. 원숭이의 데이터 모델에 대한 아이디어를 얻기 위해 다음 프롬프트를 입력합니다.
 
     ```text
-    What would a data model look like for this structure?
+    이 구조에 대한 데이터 모델은 어떻게 생겼을까요?
     ```
 
 1. 데이터 모델 클래스를 위한 파일을 생성하기 위해 다음 프롬프트를 입력합니다.
 
     ```text
-    Let's create a new file for this class.
+    이 클래스를 위한 새 파일을 만들어 봅시다.
     ```
 
 1. `MonkeyHelper` 클래스를 생성하기 위해 다음 프롬프트를 입력합니다.
 
     ```text
-    Let's create a new class called MonkeyHelper that is static. It should manage a collection of monkey data. Include methods to get all monkeys, get a random monkey, find a monkey by name, and track access count to when a random monkey is picked. The data for the monkeys should come from the Monkey MCP server that we just got.
+    MonkeyHelper라는 정적 클래스를 새로 만들어 봅시다. 원숭이 데이터의 컬렉션을 관리해야 합니다. 모든 원숭이를 가져오고, 무작위 원숭이를 가져오고, 이름으로 원숭이를 찾고, 무작위 원숭이가 선택될 때 액세스 횟수를 추적하는 메서드를 포함하세요. 원숭이 데이터는 방금 얻은 Monkey MCP 서버에서 가져와야 합니다.
     ```
 
 1. 콘솔 앱을 업데이트하기 위해 다음 프롬프트를 입력합니다.
 
     ```text
-    Let's update the app now to have a nice menu with the following options that will call into that `MonkeyHelper`.
+    이제 `MonkeyHelper`를 호출할 다음 옵션들로 멋진 메뉴를 가지도록 앱을 업데이트해 봅시다.
     
-    1. List all monkeys
-    2. Get details for a specific monkey by name
-    3. Get a random monkey
-    4. Exit app
+    1. 모든 원숭이 나열
+    2. 이름으로 특정 원숭이의 세부 정보 가져오기
+    3. 무작위 원숭이 가져오기
+    4. 앱 종료
 
-    Also display some funny ASCII art randomly.
+    또한 재미있는 ASCII 아트를 무작위로 표시하세요.
     ```
 
 1. 업데이트된 콘솔 앱을 푸시하기 위해 GitHub Copilot에 다음 프롬프트를 입력합니다.
 
     ```text
-    Push the current changes to the `mymonkeyapp` branch of the repository.
-    With this branch, create a PR against the `main` branch.
-    Connect this PR to the issue created before.
-    Then, merge this PR and close the issue.
+    현재 변경사항을 저장소의 `mymonkeyapp` 브랜치에 푸시하세요.
+    이 브랜치로 `main` 브랜치에 대한 PR을 생성하세요.
+    이 PR을 이전에 생성된 이슈에 연결하세요.
+    그런 다음 이 PR을 병합하고 이슈를 닫으세요.
     ```
 
 ---
