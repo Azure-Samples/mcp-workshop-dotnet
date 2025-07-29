@@ -5,9 +5,10 @@ Aquí están los materiales de instrucción de aprendizaje autoguiado. ¡Úsalos
 | Paso                              | Enlace                                                |
 |-----------------------------------|-------------------------------------------------------|
 | 00: Entorno de Desarrollo         | [00-setup.md](./00-setup.md)                         |
-| 01: Desarrollo de Servidor MCP    | [01-mcp-server.md](./01-mcp-server.md)               |
-| 02: Despliegue de Servidor MCP Remoto | [02-mcp-remote-server.md](./02-mcp-remote-server.md) |
-| 03: Desarrollo de Cliente MCP     | [03-mcp-client.md](./03-mcp-client.md)               |
+| 01: Desarrollo de Aplicación Monkey con MCP | [01-monkey-app.md](./01-monkey-app.md)     |
+| 02: Desarrollo de Servidor MCP    | [02-mcp-server.md](./02-mcp-server.md)               |
+| 03: Despliegue de Servidor MCP Remoto | [03-mcp-remote-server.md](./03-mcp-remote-server.md) |
+| 04: Desarrollo de Cliente MCP     | [04-mcp-client.md](./04-mcp-client.md)               |
 
 ---
 

@@ -5,9 +5,10 @@
 | 단계                              | 링크                                                  |
 |-----------------------------------|-------------------------------------------------------|
 | 00: 개발 환경                     | [00-setup.md](./00-setup.md)                         |
-| 01: MCP 서버 개발                 | [01-mcp-server.md](./01-mcp-server.md)               |
-| 02: MCP 원격 서버 배포            | [02-mcp-remote-server.md](./02-mcp-remote-server.md) |
-| 03: MCP 클라이언트 개발           | [03-mcp-client.md](./03-mcp-client.md)               |
+| 01: MCP를 사용한 Monkey 앱 개발    | [01-monkey-app.md](./01-monkey-app.md)               |
+| 02: MCP 서버 개발                 | [02-mcp-server.md](./02-mcp-server.md)               |
+| 03: MCP 원격 서버 배포            | [03-mcp-remote-server.md](./03-mcp-remote-server.md) |
+| 04: MCP 클라이언트 개발           | [04-mcp-client.md](./04-mcp-client.md)               |
 
 ---
 

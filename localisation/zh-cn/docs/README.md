@@ -5,9 +5,10 @@
 | 步骤                              | 链接                                                  |
 |-----------------------------------|-------------------------------------------------------|
 | 00: 开发环境                      | [00-setup.md](./00-setup.md)                         |
-| 01: MCP 服务器开发                | [01-mcp-server.md](./01-mcp-server.md)               |
-| 02: MCP 远程服务器部署            | [02-mcp-remote-server.md](./02-mcp-remote-server.md) |
-| 03: MCP 客户端开发                | [03-mcp-client.md](./03-mcp-client.md)               |
+| 01: 使用 MCP 开发 Monkey 应用      | [01-monkey-app.md](./01-monkey-app.md)               |
+| 02: MCP 服务器开发                | [02-mcp-server.md](./02-mcp-server.md)               |
+| 03: MCP 远程服务器部署            | [03-mcp-remote-server.md](./03-mcp-remote-server.md) |
+| 04: MCP 客户端开发                | [04-mcp-client.md](./04-mcp-client.md)               |
 
 ---
 

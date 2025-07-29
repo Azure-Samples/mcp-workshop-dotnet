@@ -5,9 +5,10 @@
 | ステップ                          | リンク                                                 |
 |-----------------------------------|-------------------------------------------------------|
 | 00: 開発環境                      | [00-setup.md](./00-setup.md)                         |
-| 01: MCPサーバー開発               | [01-mcp-server.md](./01-mcp-server.md)               |
-| 02: MCPリモートサーバーデプロイ   | [02-mcp-remote-server.md](./02-mcp-remote-server.md) |
-| 03: MCPクライアント開発           | [03-mcp-client.md](./03-mcp-client.md)               |
+| 01: MCPを使ったMonkeyアプリ開発    | [01-monkey-app.md](./01-monkey-app.md)               |
+| 02: MCPサーバー開発               | [02-mcp-server.md](./02-mcp-server.md)               |
+| 03: MCPリモートサーバーデプロイ   | [03-mcp-remote-server.md](./03-mcp-remote-server.md) |
+| 04: MCPクライアント開発           | [04-mcp-client.md](./04-mcp-client.md)               |
 
 ---
 

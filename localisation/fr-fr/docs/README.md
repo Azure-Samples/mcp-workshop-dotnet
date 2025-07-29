@@ -5,9 +5,10 @@ Voici les matériaux d'instruction d'apprentissage autonome. Utilisez-les et cr�
 | Étape                             | Lien                                                  |
 |-----------------------------------|-------------------------------------------------------|
 | 00 : Environnement de Développement | [00-setup.md](./00-setup.md)                         |
-| 01 : Développement de Serveur MCP | [01-mcp-server.md](./01-mcp-server.md)               |
-| 02 : Déploiement de Serveur MCP Distant | [02-mcp-remote-server.md](./02-mcp-remote-server.md) |
-| 03 : Développement de Client MCP  | [03-mcp-client.md](./03-mcp-client.md)               |
+| 01 : Développement d'Application Monkey avec MCP | [01-monkey-app.md](./01-monkey-app.md) |
+| 02 : Développement de Serveur MCP | [02-mcp-server.md](./02-mcp-server.md)               |
+| 03 : Déploiement de Serveur MCP Distant | [03-mcp-remote-server.md](./03-mcp-remote-server.md) |
+| 04 : Développement de Client MCP  | [04-mcp-client.md](./04-mcp-client.md)               |
 
 ---
 
