@@ -21,12 +21,12 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
 1. Clique no ícone do GitHub Copilot no topo do GitHub Codespace ou VS Code e abra a janela do GitHub Copilot.
 
-   ![Open GitHub Copilot Chat](./images/setup-01.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. Se for solicitado para fazer login ou se inscrever, faça-o. É gratuito.
 1. Certifique-se de estar usando o Modo Agente do GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](./images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
 1. Certifique-se de ter configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).
@@ -402,7 +402,7 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
 
 ---
 
-Ótimo. Você completou a etapa "Desenvolvimento do Servidor MCP". Agora vamos para o [PASSO 03: Servidor MCP Remoto](./03-mcp-remote-server.md).
+Ótimo. Você completou a etapa "Desenvolvimento do Servidor MCP". Agora vamos para o [PASSO 02: Servidor MCP Remoto](./02-mcp-remote-server.md).
 
 ---
 

@@ -20,12 +20,12 @@
 
 1. GitHub Codespace 또는 VS Code 상단의 GitHub Copilot 아이콘을 클릭하고 GitHub Copilot 창을 엽니다.
 
-   ![GitHub Copilot 채팅 열기](./images/setup-01.png)
+   ![GitHub Copilot 채팅 열기](../../../docs/images/setup-01.png)
 
 1. 로그인 또는 가입을 요청받으면 진행하세요. 무료입니다.
 1. GitHub Copilot 에이전트 모드를 사용하고 있는지 확인하세요.
 
-   ![GitHub Copilot 에이전트 모드](./images/setup-02.png)
+   ![GitHub Copilot 에이전트 모드](../../../docs/images/setup-02.png)
 
 1. 모델을 `GPT-4.1` 또는 `Claude Sonnet 4` 중 하나로 선택하세요.
 1. [MCP 서버](./00-setup.md#mcp-서버-설정)를 구성했는지 확인하세요.

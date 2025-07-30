@@ -21,12 +21,12 @@
 
 1. 点击 GitHub Codespace 或 VS Code 顶部的 GitHub Copilot 图标并打开 GitHub Copilot 窗口。
 
-   ![Open GitHub Copilot Chat](./images/setup-01.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. 如果要求您登录或注册，请照做。这是免费的。
 1. 确保您正在使用 GitHub Copilot 代理模式。
 
-   ![GitHub Copilot Agent Mode](./images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
 1. 确保您已配置 [MCP 服务器](./00-setup.md#设置-mcp-服务器)。
@@ -402,7 +402,7 @@
 
 ---
 
-很好。您已完成"MCP 服务器开发"步骤。让我们继续进行 [步骤 03: MCP 远程服务器](./03-mcp-remote-server.md)。
+很好。您已完成"MCP 服务器开发"步骤。让我们继续进行 [步骤 02: MCP 远程服务器](./02-mcp-remote-server.md)。
 
 ---
 

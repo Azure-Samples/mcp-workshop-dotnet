@@ -86,6 +86,30 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
    A versão `7.5.0` ou superior é recomendada. Se sua versão for inferior a essa, visite a [página de instalação do PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) e siga as instruções.
 
+### Instalar node.js
+
+1. Verifique se você já instalou o node.js.
+
+    ```bash
+    # Bash/Zsh
+    which node
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command node
+    ```
+
+   Se você não vir o caminho do comando `node`, significa que ainda não instalou o node.js. Visite a [página de download do node.js](https://nodejs.org/en/download) e siga as instruções.
+
+1. Verifique a versão do seu node.js.
+
+    ```bash
+    node --version
+    ```
+
+   A versão `22.17.x` (LTS mais recente) é recomendada. Se sua versão for inferior a essa, visite a [página de download do node.js](https://nodejs.org/en/download) e siga as instruções.
+
 ### Instalar git CLI
 
 1. Verifique se você já instalou o git CLI.
@@ -274,22 +298,25 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
+1. Abra a Paleta de Comandos digitando `F1` ou `Ctrl`+`Shift`+`P` no Windows ou `Cmd`+`Shift`+`P` no Mac OS, e procure por `MCP: List Servers`.
+1. Escolha `context7` e clique em `Start Server`.
+
 ## Verificar Modo Agente GitHub Copilot
 
 1. Clique no ícone do GitHub Copilot no topo do GitHub Codespace ou VS Code e abra a janela do GitHub Copilot.
 
-   ![Open GitHub Copilot Chat](./images/setup-01.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. Se for solicitado para fazer login ou se inscrever, faça-o. É gratuito.
 1. Certifique-se de estar usando o Modo Agente do GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](./images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Selecione o modelo como `GPT-4.1` ou `Claude Sonnet 4`.
 
 ---
 
-Ótimo. Você completou a etapa "Ambiente de Desenvolvimento". Agora vamos para o [PASSO 01: Aplicação Monkey](./01-monkey-app.md).
+Ótimo. Você completou a etapa "Ambiente de Desenvolvimento". Agora vamos para o [PASSO 01: Servidor MCP](./01-mcp-server.md).
 
 ---
 

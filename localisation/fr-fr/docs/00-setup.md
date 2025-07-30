@@ -86,6 +86,30 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
 
    La version `7.5.0` ou supérieure est recommandée. Si votre version est inférieure, visitez la [page d'installation de PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) et suivez les instructions.
 
+### Installer node.js
+
+1. Vérifiez si vous avez déjà installé node.js.
+
+    ```bash
+    # Bash/Zsh
+    which node
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command node
+    ```
+
+   Si vous ne voyez pas le chemin de commande de `node`, cela signifie que vous n'avez pas encore installé node.js. Visitez la [page de téléchargement de node.js](https://nodejs.org/en/download) et suivez les instructions.
+
+1. Vérifiez la version de votre node.js.
+
+    ```bash
+    node --version
+    ```
+
+   La version `22.17.x` (LTS la plus récente) est recommandée. Si votre version est inférieure, visitez la [page de téléchargement de node.js](https://nodejs.org/en/download) et suivez les instructions.
+
 ### Installer git CLI
 
 1. Vérifiez si vous avez déjà installé git CLI.
@@ -274,22 +298,25 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
+1. Ouvrez la palette de commandes en tapant `F1` ou `Ctrl`+`Shift`+`P` sur Windows ou `Cmd`+`Shift`+`P` sur Mac OS, et recherchez `MCP: List Servers`.
+1. Choisissez `context7` puis cliquez sur `Start Server`.
+
 ## Vérifier le Mode Agent GitHub Copilot
 
 1. Cliquez sur l'icône GitHub Copilot en haut de GitHub Codespace ou VS Code et ouvrez la fenêtre GitHub Copilot.
 
-   ![Open GitHub Copilot Chat](./images/setup-01.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. Si on vous demande de vous connecter ou de vous inscrire, faites-le. C'est gratuit.
 1. Assurez-vous d'utiliser le Mode Agent GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](./images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. Sélectionnez le modèle comme `GPT-4.1` ou `Claude Sonnet 4`.
 
 ---
 
-Parfait. Vous avez terminé l'étape "Environnement de Développement". Passons maintenant à [ÉTAPE 01 : Application Monkey](./01-monkey-app.md).
+Parfait. Vous avez terminé l'étape "Environnement de Développement". Passons maintenant à [ÉTAPE 01 : Serveur MCP](./01-mcp-server.md).
 
 ---
 

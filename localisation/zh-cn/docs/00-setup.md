@@ -86,6 +86,30 @@
 
    建议使用版本 `7.5.0` 或更高版本。如果您的版本低于此版本，请访问 [PowerShell 安装页面](https://learn.microsoft.com/powershell/scripting/install/installing-powershell) 并按照说明操作。
 
+### 安装 node.js
+
+1. 检查您是否已经安装了 node.js。
+
+    ```bash
+    # Bash/Zsh
+    which node
+    ```
+
+    ```bash
+    # PowerShell
+    Get-Command node
+    ```
+
+   如果您没有看到 `node` 的命令路径，意味着您还没有安装 node.js。请访问 [node.js 下载页面](https://nodejs.org/en/download) 并按照说明操作。
+
+1. 检查您的 node.js 版本。
+
+    ```bash
+    node --version
+    ```
+
+   建议使用版本 `22.17.x`（最新的 LTS）。如果您的版本低于此版本，请访问 [node.js 下载页面](https://nodejs.org/en/download) 并按照说明操作。
+
 ### 安装 git CLI
 
 1. 检查您是否已经安装了 git CLI。
@@ -274,22 +298,25 @@
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
+1. 通过按 `F1` 或在 Windows 上按 `Ctrl`+`Shift`+`P` 或在 Mac OS 上按 `Cmd`+`Shift`+`P` 打开命令面板，然后搜索 `MCP: List Servers`。
+1. 选择 `context7` 然后点击 `Start Server`。
+
 ## 检查 GitHub Copilot 代理模式
 
 1. 点击 GitHub Codespace 或 VS Code 顶部的 GitHub Copilot 图标并打开 GitHub Copilot 窗口。
 
-   ![Open GitHub Copilot Chat](./images/setup-01.png)
+   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
 
 1. 如果要求您登录或注册，请照做。这是免费的。
 1. 确保您正在使用 GitHub Copilot 代理模式。
 
-   ![GitHub Copilot Agent Mode](./images/setup-02.png)
+   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
 
 1. 选择模型为 `GPT-4.1` 或 `Claude Sonnet 4`。
 
 ---
 
-很好。您已完成"开发环境"步骤。让我们继续进行 [步骤 01: Monkey 应用](./01-monkey-app.md)。
+很好。您已完成"开发环境"步骤。让我们继续进行 [步骤 01: MCP 服务器](./01-mcp-server.md)。
 
 ---
 
