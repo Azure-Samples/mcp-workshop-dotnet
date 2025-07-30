@@ -274,9 +274,6 @@
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
-1. 通过按 `F1` 或在 Windows 上按 `Ctrl`+`Shift`+`P` 或在 Mac OS 上按 `Cmd`+`Shift`+`P` 打开命令面板，然后搜索 `MCP: List Servers`。
-1. 选择 `context7` 然后点击 `Start Server`。
-
 ## 检查 GitHub Copilot 代理模式
 
 1. 点击 GitHub Codespace 或 VS Code 顶部的 GitHub Copilot 图标并打开 GitHub Copilot 窗口。

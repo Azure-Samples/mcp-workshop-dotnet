@@ -274,9 +274,6 @@
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
-1. `F1`キーを押すか、Windowsでは`Ctrl`+`Shift`+`P`、Mac OSでは`Cmd`+`Shift`+`P`を押してコマンドパレットを開き、`MCP: List Servers`を検索します。
-1. `context7`を選択して`Start Server`をクリックします。
-
 ## GitHub Copilotエージェントモードを確認
 
 1. GitHub CodespaceまたはVS Codeの上部にあるGitHub Copilotアイコンをクリックして、GitHub Copilotウィンドウを開きます。
