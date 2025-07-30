@@ -25,7 +25,7 @@ PAT를 얻으려면 [GitHub 설정](https://github.com/settings/personal-access-
 
 ## MCP 클라이언트 개발 준비
 
-[이전 세션](./01-mcp-server.md)에서 이미 MCP 서버와 클라이언트 앱을 모두 복사했습니다. 계속 사용해보겠습니다.
+[이전 세션](./02-mcp-server.md)에서 이미 MCP 서버와 클라이언트 앱을 모두 복사했습니다. 계속 사용해보겠습니다.
 
 1. `$REPOSITORY_ROOT` 환경 변수가 있는지 확인하세요.
 

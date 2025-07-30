@@ -289,7 +289,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
 ---
 
-Ótimo. Você completou a etapa "Ambiente de Desenvolvimento". Agora vamos para o [PASSO 01: Servidor MCP](./01-mcp-server.md).
+Ótimo. Você completou a etapa "Ambiente de Desenvolvimento". Agora vamos para o [PASSO 01: Aplicação Monkey](./01-monkey-app.md).
 
 ---
 

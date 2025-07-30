@@ -25,7 +25,7 @@ PATを取得するには、[GitHub設定](https://github.com/settings/personal-a
 
 ## MCPクライアント開発の準備
 
-[前のセッション](./01-mcp-server.md)で、MCPサーバーとクライアントアプリの両方をすでにコピーしました。それを使い続けましょう。
+[前のセッション](./02-mcp-server.md)で、MCPサーバーとクライアントアプリの両方をすでにコピーしました。それを使い続けましょう。
 
 1. 環境変数`$REPOSITORY_ROOT`があることを確認してください。
 

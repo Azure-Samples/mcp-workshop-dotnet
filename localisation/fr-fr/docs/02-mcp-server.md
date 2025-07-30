@@ -402,7 +402,7 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 
 ---
 
-Parfait. Vous avez terminé l'étape "Développement du Serveur MCP". Passons maintenant à [ÉTAPE 02 : Serveur MCP Distant](./02-mcp-remote-server.md).
+Parfait. Vous avez terminé l'étape "Développement du Serveur MCP". Passons maintenant à [ÉTAPE 03 : Serveur MCP Distant](./03-mcp-remote-server.md).
 
 ---
 

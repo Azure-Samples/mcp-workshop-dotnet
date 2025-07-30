@@ -25,7 +25,7 @@ Pour obtenir le PAT, allez sur [Paramètres GitHub](https://github.com/settings/
 
 ## Préparer le Développement du Client MCP
 
-Dans la [session précédente](./01-mcp-server.md), vous avez déjà copié à la fois l'application serveur MCP et client. Continuons à l'utiliser.
+Dans la [session précédente](./02-mcp-server.md), vous avez déjà copié à la fois l'application serveur MCP et client. Continuons à l'utiliser.
 
 1. Assurez-vous d'avoir la variable d'environnement `$REPOSITORY_ROOT`.
 

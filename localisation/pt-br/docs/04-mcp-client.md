@@ -25,7 +25,7 @@ Para obter o PAT, vá para [Configurações do GitHub](https://github.com/settin
 
 ## Preparar Desenvolvimento do Cliente MCP
 
-Na [sessão anterior](./01-mcp-server.md), você já copiou tanto a aplicação do servidor MCP quanto a do cliente. Vamos continuar usando-a.
+Na [sessão anterior](./02-mcp-server.md), você já copiou tanto a aplicação do servidor MCP quanto a do cliente. Vamos continuar usando-a.
 
 1. Certifique-se de que você tem a variável de ambiente `$REPOSITORY_ROOT`.
 

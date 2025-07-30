@@ -13,7 +13,7 @@
 
 ## 使用 `Dockerfile` 容器化 MCP 服务器
 
-在[上一节](./01-mcp-server.md)中，您已经创建了一个 MCP 服务器应用程序。让我们继续使用它。
+在[上一节](./02-mcp-server.md)中，您已经创建了一个 MCP 服务器应用程序。让我们继续使用它。
 
 1. 确保 Docker Desktop 已启动并运行。
 1. 确保您已设置环境变量 `$REPOSITORY_ROOT`。
@@ -106,7 +106,7 @@
     }
     ```
 
-1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
+1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./02-mcp-server.md#测试-mcp-服务器)进行测试。
 1. 测试完成后，停止容器并删除它。
 
     ```bash
@@ -218,11 +218,11 @@
     }
     ```
 
-1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./01-mcp-server.md#测试-mcp-服务器)进行测试。
+1. 启动 MCP 服务器 `mcp-todo`，并按照[此文档](./02-mcp-server.md#测试-mcp-服务器)进行测试。
 
 ---
 
-很好。您已完成"MCP 远程服务器部署"步骤。让我们继续进行 [步骤 03: MCP 客户端](./03-mcp-client.md)。
+很好。您已完成"MCP 远程服务器部署"步骤。让我们继续进行 [步骤 04: MCP 客户端](./04-mcp-client.md)。
 
 ---
 

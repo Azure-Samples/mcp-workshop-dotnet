@@ -13,7 +13,7 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
 
 ## Conteneuriser le Serveur MCP avec `Dockerfile`
 
-Dans la [session précédente](./01-mcp-server.md), vous avez déjà créé une application serveur MCP. Continuons à l'utiliser.
+Dans la [session précédente](./02-mcp-server.md), vous avez déjà créé une application serveur MCP. Continuons à l'utiliser.
 
 1. Assurez-vous que Docker Desktop est en cours d'exécution.
 1. Assurez-vous d'avoir la variable d'environnement `$REPOSITORY_ROOT`.
@@ -106,7 +106,7 @@ Dans la [session précédente](./01-mcp-server.md), vous avez déjà créé une 
     }
     ```
 
-1. Démarrez le serveur MCP, `mcp-todo`, et testez-le en suivant [ce document](./01-mcp-server.md#tester-le-serveur-mcp).
+1. Démarrez le serveur MCP, `mcp-todo`, et testez-le en suivant [ce document](./02-mcp-server.md#tester-le-serveur-mcp).
 1. Une fois le test terminé, arrêtez le conteneur et supprimez-le.
 
     ```bash
@@ -218,11 +218,11 @@ Dans la [session précédente](./01-mcp-server.md), vous avez déjà créé une 
     }
     ```
 
-1. Démarrez le serveur MCP, `mcp-todo`, et testez-le en suivant [ce document](./01-mcp-server.md#tester-le-serveur-mcp).
+1. Démarrez le serveur MCP, `mcp-todo`, et testez-le en suivant [ce document](./02-mcp-server.md#tester-le-serveur-mcp).
 
 ---
 
-Parfait. Vous avez terminé l'étape "Déploiement du Serveur MCP Distant". Passons maintenant à [ÉTAPE 03 : Client MCP](./03-mcp-client.md).
+Parfait. Vous avez terminé l'étape "Déploiement du Serveur MCP Distant". Passons maintenant à [ÉTAPE 04 : Client MCP](./04-mcp-client.md).
 
 ---
 
