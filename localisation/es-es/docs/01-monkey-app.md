@@ -20,12 +20,12 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 
 1. Haz clic en el icono de GitHub Copilot en la parte superior de GitHub Codespace o VS Code y abre la ventana de GitHub Copilot.
 
-   ![Abrir GitHub Copilot Chat](../../../docs/images/setup-01.png)
+   ![Abrir GitHub Copilot Chat](./images/setup-01.png)
 
 1. Si se te pide iniciar sesión o registrarte, hazlo. Es gratuito.
 1. Asegúrate de estar usando el Modo Agente de GitHub Copilot.
 
-   ![Modo Agente de GitHub Copilot](../../../docs/images/setup-02.png)
+   ![Modo Agente de GitHub Copilot](./images/setup-02.png)
 
 1. Selecciona el modelo para `GPT-4.1` o `Claude Sonnet 4`.
 1. Asegúrate de haber configurado [Servidores MCP](./00-setup.md#configurar-servidores-mcp).

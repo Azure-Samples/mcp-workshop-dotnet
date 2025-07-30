@@ -274,25 +274,22 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
-1. Abre la Paleta de Comandos presionando `F1` o `Ctrl`+`Shift`+`P` en Windows o `Cmd`+`Shift`+`P` en Mac OS, y busca `MCP: List Servers`.
-1. Elige `context7` y luego haz clic en `Start Server`.
-
 ## Verificar Modo Agente de GitHub Copilot
 
 1. Haz clic en el icono de GitHub Copilot en la parte superior de GitHub Codespace o VS Code y abre la ventana de GitHub Copilot.
 
-   ![Open GitHub Copilot Chat](../../../docs/images/setup-01.png)
+   ![Open GitHub Copilot Chat](./images/setup-01.png)
 
 1. Si se te pide iniciar sesión o registrarte, hazlo. Es gratuito.
 1. Asegúrate de estar usando el Modo Agente de GitHub Copilot.
 
-   ![GitHub Copilot Agent Mode](../../../docs/images/setup-02.png)
+   ![GitHub Copilot Agent Mode](./images/setup-02.png)
 
 1. Selecciona el modelo como `GPT-4.1` o `Claude Sonnet 4`.
 
 ---
 
-Perfecto. Has completado el paso "Entorno de Desarrollo". Ahora vamos al [PASO 01: Servidor MCP](./01-mcp-server.md).
+Perfecto. Has completado el paso "Entorno de Desarrollo". Ahora vamos al [PASO 01: Aplicación Monkey](./01-monkey-app.md).
 
 ---
 

@@ -20,12 +20,12 @@
 
 1. GitHub CodespaceまたはVS CodeのトップにあるGitHub Copilotアイコンをクリックし、GitHub Copilotウィンドウを開きます。
 
-   ![GitHub Copilot Chatを開く](../../../docs/images/setup-01.png)
+   ![GitHub Copilot Chatを開く](./images/setup-01.png)
 
 1. ログインまたはサインアップを求められた場合は実行してください。無料です。
 1. GitHub Copilot エージェントモードを使用していることを確認してください。
 
-   ![GitHub Copilot エージェントモード](../../../docs/images/setup-02.png)
+   ![GitHub Copilot エージェントモード](./images/setup-02.png)
 
 1. モデルを`GPT-4.1`または`Claude Sonnet 4`のいずれかに選択してください。
 1. [MCPサーバー](./00-setup.md#mcpサーバーをセットアップ)を設定していることを確認してください。

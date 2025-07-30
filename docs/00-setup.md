@@ -313,4 +313,4 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 
 ---
 
-OK. You've completed the "Development Environment" step. Let's move onto [STEP 01: MCP Server](./01-mcp-server.md).
+OK. You've completed the "Development Environment" step. Let's move onto [STEP 01: Monkey App](./01-monkey-app.md).
