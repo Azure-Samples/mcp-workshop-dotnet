@@ -9,13 +9,12 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 ## Começando
 
 - [Verificar Modo Agente do GitHub Copilot](#verificar-modo-agente-do-github-copilot)
+- [Iniciar Servidor MCP – GitHub](#iniciar-servidor-mcp--github)
 - [Preparar Instruções Personalizadas](#preparar-instruções-personalizadas)
-- [Preparar Desenvolvimento do Servidor MCP](#preparar-desenvolvimento-do-servidor-mcp)
-- [Desenvolver Lógica de Gerenciamento de Lista de Tarefas](#desenvolver-lógica-de-gerenciamento-de-lista-de-tarefas)
-- [Remover Lógica da API](#remover-lógica-da-api)
-- [Converter para Servidor MCP](#converter-para-servidor-mcp)
-- [Executar Servidor MCP](#executar-servidor-mcp)
-- [Testar Servidor MCP](#testar-servidor-mcp)
+- [Criar Aplicativo de Console](#criar-aplicativo-de-console)
+- [Gerenciar Repositório GitHub](#gerenciar-repositório-github)
+- [Iniciar Servidor MCP – Monkey MCP](#iniciar-servidor-mcp--monkey-mcp)
+- [Desenvolver Aplicativo Monkey com GitHub Copilot e Servidores MCP](#desenvolver-aplicativo-monkey-com-github-copilot-e-servidores-mcp)
 
 ## Verificar Modo Agente do GitHub Copilot
 

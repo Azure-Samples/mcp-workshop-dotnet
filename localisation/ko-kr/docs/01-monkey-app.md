@@ -9,13 +9,12 @@
 ## 시작하기
 
 - [GitHub Copilot 에이전트 모드 확인](#github-copilot-에이전트-모드-확인)
+- [MCP 서버 시작 – GitHub](#mcp-서버-시작--github)
 - [사용자 정의 지침 준비](#사용자-정의-지침-준비)
-- [MCP 서버 개발 준비](#mcp-서버-개발-준비)
-- [할 일 목록 관리 로직 개발](#할-일-목록-관리-로직-개발)
-- [API 로직 제거](#api-로직-제거)
-- [MCP 서버로 변환](#mcp-서버로-변환)
-- [MCP 서버 실행](#mcp-서버-실행)
-- [MCP 서버 테스트](#mcp-서버-테스트)
+- [콘솔 앱 생성](#콘솔-앱-생성)
+- [GitHub 저장소 관리](#github-저장소-관리)
+- [MCP 서버 시작 – Monkey MCP](#mcp-서버-시작--monkey-mcp)
+- [GitHub Copilot과 MCP 서버로 Monkey 앱 개발](#github-copilot과-mcp-서버로-monkey-앱-개발)
 
 ## GitHub Copilot 에이전트 모드 확인
 

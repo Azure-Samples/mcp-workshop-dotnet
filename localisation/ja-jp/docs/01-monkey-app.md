@@ -9,13 +9,12 @@
 ## 開始
 
 - [GitHub Copilot エージェントモードの確認](#github-copilot-エージェントモードの確認)
+- [MCPサーバーの開始 – GitHub](#mcpサーバーの開始--github)
 - [カスタム指示の準備](#カスタム指示の準備)
-- [MCPサーバー開発の準備](#mcpサーバー開発の準備)
-- [To-doリスト管理ロジックの開発](#to-doリスト管理ロジックの開発)
-- [APIロジックの削除](#apiロジックの削除)
-- [MCPサーバーへの変換](#mcpサーバーへの変換)
-- [MCPサーバーの実行](#mcpサーバーの実行)
-- [MCPサーバーのテスト](#mcpサーバーのテスト)
+- [コンソールアプリの作成](#コンソールアプリの作成)
+- [GitHubリポジトリの管理](#githubリポジトリの管理)
+- [MCPサーバーの開始 – Monkey MCP](#mcpサーバーの開始--monkey-mcp)
+- [GitHub CopilotとMCPサーバーでMonkeyアプリを開発](#github-copilotとmcpサーバーでmonkeyアプリを開発)
 
 ## GitHub Copilot エージェントモードの確認
 
@@ -29,7 +28,7 @@
    ![GitHub Copilot エージェントモード](../../../docs/images/setup-02.png)
 
 1. モデルを`GPT-4.1`または`Claude Sonnet 4`のいずれかに選択してください。
-1. [MCPサーバー](./00-setup.md#mcpサーバーのセットアップ)を設定していることを確認してください。
+1. [MCPサーバー](./00-setup.md#mcpサーバーをセットアップ)を設定していることを確認してください。
 
 ## MCPサーバーの開始 &ndash; GitHub
 

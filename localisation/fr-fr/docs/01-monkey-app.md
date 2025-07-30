@@ -1,23 +1,20 @@
 # 01: Développement d'application Monkey avec MCP
 
-> **Note de localisation**: Ce contenu a été localisé en français à l'aide de GitHub Copilot et peut contenir des erreurs ou des inexactitudes. Pour toute question ou correction, veuillez soumettre un problème dans le dépôt GitHub.
-
 Dans cette étape, vous construisez une application console simple en utilisant les serveurs MCP.
 
 ## Prérequis
 
-Consultez la documentation [README](../README.md#prerequisites) pour la préparation.
+Consultez la documentation [README](../README.md#prérequis) pour la préparation.
 
 ## Commencer
 
 - [Vérifier le mode Agent GitHub Copilot](#vérifier-le-mode-agent-github-copilot)
+- [Démarrer le serveur MCP – GitHub](#démarrer-le-serveur-mcp--github)
 - [Préparer les instructions personnalisées](#préparer-les-instructions-personnalisées)
-- [Préparer le développement du serveur MCP](#préparer-le-développement-du-serveur-mcp)
-- [Développer la logique de gestion des to-do](#développer-la-logique-de-gestion-des-to-do)
-- [Supprimer la logique API](#supprimer-la-logique-api)
-- [Convertir en serveur MCP](#convertir-en-serveur-mcp)
-- [Exécuter le serveur MCP](#exécuter-le-serveur-mcp)
-- [Tester le serveur MCP](#tester-le-serveur-mcp)
+- [Créer une application console](#créer-une-application-console)
+- [Gérer le dépôt GitHub](#gérer-le-dépôt-github)
+- [Démarrer le serveur MCP – Monkey MCP](#démarrer-le-serveur-mcp--monkey-mcp)
+- [Développer l'application Monkey avec GitHub Copilot et les serveurs MCP](#développer-lapplication-monkey-avec-github-copilot-et-les-serveurs-mcp)
 
 ## Vérifier le mode Agent GitHub Copilot
 
@@ -31,7 +28,7 @@ Consultez la documentation [README](../README.md#prerequisites) pour la prépara
    ![Mode Agent GitHub Copilot](../../../docs/images/setup-02.png)
 
 1. Sélectionnez le modèle `GPT-4.1` ou `Claude Sonnet 4`.
-1. Assurez-vous d'avoir configuré les [serveurs MCP](./00-setup.md#set-up-mcp-servers).
+1. Assurez-vous d'avoir configuré les [serveurs MCP](./00-setup.md#configurer-les-serveurs-mcp).
 
 ## Démarrer le serveur MCP &ndash; GitHub
 

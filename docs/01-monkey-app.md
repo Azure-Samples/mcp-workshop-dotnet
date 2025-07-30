@@ -9,13 +9,12 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 ## Getting Started
 
 - [Check GitHub Copilot Agent Mode](#check-github-copilot-agent-mode)
+- [Start MCP Server – GitHub](#start-mcp-server--github)
 - [Prepare Custom Instructions](#prepare-custom-instructions)
-- [Prepare MCP Server Development](#prepare-mcp-server-development)
-- [Develop To-do List Management Logic](#develop-to-do-list-management-logic)
-- [Remove API Logic](#remove-api-logic)
-- [Convert to MCP Server](#convert-to-mcp-server)
-- [Run MCP Server](#run-mcp-server)
-- [Test MCP Server](#test-mcp-server)
+- [Scaffold Console App](#scaffold-console-app)
+- [Manage GitHub Repository](#manage-github-repository)
+- [Start MCP Server – Monkey MCP](#start-mcp-server--monkey-mcp)
+- [Develop Monkey App with GitHub Copilot and MCP Servers](#develop-monkey-app-with-github-copilot-and-mcp-servers)
 
 ## Check GitHub Copilot Agent Mode
 

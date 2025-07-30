@@ -9,13 +9,12 @@
 ## 开始
 
 - [检查 GitHub Copilot 代理模式](#检查-github-copilot-代理模式)
+- [启动 MCP 服务器 – GitHub](#启动-mcp-服务器--github)
 - [准备自定义指令](#准备自定义指令)
-- [准备 MCP 服务器开发](#准备-mcp-服务器开发)
-- [开发待办事项列表管理逻辑](#开发待办事项列表管理逻辑)
-- [删除 API 逻辑](#删除-api-逻辑)
-- [转换为 MCP 服务器](#转换为-mcp-服务器)
-- [运行 MCP 服务器](#运行-mcp-服务器)
-- [测试 MCP 服务器](#测试-mcp-服务器)
+- [创建控制台应用程序](#创建控制台应用程序)
+- [管理 GitHub 存储库](#管理-github-存储库)
+- [启动 MCP 服务器 – Monkey MCP](#启动-mcp-服务器--monkey-mcp)
+- [使用 GitHub Copilot 和 MCP 服务器开发 Monkey 应用](#使用-github-copilot-和-mcp-服务器开发-monkey-应用)
 
 ## 检查 GitHub Copilot 代理模式
 
