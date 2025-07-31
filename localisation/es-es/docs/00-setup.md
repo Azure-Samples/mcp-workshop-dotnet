@@ -298,9 +298,6 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
 
-1. Abre la Paleta de Comandos presionando `F1` o `Ctrl`+`Shift`+`P` en Windows o `Cmd`+`Shift`+`P` en Mac OS, y busca `MCP: List Servers`.
-1. Elige `context7` y luego haz clic en `Start Server`.
-
 ## Verificar Modo Agente de GitHub Copilot
 
 1. Haz clic en el icono de GitHub Copilot en la parte superior de GitHub Codespace o VS Code y abre la ventana de GitHub Copilot.
