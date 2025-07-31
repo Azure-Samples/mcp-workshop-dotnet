@@ -42,9 +42,10 @@ MCP 서버 구축에 관심이 있으신가요? MCP 클라이언트는 어떠세
 | 단계                              | 링크                                                      |
 |-----------------------------------|-----------------------------------------------------------|
 | 00: 개발 환경 설정 | [00-setup.md](./docs/00-setup.md)                         |
-| 01: MCP 서버 개발        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
-| 02: MCP 원격 서버 배포  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
-| 03: MCP 클라이언트 개발        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
+| 01: MCP와 함께하는 Monkey 앱 개발 | [01-monkey-app.md](./docs/01-monkey-app.md)               |
+| 02: MCP 서버 개발        | [02-mcp-server.md](./docs/02-mcp-server.md)               |
+| 03: MCP 원격 서버 배포  | [03-mcp-remote-server.md](./docs/03-mcp-remote-server.md) |
+| 04: MCP 클라이언트 개발        | [04-mcp-client.md](./docs/04-mcp-client.md)               |
 
 ## 완전한 샘플
 

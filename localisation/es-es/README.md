@@ -42,9 +42,10 @@ Este es un taller de ritmo propio. Sigue las instrucciones paso a paso en la doc
 | Paso                              | Enlace                                                      |
 |-----------------------------------|-----------------------------------------------------------|
 | 00: Configuración del Entorno de Desarrollo | [00-setup.md](./docs/00-setup.md)                         |
-| 01: Desarrollo del Servidor MCP        | [01-mcp-server.md](./docs/01-mcp-server.md)               |
-| 02: Despliegue del Servidor MCP Remoto  | [02-mcp-remote-server.md](./docs/02-mcp-remote-server.md) |
-| 03: Desarrollo del Cliente MCP        | [03-mcp-client.md](./docs/03-mcp-client.md)               |
+| 01: Desarrollo de App Monkey con MCP | [01-monkey-app.md](./docs/01-monkey-app.md)               |
+| 02: Desarrollo del Servidor MCP        | [02-mcp-server.md](./docs/02-mcp-server.md)               |
+| 03: Despliegue del Servidor MCP Remoto  | [03-mcp-remote-server.md](./docs/03-mcp-remote-server.md) |
+| 04: Desarrollo del Cliente MCP        | [04-mcp-client.md](./docs/04-mcp-client.md)               |
 
 ## Muestra Completa
 
