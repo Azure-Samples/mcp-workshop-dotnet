@@ -153,7 +153,7 @@ Consultez la documentation [README](../README.md#prérequis) pour la préparatio
 
     ```text
     Poussez les changements actuels vers la branche `mymonkeyapp` du dépôt.
-    Avec cette branche, créez une PR contre la branche `main`.
+    Avec cette branche, créez une PR contre la branche `main` de votre dépôt, pas de l'upstream.
     Connectez cette PR au problème créé précédemment.
     Ensuite, fusionnez cette PR et fermez le problème.
     ```

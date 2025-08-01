@@ -153,7 +153,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 
     ```text
     Envie as alterações atuais para o branch `mymonkeyapp` do repositório.
-    Com este branch, crie um PR contra o branch `main`.
+    Com este branch, crie um PR contra o branch `main` do seu repositório, não do upstream.
     Conecte este PR à issue criada anteriormente.
     Em seguida, faça merge deste PR e feche a issue.
     ```
