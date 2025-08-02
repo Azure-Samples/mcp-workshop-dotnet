@@ -153,6 +153,7 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 
     ```text
     Empuja los cambios actuales a la rama `mymonkeyapp` del repositorio.
+    Antes de enviar los cambios, asegúrate de que el directorio `workshop` esté incluido en el push.
     Con esta rama, crea una PR contra la rama `main` de tu repositorio, no del upstream.
     Conecta esta PR al issue creado anteriormente.
     Luego, fusiona esta PR y cierra el issue.
