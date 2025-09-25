@@ -104,6 +104,8 @@
 
 1. 将 `@Copilot` 分配给问题并观察发生的情况。
 
+   > **注意**：根据 GitHub Copilot 免费用户的设置，您可能无法分配 `@Copilot` 来继续。
+
 ## 启动 MCP 服务器 &ndash; Monkey MCP
 
 1. 通过按 `F1` 或在 Windows 上按 `Ctrl`+`Shift`+`P` 或在 Mac OS 上按 `Cmd`+`Shift`+`P` 打开命令面板，并搜索 `MCP: List Servers`。

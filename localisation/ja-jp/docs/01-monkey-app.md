@@ -104,6 +104,8 @@
 
 1. issueに`@Copilot`をアサインし、何が起こっているかを観察します。
 
+   > **注意**：GitHub Copilot無料ユーザーの設定によっては、`@Copilot`をアサインして続行できない場合があります。
+
 ## MCPサーバーの開始 &ndash; Monkey MCP
 
 1. `F1`または Windows では`Ctrl`+`Shift`+`P`、Mac OSでは`Cmd`+`Shift`+`P`を押してコマンドパレットを開き、`MCP: List Servers`を検索します。

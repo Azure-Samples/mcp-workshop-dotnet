@@ -104,6 +104,8 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 
 1. Asigna `@Copilot` al issue y observa lo que está sucediendo.
 
+   > **NOTA**: Dependiendo de la configuración como usuario gratuito de GitHub Copilot, es posible que no puedas asignar `@Copilot` para continuar.
+
 ## Iniciar Servidor MCP &ndash; Monkey MCP
 
 1. Abre la Paleta de Comandos presionando `F1` o `Ctrl`+`Shift`+`P` en Windows o `Cmd`+`Shift`+`P` en Mac OS, y busca `MCP: List Servers`.

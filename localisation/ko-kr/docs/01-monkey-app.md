@@ -104,6 +104,8 @@
 
 1. 이슈에 `@Copilot`을 할당하고 무슨 일이 일어나는지 관찰합니다.
 
+   > **참고**: GitHub Copilot 무료 사용자의 설정에 따라 `@Copilot`을 할당하여 진행하지 못할 수 있습니다.
+
 ## MCP 서버 시작 &ndash; Monkey MCP
 
 1. `F1` 또는 Windows에서 `Ctrl`+`Shift`+`P`, Mac OS에서 `Cmd`+`Shift`+`P`를 입력하여 명령 팔레트를 열고 `MCP: List Servers`를 검색합니다.
