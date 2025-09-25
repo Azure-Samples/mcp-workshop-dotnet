@@ -22,12 +22,9 @@
         "ghcr.io/microsoft/mcp-dotnet-samples/awesome-copilot:stdio"
       ]
     },
-    "context7": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ]
+    "microsoft.docs.mcp": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp"
     },
     "sequentialthinking": {
       "command": "docker",
