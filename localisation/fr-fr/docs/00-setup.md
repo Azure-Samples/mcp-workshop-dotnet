@@ -56,6 +56,39 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
 
    Si vous voyez quelque chose de différent, supprimez l'instance GitHub Codespace et recréez-la.
 
+1. Exécutez la commande suivante pour forker ce dépôt vers votre compte GitHub.
+
+    ```bash
+    git remote -v > remote.txt
+    git add . && git commit -m "Add remote.txt for forking"
+    ```
+
+   Vous pourriez voir un message comme ci-dessous :
+
+    ```text
+    You don't have write access to the Azure-Samples/mcp-workshop-dotnet repository, so you cannot push changes to it.
+    To obtain write access we will point this codespace at your fork of Azure-Samples/mcp-workshop-dotnet, creating that fork if it doesn't exist.
+
+    Would you like to proceed?
+    ```
+
+   Entrez `y`, et il forkera automatiquement ce dépôt vers votre compte GitHub.
+
+1. Vérifiez à nouveau le dépôt distant.
+
+    ```bash
+    git remote -v
+    ```
+
+   Vous devriez pouvoir voir à la fois `origin` et `upstream`.
+
+    ```text
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (fetch)
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (push)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (fetch)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
+    ```
+
 1. Descendez à la section [Configurer les Serveurs MCP](#configurer-les-serveurs-mcp).
 
 **👇👇👇 Si vous préférez utiliser VS Code sur votre machine locale, suivez les instructions ci-dessous. La section ci-dessous ne s'applique pas à ceux qui utilisent GitHub Codespaces. 👇👇👇**

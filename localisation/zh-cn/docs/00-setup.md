@@ -56,6 +56,39 @@
 
    如果您看到与上述不同的内容，请删除 GitHub Codespace 实例并重新创建它。
 
+1. 运行以下命令将此存储库 fork 到您的 GitHub 账户。
+
+    ```bash
+    git remote -v > remote.txt
+    git add . && git commit -m "Add remote.txt for forking"
+    ```
+
+   您可能会看到如下消息：
+
+    ```text
+    You don't have write access to the Azure-Samples/mcp-workshop-dotnet repository, so you cannot push changes to it.
+    To obtain write access we will point this codespace at your fork of Azure-Samples/mcp-workshop-dotnet, creating that fork if it doesn't exist.
+
+    Would you like to proceed?
+    ```
+
+   输入 `y`，它将自动将此存储库 fork 到您的 GitHub 账户。
+
+1. 再次检查远程存储库。
+
+    ```bash
+    git remote -v
+    ```
+
+   您将能够看到 `origin` 和 `upstream`。
+
+    ```text
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (fetch)
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (push)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (fetch)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
+    ```
+
 1. 转到 [设置 MCP 服务器](#设置-mcp-服务器) 部分。
 
 **👇👇👇 如果您希望在本地机器上使用 VS Code，请按照以下说明操作。以下部分不适用于使用 GitHub Codespaces 的用户。👇👇👇**

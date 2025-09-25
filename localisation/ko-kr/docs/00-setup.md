@@ -56,6 +56,39 @@
 
    위와 다른 것이 보이면 GitHub Codespace 인스턴스를 삭제하고 다시 만드세요.
 
+1. 다음 명령을 실행하여 이 리포지토리를 GitHub 계정으로 포크하세요.
+
+    ```bash
+    git remote -v > remote.txt
+    git add . && git commit -m "Add remote.txt for forking"
+    ```
+
+   아래와 같은 메시지가 표시될 수 있습니다:
+
+    ```text
+    You don't have write access to the Azure-Samples/mcp-workshop-dotnet repository, so you cannot push changes to it.
+    To obtain write access we will point this codespace at your fork of Azure-Samples/mcp-workshop-dotnet, creating that fork if it doesn't exist.
+
+    Would you like to proceed?
+    ```
+
+   `y`를 입력하면 이 리포지토리가 자동으로 GitHub 계정으로 포크됩니다.
+
+1. 원격 리포지토리를 다시 확인하세요.
+
+    ```bash
+    git remote -v
+    ```
+
+   `origin`과 `upstream` 모두를 볼 수 있을 것입니다.
+
+    ```text
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (fetch)
+    origin  https://github.com/<your GitHub ID>/mcp-workshop-dotnet.git (push)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (fetch)
+    upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
+    ```
+
 1. [MCP 서버 설정](#mcp-서버-설정) 섹션으로 이동하세요.
 
 **👇👇👇 로컬 머신에서 VS Code를 사용하려면 아래 지침을 따르세요. 아래 섹션은 GitHub Codespaces를 사용하는 사람들에게는 적용되지 않습니다. 👇👇👇**
