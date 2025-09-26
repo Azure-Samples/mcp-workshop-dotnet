@@ -321,12 +321,14 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 
     ```bash
     # bash/zsh
+    mkdir -p $REPOSITORY_ROOT/.vscode
     cp -r $REPOSITORY_ROOT/docs/.vscode/. \
           $REPOSITORY_ROOT/.vscode/
     ```
 
     ```powershell
     # PowerShell
+    New-Item -ItemType Directory -Path $REPOSITORY_ROOT/.vscode -Force
     Copy-Item -Path $REPOSITORY_ROOT/docs/.vscode/* `
               -Destination $REPOSITORY_ROOT/.vscode/ -Recurse -Force
     ```
