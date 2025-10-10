@@ -133,7 +133,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 1. Digite o seguinte prompt para obter a lista de macacos.
 
     ```text
-    Obtenha uma lista de macacos que estão disponíveis e exiba-os em uma tabela com seus detalhes.
+    #monkeymcp Obtenha uma lista de macacos disponíveis e exiba-os em uma tabela com seus detalhes.
     ```
 
 1. Digite o seguinte prompt para obter uma ideia do modelo de dados para um macaco.
@@ -170,11 +170,11 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 1. Digite o seguinte prompt no GitHub Copilot para fazer push do aplicativo de console atualizado.
 
     ```text
-    Envie as alterações atuais para o branch `mymonkeyapp` do repositório.
-    Antes de enviar as alterações, certifique-se de que o diretório `workshop` está incluído no push.
-    Com este branch, crie um PR contra o branch `main` do seu repositório, não do upstream.
-    Conecte este PR à issue criada anteriormente.
-    Em seguida, faça merge deste PR e feche a issue.
+    - Envie as alterações atuais para o branch `mymonkeyapp` do repositório.
+    - Antes de enviar as alterações, certifique-se de que o diretório `workshop` está incluído no push.
+    - Com este branch, crie um PR contra o branch `main` do seu repositório, não do upstream.
+    - Conecte este PR à issue criada anteriormente.
+    - Em seguida, faça merge deste PR e feche a issue.
     ```
 
 ---

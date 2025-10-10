@@ -133,7 +133,7 @@ Consultez la documentation [README](../README.md#prérequis) pour la préparatio
 1. Entrez le prompt suivant pour obtenir la liste des singes.
 
     ```text
-    Obtenez-moi une liste des singes qui sont disponibles et affichez-les dans un tableau avec leurs détails.
+    #monkeymcp Obtenez-moi une liste des singes disponibles et affichez-les dans un tableau avec leurs détails.
     ```
 
 1. Entrez le prompt suivant pour avoir une idée du modèle de données pour un singe.
@@ -170,11 +170,11 @@ Consultez la documentation [README](../README.md#prérequis) pour la préparatio
 1. Entrez le prompt suivant à GitHub Copilot pour pousser l'application console mise à jour.
 
     ```text
-    Poussez les changements actuels vers la branche `mymonkeyapp` du dépôt.
-    Avant de pousser les modifications, assurez-vous que le répertoire `workshop` est inclus dans le push.
-    Avec cette branche, créez une PR contre la branche `main` de votre dépôt, pas de l'upstream.
-    Connectez cette PR au problème créé précédemment.
-    Ensuite, fusionnez cette PR et fermez le problème.
+    - Poussez les changements actuels vers la branche `mymonkeyapp` du dépôt.
+    - Avant de pousser les modifications, assurez-vous que le répertoire `workshop` est inclus dans le push.
+    - Avec cette branche, créez une PR contre la branche `main` de votre dépôt, pas de l'upstream.
+    - Connectez cette PR au problème créé précédemment.
+    - Ensuite, fusionnez cette PR et fermez le problème.
     ```
 
 ---

@@ -133,7 +133,7 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 1. Ingresa el siguiente prompt para obtener la lista de monos.
 
     ```text
-    Obtén una lista de monos que estén disponibles y muéstralos en una tabla con sus detalles.
+    #monkeymcp Consígueme una lista de monos disponibles y muéstralos en una tabla con sus detalles.
     ```
 
 1. Ingresa el siguiente prompt para obtener una idea del modelo de datos para un mono.
@@ -170,11 +170,11 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 1. Ingresa el siguiente prompt a GitHub Copilot para subir la aplicación de consola actualizada.
 
     ```text
-    Empuja los cambios actuales a la rama `mymonkeyapp` del repositorio.
-    Antes de enviar los cambios, asegúrate de que el directorio `workshop` esté incluido en el push.
-    Con esta rama, crea una PR contra la rama `main` de tu repositorio, no del upstream.
-    Conecta esta PR al issue creado anteriormente.
-    Luego, fusiona esta PR y cierra el issue.
+    - Empuja los cambios actuales a la rama `mymonkeyapp` del repositorio.
+    - Antes de enviar los cambios, asegúrate de que el directorio `workshop` esté incluido en el push.
+    - Con esta rama, crea una PR contra la rama `main` de tu repositorio, no del upstream.
+    - Conecta esta PR al issue creado anteriormente.
+    - Luego, fusiona esta PR y cierra el issue.
     ```
 
 ---
