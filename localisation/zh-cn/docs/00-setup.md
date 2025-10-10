@@ -41,6 +41,11 @@
     pwsh --version
     ```
 
+    ```bash
+    # Docker
+    docker info
+    ```
+
 1. 检查您的存储库状态。
 
     ```bash

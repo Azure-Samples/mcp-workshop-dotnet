@@ -41,6 +41,11 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
     pwsh --version
     ```
 
+    ```bash
+    # Docker
+    docker info
+    ```
+
 1. Verifique o status do seu repositório.
 
     ```bash

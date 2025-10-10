@@ -41,6 +41,11 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
     pwsh --version
     ```
 
+    ```bash
+    # Docker
+    docker info
+    ```
+
 1. Vérifiez le statut de votre dépôt.
 
     ```bash

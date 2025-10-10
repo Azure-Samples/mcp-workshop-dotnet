@@ -41,6 +41,11 @@
     pwsh --version
     ```
 
+    ```bash
+    # Docker
+    docker info
+    ```
+
 1. 리포지토리 상태를 확인합니다.
 
     ```bash

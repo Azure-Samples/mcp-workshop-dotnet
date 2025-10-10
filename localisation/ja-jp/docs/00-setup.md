@@ -41,6 +41,11 @@
     pwsh --version
     ```
 
+    ```bash
+    # Docker
+    docker info
+    ```
+
 1. リポジトリのステータスを確認します。
 
     ```bash
