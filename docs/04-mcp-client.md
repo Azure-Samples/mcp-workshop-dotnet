@@ -144,13 +144,13 @@ In the [previous session](./02-mcp-server.md), you've already copied both MCP se
     @inject IChatClient ChatClient
     ```
 
-1. In the same `Components/Pages/Chat/Chat.razor`, add `IMcpClient` as another dependency.
+1. In the same `Components/Pages/Chat/Chat.razor`, add `McpClient` as another dependency.
 
     ```razor
     @inject IChatClient ChatClient
     
     @* 👇👇👇 Add 👇👇👇 *@
-    @inject IMcpClient McpClient
+    @inject McpClient McpClient
     @* 👆👆👆 Add 👆👆👆 *@
     
     @implements IDisposable
