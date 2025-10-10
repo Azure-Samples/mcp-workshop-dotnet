@@ -144,13 +144,12 @@ In the `start` directory, an ASP.NET Core Minimal API app is already scaffolded.
 ## Develop To-do List Management Logic
 
 1. Make sure that you're using GitHub Copilot Agent Mode with the model of `Claude Sonnet 4` or `GPT-4.1`.
-1. Make sure that the `context7` and `sequentialthinking` MCP server is up and running.
+1. Make sure that both `microsoft.docs.mcp` and `sequentialthinking` MCP servers are up and running.
 1. Use the prompt like below to implement a to-do list management logic.
 
     ```text
     I'd like to implement a to-do list management logic in the ASP.NET Core Minimal API app. Follow the instructions below for the app development.
     
-    - Use context7.
     - Identify all the steps first, which you're going to do.
     - Your working directory is `workshop/src/McpTodoServer.ContainerApp`.
     - Use SQLite as a database and should use the in-memory feature.
@@ -171,7 +170,6 @@ In the `start` directory, an ASP.NET Core Minimal API app is already scaffolded.
     ```text
     I'd like to build the app. Follow the instructions.
 
-    - Use context7.
     - Build the app and verify if the app is built properly.
     - If building the app fails, analyze the issues and fix them.
     ```
@@ -187,7 +185,6 @@ In the `start` directory, an ASP.NET Core Minimal API app is already scaffolded.
     ```text
     I'd like to add `TodoTool` class to the app. Follow the instructions.
 
-    - Use context7.
     - Identify all the steps first, which you're going to do.
     - Your working directory is `workshop/src/McpTodoServer.ContainerApp`.
     - The `TodoTool` class should contain 5 methods - create, list, update, complete and delete.
@@ -414,13 +411,7 @@ In the `start` directory, an ASP.NET Core Minimal API app is already scaffolded.
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         // 👇👇👇 Added 👇👇👇
         "mcp-todo": {
           "url": "http://localhost:5242/mcp"

@@ -87,13 +87,7 @@ In the [previous session](./02-mcp-server.md), you've already created an MCP ser
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Before
           "url": "http://localhost:5242/mcp"
@@ -199,13 +193,7 @@ In the [previous session](./02-mcp-server.md), you've already created an MCP ser
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Before
           "url": "http://localhost:8080/mcp"
