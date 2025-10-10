@@ -83,7 +83,23 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     dotnet new console -n MyMonkeyApp
     ```
 
+1. If you like, you can run the console app and see the result.
+
+    ```bash
+    dotnet run --project $REPOSITORY_ROOT/workshop/MyMonkeyApp
+    ```
+
 ## Manage GitHub Repository
+
+1. Update `.gitignore` to include the `workshop` directory.
+
+    ```text
+    ...
+    .github/copilot-instructions.md
+    .vscode/mcp.json
+    .vscode/settings.json
+    # workshop/
+    ```
 
 1. Enter the following prompt to GitHub Copilot to push the scaffolded console app.
 
@@ -117,7 +133,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 1. Enter the following prompt to get the list of monkeys.
 
     ```text
-    Get me a list of monkeys that are available and display them in a table with their details.
+    #monkeymcp Get me a list of monkeys that are available and display them in a table with their details.
     ```
 
 1. Enter the following prompt to get an idea of data model for a monkey.
@@ -135,7 +151,7 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 1. Enter the following prompt to create a `MonkeyHelper` class.
 
     ```text
-    Let's create a new class called MonkeyHelper that is static. It should manage a collection of monkey data. Include methods to get all monkeys, get a random monkey, find a monkey by name, and track access count to when a random monkey is picked. The data for the monkeys should come from the Monkey MCP server that we just got.
+    Let's create a new class called `MonkeyHelper` that is static. It should manage a collection of monkey data. Include methods to get all monkeys, get a random monkey, find a monkey by name, and track access count to when a random monkey is picked. The data for the monkeys should come from the Monkey MCP server that we just got.
     ```
 
 1. Enter the following prompt to update the console app.
@@ -154,11 +170,11 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
 1. Enter the following prompt to GitHub Copilot to push the updated console app.
 
     ```text
-    Push the current changes to the `mymonkeyapp` branch of the repository.
-    Before pushing the changes, make sure the `workshop` directory should be included in the push.
-    With this branch, create a PR against the `main` branch of your repository, not the upstream one.
-    Connect this PR to the issue created before.
-    Then, merge this PR and close the issue.
+    - Push the current changes to the `mymonkeyapp` branch of the repository.
+    - Before pushing the changes, make sure the `workshop` directory should be included in the push.
+    - With this branch, create a PR against the `main` branch of your repository, not the upstream one.
+    - Connect this PR to the issue created before.
+    - Then, merge this PR and close the issue.
     ```
 
 ---

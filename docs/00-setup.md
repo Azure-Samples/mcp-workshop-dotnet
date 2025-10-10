@@ -89,6 +89,8 @@ Refer to the [README](../README.md#prerequisites) doc for preparation.
     upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
     ```
 
+1. Make sure your forked repository has the "Issues" tab available. If it's not, go to "Settings" 👉 scroll down to the "Features" section 👉 tick the "Issues" checkbox.
+
 1. Move down to the [Set-up MCP Servers](#set-up-mcp-servers) section.
 
 **👇👇👇 If you'd like to use VS Code on your local machine instead, follow the instruction below. The section below doesn't apply to those who use GitHub Codespaces. 👇👇👇**
