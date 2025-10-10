@@ -83,7 +83,23 @@
     dotnet new console -n MyMonkeyApp
     ```
 
+1. よろしければ、コンソールアプリを実行して結果を確認できます。
+
+    ```bash
+    dotnet run --project $REPOSITORY_ROOT/workshop/MyMonkeyApp
+    ```
+
 ## GitHubリポジトリの管理
+
+1. `workshop`ディレクトリを含めるために`.gitignore`を更新します。
+
+    ```text
+    ...
+    .github/copilot-instructions.md
+    .vscode/mcp.json
+    .vscode/settings.json
+    # workshop/
+    ```
 
 1. 作成したコンソールアプリをプッシュするために、GitHub Copilotに以下のプロンプトを入力します。
 

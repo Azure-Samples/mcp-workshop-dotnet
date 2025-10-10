@@ -83,7 +83,23 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
     dotnet new console -n MyMonkeyApp
     ```
 
+1. Si lo deseas, puedes ejecutar la aplicación de consola y ver el resultado.
+
+    ```bash
+    dotnet run --project $REPOSITORY_ROOT/workshop/MyMonkeyApp
+    ```
+
 ## Gestionar Repositorio de GitHub
+
+1. Actualiza `.gitignore` para incluir el directorio `workshop`.
+
+    ```text
+    ...
+    .github/copilot-instructions.md
+    .vscode/mcp.json
+    .vscode/settings.json
+    # workshop/
+    ```
 
 1. Ingresa el siguiente prompt a GitHub Copilot para subir la aplicación de consola creada.
 

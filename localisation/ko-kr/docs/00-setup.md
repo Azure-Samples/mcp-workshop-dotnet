@@ -89,6 +89,8 @@
     upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
     ```
 
+1. 포크한 저장소에 "Issues" 탭이 사용 가능한지 확인하세요. 그렇지 않은 경우 "Settings" 👉 "Features" 섹션으로 스크롤 👉 "Issues" 체크박스를 선택하세요.
+
 1. [MCP 서버 설정](#mcp-서버-설정) 섹션으로 이동하세요.
 
 **👇👇👇 로컬 머신에서 VS Code를 사용하려면 아래 지침을 따르세요. 아래 섹션은 GitHub Codespaces를 사용하는 사람들에게는 적용되지 않습니다. 👇👇👇**

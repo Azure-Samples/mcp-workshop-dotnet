@@ -89,6 +89,8 @@
     upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
     ```
 
+1. 确保您 fork 的存储库具有可用的 "Issues" 选项卡。如果没有，请转到 "Settings" 👉 向下滚动到 "Features" 部分 👉 勾选 "Issues" 复选框。
+
 1. 转到 [设置 MCP 服务器](#设置-mcp-服务器) 部分。
 
 **👇👇👇 如果您希望在本地机器上使用 VS Code，请按照以下说明操作。以下部分不适用于使用 GitHub Codespaces 的用户。👇👇👇**

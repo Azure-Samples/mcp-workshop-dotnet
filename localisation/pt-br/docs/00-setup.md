@@ -89,6 +89,8 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
     upstream        https://github.com/Azure-Samples/mcp-workshop-dotnet (push)
     ```
 
+1. Certifique-se de que o repositório que você bifurcou tenha a aba "Issues" disponível. Se não estiver, vá para "Settings" 👉 role para baixo até a seção "Features" 👉 marque a caixa de seleção "Issues".
+
 1. Vá para a seção [Configurar Servidores MCP](#configurar-servidores-mcp).
 
 **👇👇👇 Se você preferir usar VS Code em sua máquina local, siga as instruções abaixo. A seção abaixo não se aplica àqueles que usam GitHub Codespaces. 👇👇👇**

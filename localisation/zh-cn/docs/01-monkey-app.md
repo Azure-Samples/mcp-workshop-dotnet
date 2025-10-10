@@ -83,7 +83,23 @@
     dotnet new console -n MyMonkeyApp
     ```
 
+1. 如果您愿意，可以运行控制台应用程序并查看结果。
+
+    ```bash
+    dotnet run --project $REPOSITORY_ROOT/workshop/MyMonkeyApp
+    ```
+
 ## 管理 GitHub 存储库
+
+1. 更新 `.gitignore` 以包含 `workshop` 目录。
+
+    ```text
+    ...
+    .github/copilot-instructions.md
+    .vscode/mcp.json
+    .vscode/settings.json
+    # workshop/
+    ```
 
 1. 向 GitHub Copilot 输入以下提示以推送创建的控制台应用程序。
 
