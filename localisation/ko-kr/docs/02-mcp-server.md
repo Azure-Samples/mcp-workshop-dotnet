@@ -150,7 +150,6 @@
     ```text
     ASP.NET Core Minimal API 애플리케이션에서 할 일 목록 관리 로직을 구현하고 싶습니다. 애플리케이션 개발을 위해 아래 지침을 따르세요.
     
-    - context7을 사용하세요.
     - 먼저 수행할 모든 단계를 식별하세요.
     - 작업 디렉토리는 `workshop/src/McpTodoServer.ContainerApp`입니다.
     - 데이터베이스로 SQLite를 사용하고 메모리 내 기능을 사용해야 합니다.
@@ -171,7 +170,6 @@
     ```text
     애플리케이션을 빌드하고 싶습니다. 지침을 따르세요.
 
-    - context7을 사용하세요.
     - 애플리케이션을 빌드하고 제대로 빌드되는지 확인하세요.
     - 빌드가 실패하면 문제를 분석하고 수정하세요.
     ```
@@ -187,7 +185,6 @@
     ```text
     애플리케이션에 `TodoTool` 클래스를 추가하고 싶습니다. 지침을 따르세요.
 
-    - context7을 사용하세요.
     - 먼저 수행할 모든 단계를 식별하세요.
     - 작업 디렉토리는 `workshop/src/McpTodoServer.ContainerApp`입니다.
     - `TodoTool` 클래스에는 5개의 메서드가 포함되어야 합니다 - 생성, 목록, 업데이트, 완료, 삭제.
@@ -414,16 +411,10 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         // 👇👇👇 추가됨 👇👇👇
         "mcp-todo": {
-            "url": "http://localhost:5242/mcp"
+          "url": "http://localhost:5242/mcp"
         }
         // 👆👆👆 추가됨 👆👆👆
       }

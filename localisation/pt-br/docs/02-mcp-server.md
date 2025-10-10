@@ -150,7 +150,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```text
     Gostaria de implementar uma lógica de gerenciamento de lista de tarefas na aplicação ASP.NET Core Minimal API. Siga as instruções abaixo para o desenvolvimento da aplicação.
     
-    - Use context7.
     - Identifique primeiro todos os passos que você vai fazer.
     - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
     - Use SQLite como banco de dados e deve usar o recurso em memória.
@@ -171,7 +170,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```text
     Gostaria de construir a aplicação. Siga as instruções.
 
-    - Use context7.
     - Construa a aplicação e verifique se ela constrói corretamente.
     - Se a construção falhar, analise os problemas e corrija-os.
     ```
@@ -187,7 +185,6 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```text
     Gostaria de adicionar a classe `TodoTool` à aplicação. Siga as instruções.
 
-    - Use context7.
     - Identifique primeiro todos os passos que você vai fazer.
     - Seu diretório de trabalho é `workshop/src/McpTodoServer.ContainerApp`.
     - A classe `TodoTool` deve conter 5 métodos - criar, listar, atualizar, completar e excluir.
@@ -414,16 +411,10 @@ No diretório `start`, uma aplicação ASP.NET Core Minimal API já está estrut
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         // 👇👇👇 Adicionado 👇👇👇
         "mcp-todo": {
-            "url": "http://localhost:5242/mcp"
+          "url": "http://localhost:5242/mcp"
         }
         // 👆👆👆 Adicionado 👆👆👆
       }

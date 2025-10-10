@@ -150,7 +150,6 @@
     ```text
     我想在 ASP.NET Core Minimal API 应用程序中实现待办事项列表管理逻辑。请按照以下应用程序开发指示操作。
     
-    - 使用 context7。
     - 首先识别您要执行的所有步骤。
     - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
     - 使用 SQLite 作为数据库，并应使用内存功能。
@@ -171,7 +170,6 @@
     ```text
     我想构建应用程序。按照指示操作。
 
-    - 使用 context7。
     - 构建应用程序并验证其是否正确构建。
     - 如果构建失败，分析问题并修复它们。
     ```
@@ -187,7 +185,6 @@
     ```text
     我想向应用程序添加 `TodoTool` 类。按照指示操作。
 
-    - 使用 context7。
     - 首先识别您要执行的所有步骤。
     - 您的工作目录是 `workshop/src/McpTodoServer.ContainerApp`。
     - `TodoTool` 类应包含 5 个方法 - 创建、列表、更新、完成和删除。
@@ -414,16 +411,10 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         // 👇👇👇 已添加 👇👇👇
         "mcp-todo": {
-            "url": "http://localhost:5242/mcp"
+          "url": "http://localhost:5242/mcp"
         }
         // 👆👆👆 已添加 👆👆👆
       }
