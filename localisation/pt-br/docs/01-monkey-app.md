@@ -151,7 +151,7 @@ Consulte o documento [README](../README.md#pré-requisitos) para preparação.
 1. Digite o seguinte prompt para criar uma classe `MonkeyHelper`.
 
     ```text
-    Vamos criar uma nova classe chamada MonkeyHelper que é estática. Ela deve gerenciar uma coleção de dados de macacos. Inclua métodos para obter todos os macacos, obter um macaco aleatório, encontrar um macaco por nome, e rastrear a contagem de acesso quando um macaco aleatório é escolhido. Os dados dos macacos devem vir do servidor Monkey MCP que acabamos de obter.
+    Vamos criar uma nova classe chamada `MonkeyHelper` que é estática. Ela deve gerenciar uma coleção de dados de macacos. Inclua métodos para obter todos os macacos, obter um macaco aleatório, encontrar um macaco por nome, e rastrear a contagem de acesso quando um macaco aleatório é escolhido. Os dados dos macacos devem vir do servidor Monkey MCP que acabamos de obter.
     ```
 
 1. Digite o seguinte prompt para atualizar o aplicativo de console.

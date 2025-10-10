@@ -151,7 +151,7 @@ Consulta el documento [README](../README.md#requisitos-previos) para la preparac
 1. Ingresa el siguiente prompt para crear una clase `MonkeyHelper`.
 
     ```text
-    Creemos una nueva clase llamada MonkeyHelper que sea estática. Debe gestionar una colección de datos de monos. Incluye métodos para obtener todos los monos, obtener un mono aleatorio, encontrar un mono por nombre, y rastrear el recuento de acceso cuando se elige un mono aleatorio. Los datos de los monos deben provenir del servidor Monkey MCP que acabamos de obtener.
+    Creemos una nueva clase llamada `MonkeyHelper` que sea estática. Debe gestionar una colección de datos de monos. Incluye métodos para obtener todos los monos, obtener un mono aleatorio, encontrar un mono por nombre, y rastrear el recuento de acceso cuando se elige un mono aleatorio. Los datos de los monos deben provenir del servidor Monkey MCP que acabamos de obtener.
     ```
 
 1. Ingresa el siguiente prompt para actualizar la aplicación de consola.

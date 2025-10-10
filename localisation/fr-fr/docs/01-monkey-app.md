@@ -151,7 +151,7 @@ Consultez la documentation [README](../README.md#prérequis) pour la préparatio
 1. Entrez le prompt suivant pour créer une classe `MonkeyHelper`.
 
     ```text
-    Créons une nouvelle classe appelée MonkeyHelper qui est statique. Elle devrait gérer une collection de données de singes. Incluez des méthodes pour obtenir tous les singes, obtenir un singe aléatoire, trouver un singe par nom, et suivre le nombre d'accès quand un singe aléatoire est choisi. Les données pour les singes devraient provenir du serveur Monkey MCP que nous venons d'obtenir.
+    Créons une nouvelle classe appelée `MonkeyHelper` qui est statique. Elle devrait gérer une collection de données de singes. Incluez des méthodes pour obtenir tous les singes, obtenir un singe aléatoire, trouver un singe par nom, et suivre le nombre d'accès quand un singe aléatoire est choisi. Les données pour les singes devraient provenir du serveur Monkey MCP que nous venons d'obtenir.
     ```
 
 1. Entrez le prompt suivant pour mettre à jour l'application console.
