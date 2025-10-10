@@ -102,17 +102,17 @@ Na [sessão anterior](./02-mcp-server.md), você já copiou tanto a aplicação 
                     .UseLogging();
     
     // 👇👇👇 Adicionar 👇👇👇
-    builder.Services.AddSingleton<IMcpClient>(sp =>
+    builder.Services.AddSingleton<McpClient>(sp =>
     {
         var loggerFactory = sp.GetRequiredService<ILoggerFactory>();
     
         var uri = new Uri("http://localhost:5242");
     
-        var clientTransportOptions = new SseClientTransportOptions()
+        var clientTransportOptions = new HttpClientTransportOptions()
         {
             Endpoint = new Uri($"{uri.AbsoluteUri.TrimEnd('/')}/mcp")
         };
-        var clientTransport = new SseClientTransport(clientTransportOptions, loggerFactory);
+        var clientTransport = new HttpClientTransport(clientTransportOptions, loggerFactory);
     
         var clientOptions = new McpClientOptions()
         {
@@ -123,7 +123,7 @@ Na [sessão anterior](./02-mcp-server.md), você já copiou tanto a aplicação 
             }
         };
     
-        return McpClientFactory.CreateAsync(clientTransport, clientOptions, loggerFactory).GetAwaiter().GetResult();
+        return McpClient.CreateAsync(clientTransport, clientOptions, loggerFactory).GetAwaiter().GetResult();
     });
     // 👆👆👆 Adicionar 👆👆👆
     

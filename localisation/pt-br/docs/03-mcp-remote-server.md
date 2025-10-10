@@ -87,13 +87,7 @@ Na [sessão anterior](./02-mcp-server.md), você já criou um aplicativo servido
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Antes
           "url": "http://localhost:5242/mcp"
@@ -101,7 +95,6 @@ Na [sessão anterior](./02-mcp-server.md), você já criou um aplicativo servido
           // Depois
           "url": "http://localhost:8080/mcp"
         }
-        // 👆👆👆 Adicionar 👆👆👆
       }
     }
     ```
@@ -200,13 +193,7 @@ Na [sessão anterior](./02-mcp-server.md), você já criou um aplicativo servido
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Antes
           "url": "http://localhost:8080/mcp"

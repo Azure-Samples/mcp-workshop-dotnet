@@ -102,17 +102,17 @@ PAT를 얻으려면 [GitHub 설정](https://github.com/settings/personal-access-
                     .UseLogging();
     
     // 👇👇👇 추가 👇👇👇
-    builder.Services.AddSingleton<IMcpClient>(sp =>
+    builder.Services.AddSingleton<McpClient>(sp =>
     {
         var loggerFactory = sp.GetRequiredService<ILoggerFactory>();
     
         var uri = new Uri("http://localhost:5242");
     
-        var clientTransportOptions = new SseClientTransportOptions()
+        var clientTransportOptions = new HttpClientTransportOptions()
         {
             Endpoint = new Uri($"{uri.AbsoluteUri.TrimEnd('/')}/mcp")
         };
-        var clientTransport = new SseClientTransport(clientTransportOptions, loggerFactory);
+        var clientTransport = new HttpClientTransport(clientTransportOptions, loggerFactory);
     
         var clientOptions = new McpClientOptions()
         {
@@ -123,7 +123,7 @@ PAT를 얻으려면 [GitHub 설정](https://github.com/settings/personal-access-
             }
         };
     
-        return McpClientFactory.CreateAsync(clientTransport, clientOptions, loggerFactory).GetAwaiter().GetResult();
+        return McpClient.CreateAsync(clientTransport, clientOptions, loggerFactory).GetAwaiter().GetResult();
     });
     // 👆👆👆 추가 👆👆👆
     

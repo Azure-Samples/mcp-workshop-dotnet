@@ -87,13 +87,7 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // 이전
           "url": "http://localhost:5242/mcp"
@@ -101,7 +95,6 @@
           // 이후
           "url": "http://localhost:8080/mcp"
         }
-        // 👆👆👆 추가 👆👆👆
       }
     }
     ```
@@ -200,13 +193,7 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // 이전
           "url": "http://localhost:8080/mcp"
