@@ -87,13 +87,7 @@ Dans la [session précédente](./02-mcp-server.md), vous avez déjà créé une 
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Avant
           "url": "http://localhost:5242/mcp"
@@ -101,7 +95,6 @@ Dans la [session précédente](./02-mcp-server.md), vous avez déjà créé une 
           // Après
           "url": "http://localhost:8080/mcp"
         }
-        // 👆👆👆 Ajouter 👆👆👆
       }
     }
     ```
@@ -200,13 +193,7 @@ Dans la [session précédente](./02-mcp-server.md), vous avez déjà créé une 
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Avant
           "url": "http://localhost:8080/mcp"

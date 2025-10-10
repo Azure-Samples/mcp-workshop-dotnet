@@ -87,13 +87,7 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // 之前
           "url": "http://localhost:5242/mcp"
@@ -101,8 +95,9 @@
           // 之后
           "url": "http://localhost:8080/mcp"
         }
-        // 👆👆👆 添加 👆👆👆
       }
+    }
+    ```
     }
     ```
 
@@ -200,19 +195,17 @@
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // 之前
           "url": "http://localhost:8080/mcp"
 
           // 之后
           "url": "http://{{azure-container-apps-url}}/mcp"
+        }
+      }
+    }
+    ```
         }
       }
     }

@@ -87,13 +87,7 @@ En la [sesión anterior](./02-mcp-server.md), ya has creado una aplicación de s
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Antes
           "url": "http://localhost:5242/mcp"
@@ -199,13 +193,7 @@ En la [sesión anterior](./02-mcp-server.md), ya has creado una aplicación de s
     ```jsonc
     {
       "servers": {
-        "context7": {
-          "command": "npx",
-          "args": [
-            "-y",
-            "@upstash/context7-mcp"
-          ]
-        },
+        ...
         "mcp-todo": {
           // Antes
           "url": "http://localhost:8080/mcp"
