@@ -31,6 +31,56 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
 1. Sélectionnez le modèle comme `GPT-4.1` ou `Claude Sonnet 4`.
 1. Assurez-vous d'avoir configuré [Serveurs MCP](./00-setup.md#configurer-les-serveurs-mcp).
 
+## Démarrer les Serveurs MCP &ndash; Awesome Copilot
+
+1. Ouvrez la Palette de Commandes en tapant `F1` ou `Ctrl`+`Shift`+`P` sur Windows ou `Cmd`+`Shift`+`P` sur Mac OS, et recherchez `MCP: List Servers`.
+1. Arrêtez les serveurs MCP `github` et `monkeymcp` s'ils sont encore en cours d'exécution.
+1. Choisissez `awesome-copilot` puis cliquez sur `Start Server`.
+
+## Configurer le Mode Beast
+
+1. Entrez le prompt suivant pour rechercher le prompt du mode beast.
+
+    ```text
+    Show me the list of copilot instructions for beast chatmode. It should be general purpose.
+    ```
+
+   Cela devrait renvoyer un résultat similaire à `4.1 Beast Chat Mode`. Si ce n'est pas le cas, recherchez-le à nouveau.
+
+1. Entrez le prompt suivant pour enregistrer le mode de chat beast.
+
+    ```text
+    Save it under the `.github/chatmodes` directory.
+    ```
+
+1. Choisissez le mode `4.1-Beast` au lieu du mode `Agent`. Il changera automatiquement le LLM en `GPT 4.1`.
+
+1. Définissez la variable d'environnement `$REPOSITORY_ROOT`.
+
+   ```bash
+   # bash/zsh
+   REPOSITORY_ROOT=$(git rev-parse --show-toplevel)
+   ```
+
+   ```powershell
+   # PowerShell
+   $REPOSITORY_ROOT = git rev-parse --show-toplevel
+   ```
+
+1. Copiez les paramètres de l'espace de travail.
+
+    ```bash
+    # bash/zsh
+    cp $REPOSITORY_ROOT/docs/.vscode/settings.json \
+       $REPOSITORY_ROOT/.vscode/settings.json
+    ```
+
+    ```powershell
+    # PowerShell
+    Copy-Item -Path $REPOSITORY_ROOT/docs/.vscode/settings.json `
+              -Destination $REPOSITORY_ROOT/.vscode/settings.json -Force
+    ```
+
 ## Préparer les Instructions Personnalisées
 
 1. Définissez la variable d'environnement `$REPOSITORY_ROOT`.
@@ -49,14 +99,14 @@ Référez-vous au document [README](../README.md#prérequis) pour la préparatio
 
     ```bash
     # bash/zsh
-    cp -r $REPOSITORY_ROOT/docs/.github/. \
-          $REPOSITORY_ROOT/.github/
+    cp $REPOSITORY_ROOT/docs/.github/todoapp-instructions.md \
+       $REPOSITORY_ROOT/.github/copilot-instructions.md
     ```
 
     ```powershell
     # PowerShell
-    Copy-Item -Path $REPOSITORY_ROOT/docs/.github/* `
-              -Destination $REPOSITORY_ROOT/.github/ -Recurse -Force
+    Copy-Item -Path $REPOSITORY_ROOT/docs/.github/todoapp-instructions.md `
+              -Destination $REPOSITORY_ROOT/.github/copilot-instructions.md -Force
     ```
 
 ## Préparer le Développement du Serveur MCP
@@ -94,7 +144,7 @@ Dans le répertoire `start`, une application ASP.NET Core Minimal API est déjà
 ## Développer la Logique de Gestion de Liste de Tâches
 
 1. Assurez-vous d'utiliser le Mode Agent GitHub Copilot avec le modèle `Claude Sonnet 4` ou `GPT-4.1`.
-1. Assurez-vous que le serveur MCP `context7` fonctionne.
+1. Assurez-vous que les serveurs MCP `microsoft.docs.mcp` et `sequentialthinking` fonctionnent.
 1. Utilisez le prompt suivant pour implémenter la logique de gestion de liste de tâches.
 
     ```text
