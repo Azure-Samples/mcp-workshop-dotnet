@@ -29,13 +29,14 @@ jobs:
 
       - name: Create an issue for localisation
         id: issue
-        uses: actions-cool/issues-helper@v3
-        with:
-          actions: "create-issue"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: 'Apply changes to all the localised documents'
-          body: |
-            There are some updates on the main documents written in English. Find the changes and apply them all to each localised document.
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title 'Apply changes to all the localised documents' \
+            --body 'There are some updates on the main documents written in English. Find the changes and apply them all to each localised document.'
 
       # - name: Assign the issue to Copilot
       #   shell: bash
